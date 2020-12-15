@@ -1,0 +1,358 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+
+.Main {
+    position: relative;
+    z-index: 1;
+
+    //// Companions Page
+    &_companions {
+        background-color: #EDEFF6;
+    }
+}
+
+//------------Index Page Start------------//
+.Main-Review {
+        margin-top: -1px;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.Main-HowItWorks {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        margin-top: -2px; 
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        margin-top: -2px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: -145px;
+    }
+}
+
+.Main-AboutService {
+        margin-top: -2px;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.Main-Directions {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-top: -10px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        margin-top: -81px; 
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-top: -55px;
+    }
+}
+
+.Main-Travelers {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        margin-top: -30px;          
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        margin-top: -81px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-top: -55px;       
+    }
+}
+
+.Main-Tariff {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-top: -20px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        margin-top: -61px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-top: -68px;
+    }
+}
+
+.Main-Interest {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin-top: -34px;
+        padding-top: 34px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        margin-top: -57px; 
+        padding-top: 57px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-top: -99px;
+        padding-top: 99px;
+    }
+}
+
+.Main-Address {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin-top: -32px;
+        padding-top: 32px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        margin-top: -54px;  
+        padding-top: 54px; 
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-top: -59px;
+        padding-top: 59px;
+    }    
+
+}
+
+.Main-MapBox {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-top: -26px; 
+        margin-bottom: -37px;  
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        margin-top: -53px;
+        margin-bottom: -54px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-top: -58px;
+        margin-bottom: -54px;
+    }
+}
+//------------Index Page End------------//
+
+
+
+//------------Form Page Start-----------//
+.Main-TitleBox {
+    z-index: 20;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-top: -1px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        margin-top: -1px; 
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-top: -2px;
+    } 
+}
+
+.Main-Substrate {
+    z-index: 19;
+
+    background-color: $basicBlueLight;
+    width: 100%;
+    
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        height: 22px;
+        margin-top: -22px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        height: 64px;
+        margin-top: -64px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        height: 61px;
+        margin-top: -61px;
+    } 
+}
+
+.Main-Profile {
+    position: relative;
+    z-index: 21;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}
+
+.Main-MyPlans {
+    position: relative;
+    z-index: 22;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-top: -30px;
+        padding-top: 30px;
+        padding-bottom: 29px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        margin-top: -57px; 
+        padding-top: 57px;
+        padding-bottom: 42px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-top: -55px;
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }    
+}
+
+.Main-AddPlans {
+    position: relative;
+    z-index: 23;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-top: -29px;
+        padding-top: 29px;
+        padding-bottom: 37px;
+
+        margin-bottom: -30px;
+
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        margin-top: -42px;
+        padding-top: 53px;
+        padding-bottom: 55px; 
+
+        margin-bottom: -50px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-top: -60px;
+        padding-top: 60px;
+        padding-bottom: 55px;
+
+        margin-bottom: -50px;
+    }    
+}
+//------------Form Page End-----------//
+
+
+
+//------------Companions Page Start-----------//
+.Main-FilterCountries  {
+    position: relative;
+    z-index: 3;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-top: -29px;
+        padding-top: 49px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        margin-top: -58px;
+        padding-top: 116px; 
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-top: -58px;
+        padding-top: 134px;
+    }    
+}
+
+.Main-FilterScroll  {
+    position: relative;
+    z-index: 2;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-top: -15px;
+        padding-top: 15px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        margin-top: -58px;
+
+        padding-top: 25px; 
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-top: -58px;
+        padding-top: 58px;
+    }    
+}
+
+.Main-Content  {
+    position: relative;
+    z-index: 1;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-top: -15px;
+        margin-bottom: -30px;
+        padding-top: 15px;   
+        padding-bottom: 30px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        margin-top: -58px;
+
+        padding-top: 58px; 
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 110px;
+        margin-bottom: -50px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-top: -58px;
+
+        padding-top: 151px;
+        padding-bottom: 110px;
+        margin-bottom: -50px;
+    }    
+}
+//------------Companions Page End-----------//

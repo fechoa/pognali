@@ -1,0 +1,91 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+.Flag {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        width: 35px;
+        height: 24px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        width: 70px;
+        height: 47px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 70px;
+        height: 47px;
+    }
+
+
+    &_thai {
+        background-image: url('../../../img/svg/ThaiIco.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    &_france {
+        background-image: url('../../../img/svg/FranceIco.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    &_czech {
+        background-image: url('../../../img/svg/CzechIco.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    &_sri {
+        background-image: url('../../../img/svg/SriIco.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    &_seych {
+        background-image: url('../../../img/svg/SeychIco.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    &_belg {
+        background-image: url('../../../img/svg/BelgIco.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+
+
+
+    &_card {
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+            width: 35px;
+            height: 24px;
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+            width: 35px;
+            height: 24px;
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            width: 35px;
+            height: 24px;
+        } 
+    }
+}

@@ -1,0 +1,431 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.CountryItem {
+    position: relative;
+    cursor: pointer;
+    
+     // Mobile
+     @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        height: 188px;
+
+
+
+        border-radius: 10px;
+
+        margin-bottom: 9px;
+
+        &:last-child {
+            margin-bottom: 25px;
+        }
+
+        &_Thai {
+            background-image: url('../../../img/jpg/Thai_m.jpg');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+        &_France {
+            background-image: url('../../../img/jpg/France_m.jpg');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+        &_Czech {
+            background-image: url('../../../img/jpg/Czech_m.jpg');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+
+        &_gradient {
+            &::before {
+                position: absolute;
+                z-index: 99;
+                content: '';
+        
+                width: 272px;
+                height: 74px;
+        
+                
+                bottom: 0;
+                
+                pointer-events: none;
+        
+                background-image: url('../../../img/png/Gradient_m.png');
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                background-size: contain;
+            }
+        }
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        display: flex;
+        flex-direction: column;
+        
+        z-index: 5;
+        
+        height: 141px;
+        width: 100%;
+        border-radius: 20px;
+
+        
+        margin-bottom: 11px;
+
+        &:last-child {
+            margin-bottom: 46px;
+        }
+
+        &_Thai {
+            background-image: url('../../../img/png/Thai_t.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+        &_France {
+            background-image: url('../../../img/png/France_t.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+        &_Czech {
+            background-image: url('../../../img/png/Czech_t.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+
+        &_gradient {
+            transition: 200ms linear;
+            &:hover {
+                transform: translateY(-5%);
+            }
+
+            &::before {
+                position: absolute;
+                z-index: 99;
+                content: '';
+        
+                width: 617px;
+                height: 94px;
+        
+                bottom: 0;
+                pointer-events: none;                
+        
+                background-image: url('../../../img/png/Gradient_t.png');
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                background-size: contain;
+            }
+        }
+    }
+    
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: flex;
+        flex-direction: column;
+        
+        background-color: $basicWhite;
+        z-index: 5;
+        
+        height: 140px;
+        width: 559px;
+        border-radius: 20px;
+
+        padding-top: 24px;
+        padding-left: 28px;
+        margin-bottom: 11px;
+
+        &:last-child {
+            margin-bottom: 46px;
+        }
+
+        &_Thai {
+            background-image: url('../../../img/png/Thai_d.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+        &_France {
+            background-image: url('../../../img/png/France_d.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+        &_Czech {
+            background-image: url('../../../img/png/Czech_d.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+
+        &_gradient {
+            &::before {
+                position: absolute;
+                z-index: 99;
+                content: '';
+        
+                width: 560px;
+                height: 81px;
+                
+                left: 0;
+                bottom: 0;
+                
+        
+                background-image: url('../../../img/png/Gradient_d.png');
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                background-size: contain;
+            }
+        }
+    }
+}
+
+.CountryItem-Box {
+    padding: 0;
+    margin: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        height: 89px;
+
+        margin-top: auto;
+        padding-top: 26px;
+        padding-left: 24px;
+        padding-right: 26px;
+
+        background-color: $basicWhite;
+
+        border-radius: 10px;
+
+
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        display: flex;
+        flex-direction: column;
+
+        width: 434px;
+        height: 141px;
+
+
+        padding-top: 30px;
+        padding-left: 29px;
+    
+
+        background-color: $basicWhite;
+
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.CountryItem-Texts {
+    padding: 0;
+    margin: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        display: flex;
+        flex-direction: column;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        display: flex;
+        flex-direction: column;   
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.CountryItem-Title {
+    padding: 0;
+    margin: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin-bottom: 2px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        margin-bottom: 5px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 4px;
+    }
+}
+
+.CountryItem-Subtitle {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'BloggerSansMedium', 'Arial';
+    font-style: normal;
+    font-weight: 500;
+
+    color: #444444;
+    opacity: 0.3;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        font-size: 16px;
+        line-height: 18px;    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        font-size: 20px;
+        line-height: 20px;    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 20px;    
+    }
+}
+
+.CountryItem-Amount {
+    padding: 0;
+    margin: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        position: absolute;
+
+        display: flex;
+        align-items: center;
+
+        right: 24px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        position: absolute;
+
+        display: flex;
+        align-items: center;
+
+        top: 96px;
+        left: 26px; 
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: absolute;
+
+        display: flex;
+        align-items: center;
+
+        top: 98px;
+        left: 28px; 
+    }
+}
+
+.CountryItem-Number {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'BloggerSansMedium', 'Arial';
+    font-style: normal;
+    font-weight: 500;
+
+    color: $basicBlue;
+    
+    opacity: 0.3;    
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        font-size: 20px;
+        line-height: 20px;    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+.CountryItem-Ico {
+    padding: 0;
+    margin: 0;
+
+    background-image: url('../../../img/svg/UserIco.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;  
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        width: 14px;
+        height: 14px;
+
+        margin-right: 5px;
+              
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        width: 24px;
+        height: 24px;
+
+        margin-right: 8px;
+ 
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 24px;
+        height: 24px;
+
+        margin-right: 8px;
+    }
+
+
+}
+
+.CountryItem-Flag {
+    position: absolute;
+
+    padding: 0;
+    margin: 0;
+    
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        top: 86px;
+        left: 25px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        top: 17px;
+        left: 397px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        top: 23px;
+        left: 337px;
+    }
+}

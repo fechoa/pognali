@@ -1,0 +1,78 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+.TitleBox {
+    position: relative;
+
+    display: flex;
+    width: 100%;
+
+    background-color: $basicBlue;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px; 
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;    
+
+        background-color: #192144;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        border-bottom-left-radius: 56px;
+        border-bottom-right-radius: 56px;    
+        
+        background-color: $basicBlue;
+    }
+}
+
+
+.TitleBox-Title {
+    margin: 0;
+    
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        padding-top: 22px;   
+        margin-left: 25px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        padding-top: 28px;   
+
+        margin-left: 75px;   
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        padding-top: 125px;   
+
+        margin-left: 124px;   
+    }    
+}
+
+.TitleBox-UserBox {
+    display: none;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: flex;
+    }
+}

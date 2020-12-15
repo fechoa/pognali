@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html class="Page" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>Погнали: Путешествия с попутчиками</title>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    </script>
+</head>
+<body class="PageBody">
+    <header class="Header">
+        <div class="Header-Wrapper">
+            <a class="Header-Logo  Logo" href="#!">
+                <svg class="Logo-Pic" width="96" height="15" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="15">
+                    <rect width="96" height="15" fill="url(#pattern0)"/>
+                    </mask>
+                    <g mask="url(#mask0)">
+                    <rect class="Logo-Fill" width="96" height="15" fill="white"/>
+                    </g>
+                    <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0" transform="scale(0.00787402 0.05)"/>
+                    </pattern>
+                    <image id="image0" width="127" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAAUCAYAAACkjuKKAAAFjUlEQVRoge2Ze4hXRRTHP6u59rAsy8xeaqFGZWmrpj3UwspCioge9iCyJ0GlkRWkPUgqsrAS/GMpwkijrDTL0h6Wm7U9rAxMqk17KoTS1oZbi7kbh74XhuHM3d9v9yqL7Rcu/H7nzpw5M2fmnO+cW9F3wPgW2o9hwJoC9HSi/TgKuBE4ExgAVAK/AR8CTwFLgGYbpUvnYu9SmA6sBW4CBsvxhl7ARGAR8BbQm07n71Iwx98PdG1lUqcDbwDdO52/a2AgcG9iJtsdWZVFh90SHc7PWZLZQP//4wp3YExyTvwG5f1fgJnAbdH7ySnnL86ZZ2qHpbAHcLTyTKOM2dBB17EC6AfsD2wGfuoANpWCI5w284D1+n234/xBOzLsjxazrAdWK8+slEE/A/eJiMR4UjeH1PMxcHvQ5zygRvpHJGyxsPgyUAtc47w3YjQN+BH4Xvba76+Bq7QpzgXeBZYBJ0b9h7dis/dMC/pPDHSflJjDOK2nzf9BoEfw7hOn/argdz/nfUvqqleRMABN4vhIFl71LPw8AkzJ0ZFhE3BxZOh7wNgS+o4HfgW+DIhrvVJSQ9Cui5w4MJCdrYU29AReA07JGcvanhGE1niccXJeOXhcazRYDD2Lwg3SXR/oOgt4PSLoNRrX/NcNmANcpmuchflZalelKHBMZNuqHXHy55boeMPBwJsysFz0AcZEC7KfszEPiRyPGG+Gea043jAhyqneOG3FqMDxhn0i3bZG852b2RhFV8M24AZgb23mWdowXymKxY43zCza+acB1zly2511KjbEME5QXea1c7V4SaXzLiY+3tUn6zdBacPDJnGUFFq7UpWKvChrYzwnDuLhyITcNvwr4loxLDJMBZYX7fxbHdk6VZ0GifTd7LQ5ATg5oXOjKlXZcxgwMscxQxUOs2dUjr1e/rcUMUQLaJxkRk7/PEyVYytkd1swQyc8hdQGtPXs7shXKFo8RhRuisB4R8dFwLf63azcNExEKoRdS953+v8D/FCGbbPLaOuF+wu0YQ1Nyp9DNI+diXHt2Hify/ZwAxhhfTVsVOTJt1OyeyTboLwTY6kj61ugLaWgq3hDiLrA8SEW7WTbLEIucAheqdioG0SNUuTVseMp+ORvdWS9NIHmSN7TabutQFtKwXaN2S1ou6/CdHwD6lGe6nahSSkjPAzLxIvyUkCMt3VzqkylyCJPfpNTFLHFnBzJuifyfl1BdnwgspM9S6NrU4g4nfRWtSyERbNbcsazNTxQxasQf7fR/sqAxaNTfIWzIfPQVYy/QYfSNsHhcfuic/5ix7FzdW9dqkW6w7kmtchRRWC6Jpuhvwo3HpY518CnJVsOHATcCRyb6L+nTtho5513sykFIfu3iHkpsKVMHVOiit5YFbmGh42KZvsPA39FMgurd+l78uLEQoWlyJ2JJ0QoQ1SqhF2rXB9X80JMSswH5dpSkHei7ykz12e40JFVxWVgc/6fUaMG8vGH8zbrs1HFhnKwVjkuQ6y/KUfX744sno/HRbI08J1OdluwVUUVD8uj7xeeDVlk+DSh4x3ggVZ0ePPH4ViuvIvqxCFmJjpmeCj6TPhCNNFngHP0YaQ1PA+cGk2iOjKyOkfHEm24DB8BX0RtNsvGDLZRnw3+P6pvBSnCuUXFoHAcq69/Bix0QrJVLC93bFgY2TBfv9c5PvgmKNVmWKmDkqFOY3lY4MhqY45jtX1U7hypDwQrEgpDHKf6+HqFRu+b8V7AldoIQ1USbdRHnRqF+thRGUbIpjU6RXnoo+8DjaqGeSekm0KhlUpfSnAAK0Jdr/x4gJxqi2t1A3OeyS4RkQvHOVS6bQ0staXCfWjDiw7ZtA86VnewyqLlZ4+h2y0p+3xrNqR4hfEGSxmW+y06Gbe5Vrr/A/Avocc+F49G4KEAAAAASUVORK5CYII="/>
+                    </defs>
+                </svg>   
+                <img class="Header-LogoPicTablet_w  Logo-Pic_tablet" width="166" height="42" src="img/png/LogoDesktop.png" alt="Логотип Погнали">
+                <img class="Header-LogoPicTablet_b  Logo-Pic_tablet_open" width="166" height="42" src="img/png/LogoDesktop_b.png" alt="Логотип Погнали">
+                
+                <img class="Header-LogoPicDesktop_w  Logo-Pic_desktop" width="200" height="52" src="img/png/LogoDesktop.png" alt="Логотип Погнали">             
+                <img class="Header-LogoPicDesktop_b  Logo-Pic_desktop_open" width="200" height="52" src="img/png/LogoDesktop_b.png" alt="Логотип Погнали">      
+            </a>
+
+            <button class="Header-BurgerButton">
+                <svg class="Header-BurgerIco_open" width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="Header-BurgerLine" width="25" height="3" rx="1.5" fill="white"/>
+                    <rect class="Header-BurgerLine" y="8" width="25" height="3" rx="1.5" fill="white"/>
+                </svg>  
+                <svg  class="Header-BurgerIco_close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 0.718003 -0.69604 0.718003 2.97168 0.988155)" fill="#CCCCCC"/>
+                    <rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 -0.718003 0.69604 0.718003 0.600586 17.754)" fill="#CCCCCC"/>
+                </svg>        
+            </button>
+
+            <ul class="Header-MenuList">
+                <li class="Header-MenuItem"><a class="Header-MenuLink  Link-Header" href="index.html"><span class="Header-MenuSpan" data-hover="О сервисе">О сервисе</span><span class="Header-MenuSpan_popup">О сервисе</span class></a></li>
+                <li class="Header-MenuItem"><a class="Header-MenuLink  Link-Header" href="form.html"><span class="Header-MenuSpan" data-hover="Направления">Направления</span><span class="Header-MenuSpan_popup">Направления</span></a></li>
+                <li class="Header-MenuItem"><a class="Header-MenuLink  Link-Header" href="#!"><span class="Header-MenuSpan" data-hover="Попутчики">Попутчики</span><span class="Header-MenuSpan_popup">Попутчики</span></a></li>
+            </ul>
+
+            <div class="Header-UserBox">
+                <a class="Header-Phone  Link-Header" href="tel:8 800 555-86-28">
+                    <p class="Header-PhoneIco">
+                    </p>    
+                </a>
+
+                <a class="Header-Mail  Link-Header" href="mailto:mail@htmlacademy.ru">
+                    <p class="Header-MailIco">
+                    </p>
+                </a>
+
+                <a class="Header-Auth  Link-Header" href="#!">
+                    <p class="Header-AuthText">Авторизация</p>
+                </a>
+            </div>
+            
+
+            <div class="Header-Contacts">
+                <a class="Header-ContactsLink  Link-Header" href="tel:8 800 555-86-28">
+                    <div class="Header-ContactsIco">
+                        <svg class="Header-ContactsIcoPic  Header-ContactsIcoPic_phone" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path  class="Header-ContactsIcoColor" fill-rule="evenodd" clip-rule="evenodd" d="M9.49995 1.08615C6.7035 1.08615 3.90033 1.55882 2.88322 2.50093C2.03934 3.28252 1.75804 4.66329 1.66321 5.53753C1.66321 5.53753 1.65015 5.62393 1.65015 5.66109C1.65015 6.00391 1.94445 6.27887 2.30427 6.27887C2.34678 6.27887 3.92002 6.15837 4.86851 6.08425C4.89134 6.08112 4.91434 6.07806 4.93716 6.07191C5.29043 6.0627 5.57505 5.7908 5.57505 5.45413L5.57822 4.237C5.57822 3.86014 5.90214 3.55737 6.3012 3.55737H12.6987C13.0978 3.55737 13.4218 3.86011 13.4218 4.237L13.425 5.45413C13.425 5.7908 13.7095 6.0627 14.0628 6.07191C14.0854 6.0781 14.1085 6.08112 14.1315 6.08425C15.0801 6.15834 16.6533 6.27887 16.6957 6.27887C17.0553 6.27887 17.3499 6.00391 17.3499 5.66109C17.3499 5.62393 17.3368 5.53753 17.3368 5.53753C17.2419 4.66329 16.9609 3.28255 16.117 2.50093C15.0996 1.55882 12.2964 1.08615 9.49995 1.08615ZM9.49995 9.11773C8.7771 9.11773 8.19164 9.67064 8.19164 10.3533C8.19164 11.036 8.7771 11.5889 9.49995 11.5889C10.2228 11.5889 10.8082 11.036 10.8082 10.3533C10.8082 9.67064 10.2228 9.11773 9.49995 9.11773ZM8.51873 6.33752V5.56528C8.51873 5.13902 8.15236 4.79304 7.70106 4.79304C7.24977 4.79304 6.8834 5.13905 6.8834 5.56528V6.33752L2.47095 10.7889C2.16689 11.07 1.97713 11.4622 1.97713 11.8948V13.1335C1.97713 13.8162 2.56264 14.3691 3.28545 14.3691H3.61254V15.1414C3.61254 15.5677 3.97895 15.9136 4.43025 15.9136C4.88154 15.9136 5.24792 15.5677 5.24792 15.1414V14.3691H13.752V15.1414C13.752 15.5677 14.1182 15.9136 14.5697 15.9136C15.021 15.9136 15.3873 15.5677 15.3873 15.1414V14.3691H15.7144C16.4373 14.3691 17.0227 13.8162 17.0227 13.1335V11.8948C17.0227 11.4622 16.833 11.07 16.5289 10.7889L12.1166 6.33752V5.56528C12.1166 5.13902 11.7502 4.79304 11.2989 4.79304C10.8476 4.79304 10.4812 5.13905 10.4812 5.56528V6.33752H8.51873ZM9.49995 7.8821C10.9456 7.8821 12.1166 8.98799 12.1166 10.3533C12.1166 11.7187 10.9457 12.8247 9.49995 12.8247C8.05426 12.8247 6.88336 11.7187 6.88336 10.3533C6.88336 8.98795 8.05426 7.8821 9.49995 7.8821Z" fill="#FFD74B"/>
+                        </svg>   
+                    </div>
+                    <p class="Header-ContactsText">
+                        8 800 555-86-28
+                    </p>    
+                </a>
+
+                <a class="Header-ContactsLink  Link-Header" href="mailto:mail@htmlacademy.ru">
+                    <div class="Header-ContactsIco">
+                        <svg class="Header-ContactsIcoPic  Header-ContactsIcoPic_mail" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path  class="Header-ContactsIcoColor" fill-rule="evenodd" clip-rule="evenodd" d="M18.7427 16.4663L14.5044 12.5L18.7427 8.53365L18.1648 7.90264L12 13.6719L5.8352 7.90264L5.25725 8.53365L9.49554 12.5L5.25725 16.4663L5.8352 17.0974L10.1217 13.0859L12 14.8438L13.8783 13.0859L18.1648 17.0974L18.7427 16.4663ZM4.48923 6.25C3.69742 6.25 3.05554 6.94884 3.05554 7.80786V17.1921C3.05554 18.0525 3.69222 18.75 4.48923 18.75H19.5107C20.3025 18.75 20.9444 18.0512 20.9444 17.1921V7.80786C20.9444 6.94748 20.3078 6.25 19.5107 6.25H4.48923Z" fill="#FFD74B"/>
+                        </svg>
+                            
+                    </div>
+                    <p class="Header-ContactsText">
+                        mail@htmlacademy.ru
+                    </p>
+                </a>
+            </div>
+
+            <ul class="Header-SocialList  SocialList">
+                <li class="SocialList-Item">
+                    <a href="#!" class="SocialList-Link">
+                        <p class="SocialList-Icon  SocialList-Icon_fb"></p>
+                    </a>
+                </li>
+                <li class="SocialList-Item">
+                    <a href="#!" class="SocialList-Link">
+                        <p class="SocialList-Icon  SocialList-Icon_vk"></p>
+                    </a>
+                </li>
+                <li class="SocialList-Item">
+                    <a href="#!" class="SocialList-Link">
+                        <p class="SocialList-Icon  SocialList-Icon_in"></p>
+                    </a>
+                </li>
+            </ul>
+    </header>
+
+    <main class="Main  Main_companions">
+        <div class="Main-TitleBox  TitleBox">
+            <h1 class="TitleBox-Title  HeadTitle">
+                Попутчики
+            </h1>
+        </div>
+
+        <div class="Main-FilterCountries  FilterBox  FilterBox_open">
+            <div class="FilterBox-TitleBox">
+                <p class="FilterBox-Title">Фильтрация по странам</p>
+            </div>
+
+            <div class="FilterBox-Continents">
+                <button class="FilterBox-ContinentsItem  FilterBox-ContinentsItem_current">Европа</button>
+                <button class="FilterBox-ContinentsItem">Азия</button>
+                <button class="FilterBox-ContinentsItem">Америка</button>
+                <button class="FilterBox-ContinentsItem">Острова</button>
+            </div>
+
+            <button class="FilterBox-ShowButton" type="button">
+                <p class="FilterBox-ShowText">Показать все</p>
+                <p class="FilterBox-ShowTextReturn">Свернуть</p>
+                <div class="FilterBox-ShowIco  FilterBox-ShowIco_close"></div>
+            </button>
+        </div>
+
+        <div class="Main-FilterScroll  FilterScroll">
+            <table class="FilterScroll-Calendar  CalendarCountries  CalendarCountries_filter">
+                <tr class="CalendarCountries-Row">
+                    <td class="CalendarCountries-Cell  CalendarCountries-Cell_selected">А</td>
+                    <td class="CalendarCountries-Cell">Б</td>
+                    <td class="CalendarCountries-Cell">В</td>
+                    <td class="CalendarCountries-Cell">Г</td>
+                    <td class="CalendarCountries-Cell">Д</td>
+                </tr>
+                <tr class="CalendarCountries-Row">
+                    <td class="CalendarCountries-Cell">Е</td>
+                    <td class="CalendarCountries-Cell">З</td>
+                    <td class="CalendarCountries-Cell">И</td>
+                    <td class="CalendarCountries-Cell">К</td>
+                    <td class="CalendarCountries-Cell">Л</td>
+                </tr>
+                <tr class="CalendarCountries-Row">
+                    <td class="CalendarCountries-Cell">М</td>
+                    <td class="CalendarCountries-Cell">Н</td>
+                    <td class="CalendarCountries-Cell">О</td>
+                    <td class="CalendarCountries-Cell">П</td>
+                    <td class="CalendarCountries-Cell">Р</td>
+                </tr>
+                <tr class="CalendarCountries-Row">
+                    <td class="CalendarCountries-Cell">С</td>
+                    <td class="CalendarCountries-Cell">Т</td>
+                    <td class="CalendarCountries-Cell">У</td>
+                    <td class="CalendarCountries-Cell">Ф</td>
+                    <td class="CalendarCountries-Cell">Х</td>
+                </tr>
+                <tr class="CalendarCountries-Row">
+                    <td class="CalendarCountries-Cell">Ч</td>
+                    <td class="CalendarCountries-Cell">Ш</td>
+                    <td class="CalendarCountries-Cell">Э</td>
+                    <td class="CalendarCountries-Cell">Ю</td>
+                    <td class="CalendarCountries-Cell">Я</td>
+                </tr>
+            </table>
+
+            <ul class="TableCountriesList  TableCountriesList_filter  FilterScroll-Table">
+                <li class="TableCountriesList-Item  TableCountriesList-Item_a">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Австралия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Австрия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Азербайджан</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Албания</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Алжир</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Ангола</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Андорра</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Антигуа и Барбуда</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Аргентина</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Армения</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Афганистан</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_b  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Багамские Острова</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Бангладеш</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Барбадос</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Бахрейн</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Белоруссия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Белиз</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Бельгия</a>/li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Бенин</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Болгария</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Боливия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Босния и Герцеговина</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Ботсвана</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Бразилия</a>/li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Бруней</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Буркина-Фасо</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Бурунди</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Бутан</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_v  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Вануату</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Великобритания</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Венгрия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Венесуэла</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Восточный Тимор</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Вьетнам</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_g  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Габон</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Гаити</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Гайана</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Гамбия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Гана</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Гватемала</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Гвинея</a>/li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Гвинея-Бисау</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Германия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Гондурас</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Греция</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Грузия</a></li>
+                    </ul>
+                </li>         
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_d  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Дания</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Джибути</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Доминика</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Доминикана</a></li>
+                    </ul>
+                </li>
+                
+                <li class="TableCountriesList-Item  TableCountriesList-Item_e  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Египет</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_z  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Замбия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Зимбабве</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_i  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Израиль</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Индия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Индонезия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Иордания</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Ирак</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Иран</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Ирландия</a>/li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Исландия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Испания</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Италия</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_k  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Кабо-Верде</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Казахстан</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Камбоджа</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Камерун</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Канада</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Катар</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Кения</a>/li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Кипр</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Киргизия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Кирибати</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Китай</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Колумбия</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_l  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Лаос</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Латвия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Лесото</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Либерия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Ливан</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Ливия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Литва</a>/li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Лихтенштейн</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Люксембург</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_m  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Маврикий</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Мавритания</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Мадагаскар</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Малави</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Малайзия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Мали</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Мальдивы</a>/li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Мальта</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Марокко</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_n  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Намибия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Науру</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Непал</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Нигер</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Нигерия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Нидерланды</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Никарагуа</a>/li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Новая Зеландия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Норвегия</a></li>
+                    </ul>
+                </li>
+                
+                <li class="TableCountriesList-Item  TableCountriesList-Item_o  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">ОАЭ</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Оман</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_p  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Пакистан</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Палау</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Панама</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Папуа - Новая Гвинея</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Парагвай</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Перу</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Польша</a>/li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Португалия</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_r  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Руанда</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Румыния</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Россия</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_s  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Сальвадор</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Самоа</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Сан-Марино</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Саудовская Аравия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Сейшелы</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Сенегал</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Сербия</a>/li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Сингапур</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Сирия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Словакия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Словения</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">США</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_t  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Таджикистан</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Таиланд</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Танзания</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Того</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Тонга</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Тринидад и Тобаго</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Тувалу</a>/li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Тунис</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Туркмения</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Турция</a></li>
+                    </ul>
+                </li>
+                
+                <li class="TableCountriesList-Item  TableCountriesList-Item_u  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Уганда</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Узбекистан</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Украина</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Уругвай</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_f  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Фиджи</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Филиппины</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Финляндия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Франция</a></li>
+                    </ul>
+                </li>
+                
+                <li class="TableCountriesList-Item  TableCountriesList-Item_h  OffStep">
+                    <ul class="TableCountriesList-Scroll">                        
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Хорватия</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_c  OffStep">
+                    <ul class="TableCountriesList-Scroll">                        
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Чад</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Черногория</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Чехия</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Чили</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_s  OffStep">
+                    <ul class="TableCountriesList-Scroll">
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Швейцария</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Швеция</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Шри-Ланка</a></li>
+                    </ul>
+                </li>
+                
+                <li class="TableCountriesList-Item  TableCountriesList-Item_q  OffStep">
+                    <ul class="TableCountriesList-Scroll">                        
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Эквадор</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Эритрея</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Эсватини</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Эстония</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Эфиопия</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_y  OffStep">
+                    <ul class="TableCountriesList-Scroll">                        
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">ЮАР</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Южный Судан</a></li>
+                    </ul>
+                </li>
+
+                <li class="TableCountriesList-Item  TableCountriesList-Item_j  OffStep">
+                    <ul class="TableCountriesList-Scroll">                        
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Ямайка</a></li>
+                        <li class="TableCountriesList-ScrollItem"><a class="TableCountriesList-Link" href="#!">Япония</a></li>
+                    </ul>
+                </li>    
+            </ul>
+
+            <ul class="FilterScroll-CountryList">
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">А</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Австралия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Австрия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Азербайджан</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Албания</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Алжир</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Ангола</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Андорра</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Антигуа и Барбуда</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Аргентина</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Армения</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Афганистан</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Б</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Багамские Острова
+                        </a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Бангладеш</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Барбадос</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Бахрейн</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Беларусь</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Белиз</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Бельгия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Бенин</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Болгария</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Боливия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Босния и Герцеговина</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Ботсвана</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Бразилия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Бруней</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Буркина-Фасо</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Бурунди</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Бутан</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">В</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Вануату</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Великобритания</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Венгрия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Венесуэла</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Восточный Тимор</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Вьетнам</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Г</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Габон</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Гаити</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Гайана</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Гамбия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Гана</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Гватемала</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Гвинея</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Гвинея-Бисау</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Германия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Гондурас</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Гренада</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Греция</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Грузия</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Д</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Дания</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Джибути</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Доминика</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Доминикана</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Е</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Египет</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">З</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Замбия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Зимбабве</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">И</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Израиль</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Индия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Индонезия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Иордания</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Ирак</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Иран</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Ирландия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Исландия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Испания</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Италия</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">К</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Кабо-Верде</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Казахстан</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Камбоджа</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Камерун</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Канада</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Катар</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Кения</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Кипр</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Киргизия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Кирибати</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Китай</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Колумбия</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Л</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Лаос</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Латвия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Лесото</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Либерия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Ливан</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Ливия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Литва</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Лихтенштейн</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Люксембург</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">М</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Маврикий</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Мавритания</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Мадагаскар</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Малави</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Малайзия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Мали</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Мальдивы</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Мальта</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Марокко</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Н</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Намибия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Науру</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Непал</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Нигер</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Нигерия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Нидерланды</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Никарагуа</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Новая Зеландия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Норвегия</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">О</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">ОАЭ</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Оман</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">П</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Пакистан</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Палау</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Панама</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Папуа - Новая Гвинея</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Парагвай</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Перу</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Польша</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Португалия</a></li>
+                    </ul>
+                </li>
+                
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Р</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Руанда</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Румыния</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Россия </a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">С</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Сальвадор</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Самоа</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Сан-Марино</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Саудовская Аравия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Сейшелы</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Сенегал</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Сербия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Сингапур</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Сирия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Словакия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Словения</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">США</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Т</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Таджикистан</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Таиланд</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Танзания</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Того</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Тонга</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Тринидад и Тобаго</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Тувалу</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Тунис</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Туркмения</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Турция</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">У</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Уганда</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Узбекистан</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Украина</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Уругвай</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Ф</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Фиджи</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Филиппины</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Финляндия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Франция</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Х</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Хорватия</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Ч</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Чад</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Черногория</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Чехия</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Чили</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Ш</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Швейцария</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Швеция</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Шри-Ланка</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Э</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Эквадор</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Эритрея</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Эсватини</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Эстония</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Эфиопия</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Ю</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">ЮАР</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Южный Судан</a></li>
+                    </ul>
+                </li>
+
+                <li class="FilterScroll-CountryItem">
+                    <p class="FilterScroll-CountryLetter">Я</p>
+                    <ul class="FilterScroll-Countries">
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Ямайка</a></li>
+                        <li class="FilterScroll-CountriesItem"><a class="FilterScroll-CountriesLink" href="#!">Япония</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <button class="FilterScroll-Button">
+                <p class="FilterScroll-ButtonText">Свернуть</p>
+            </button>
+        </div>
+
+        <div class="Main-Content  CompanionsContent">
+            <form action="get" class="CompanionsContent-Filter  Filter">
+                <h3 class="Filter-Title">Подберите идеального попутчика</h3>
+    
+                <fieldset class="Filter-Section">
+                    <legend class="Filter-Subtitle">Хобби</legend>
+    
+                    <ul class="Filter-List">
+                        <li class="Filter-Item">
+                            <input class="Filter-Checkbox" type="checkbox" name="gym" id="gym">
+                            <label class="Filter-Label" for="gym">Спортзал</label>
+                        </li>
+                        <li class="Filter-Item">
+                            <input class="Filter-Checkbox" type="checkbox" name="hookah" id="hookah">
+                            <label class="Filter-Label" for="hookah">Кальян</label>
+                        </li>
+                        <li class="Filter-Item">
+                            <input class="Filter-Checkbox" type="checkbox" name="sofa" id="sofa">
+                            <label class="Filter-Label" for="sofa">Диван</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="Filter-Section">
+                    <legend class="Filter-Subtitle">Музыка</legend>
+    
+                    <ul class="Filter-List">
+                        <li class="Filter-Item">
+                            <input class="Filter-Checkbox" type="checkbox" name="rock" id="rock">
+                            <label class="Filter-Label" for="rock">Тяжелый рок</label>
+                        </li>
+                        <li class="Filter-Item">
+                            <input class="Filter-Checkbox" type="checkbox" name="rap" id="rap">
+                            <label class="Filter-Label" for="rap">Русский рэп</label>
+                        </li>
+                        <li class="Filter-Item">
+                            <input class="Filter-Checkbox" type="checkbox" name="dance" id="dance">
+                            <label class="Filter-Label" for="dance">Евроденс</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="Filter-Section">
+                    <legend class="Filter-Subtitle">Еда</legend>
+    
+                    <ul class="Filter-List">
+                        <li class="Filter-Item">
+                            <input class="Filter-Checkbox" type="checkbox" name="meat" id="meat">
+                            <label class="Filter-Label" for="meat">Мясоед</label>
+                        </li>
+                        <li class="Filter-Item">
+                            <input class="Filter-Checkbox" type="checkbox" name="pp" id="pp">
+                            <label class="Filter-Label" for="pp">Сидит на ПП</label>
+                        </li>
+                        <li class="Filter-Item">
+                            <input class="Filter-Checkbox" type="checkbox" name="vegan" id="vegan">
+                            <label class="Filter-Label" for="vegan">Веган-сыроед</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="Filter-Section">
+                    <legend class="Filter-Subtitle">Транспорт</legend>
+    
+                    <ul class="Filter-TransportList">
+                        <li class="Filter-TransportItem">
+                            <p class="Filter-TransportIco  Filter-TransportIco_fly  Filter-TransportIco_active"></p>
+                        </li>
+
+                        <li class="Filter-TransportItem">
+                            <p class="Filter-TransportIco  Filter-TransportIco_car  Filter-TransportIco_active"></p>
+                        </li>
+
+                        <li class="Filter-TransportItem">
+                            <p class="Filter-TransportIco  Filter-TransportIco_bike"></p>
+                        </li>
+
+                        <li class="Filter-TransportItem">
+                            <p class="Filter-TransportIco  Filter-TransportIco_walk  Filter-TransportIco_active"></p>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="Filter-Section">
+                    <legend class="Filter-Subtitle">Левел</legend>
+                    
+                    <div class="Filter-Range">
+                        <div class="Filter-InputBox">
+                            <input type="number" class="Filter-Input  Filter-Input_less" min="1" max="99" step="1" value="30">
+                            <div class="Filter-DecorationLines"></div>
+                            <input type="number" class="Filter-Input  Filter-Input_more" min="1" max="99" step="1" value="100">
+                        </div>
+        
+                        <div class="Filter-IndicatorBar">
+                            <div class="Filter-Toggle  Filter-Toggle_less"></div>
+                            <div class="Filter-LoadingBar"></div>
+                            <div class="Filter-Toggle  Filter-Toggle_more"></div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <button class="Filter-Submit">Показать</button>
+            </form>
+
+            <div class="CompanionsContent-CardsBox">
+                <ul class="CompanionsContent-Cards  Card">
+                    <li class="Card-Item">
+                        <header class="Card-Header">
+                            <img src="img/jpg/Firsova_m.jpg" width="70" height="70" alt="Таня Фирсова" class="Card-Avatar  Card-Avatar_m">
+                            <img src="img/png/Firsova_t.png" width="190" height="190" alt="Таня Фирсова" class="Card-Avatar  Card-Avatar_t">
+                            <img src="img/png/Firsova_d.png" width="285" height="285" alt="Таня Фирсова" class="Card-Avatar  Card-Avatar_d">
+
+                            <button class="Card-Favorite  Card-Favorite_active">
+                                <p class="Card-FavoriteIco"></p>
+                            </button>
+        
+                            <div class="Card-UserInfo">
+                                <h4 class="Card-Name"><a class="Card-NameLink" href="#!">Таня <br class="Card-RowName">Фирсова</a></h4>
+                                <span class="Card-Points">1,5 М</span>
+                            </div>
+        
+                            <div class="Card-Status  Card-Status_off"></div>
+                        </header>
+
+                        <p class="Card-Tags">
+                            #ЗОЖ #ПП #Фитнес #пляж  #авокадо #смузи
+                        </p>
+        
+                        <div class="Card-WantVisit">
+                            <h4 class="Card-WantVisitText">Хочет посетить:</h4>
+        
+                            <ul class="Card-CountriesList">
+                                <li class="Card-CountriesItem">
+                                    <p class="Card-CountriesIco  Card-CountriesIco_sri"></p>
+                                    <p class="Card-CountriesText">Шри-ланка</p>
+                                </li>
+                                <li class="Card-CountriesItem">
+                                    <p class="Card-CountriesIco  Card-CountriesIco_tai"></p>
+                                    <p class="Card-CountriesText">Таиланд</p>
+                                </li>
+                                <li class="Card-CountriesItem">
+                                    <p class="Card-CountriesIco  Card-CountriesIco_sei"></p>
+                                    <p class="Card-CountriesText">Сейшелы</p>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div class="Card-WayLevelBox">
+                            <div class="Card-Way">
+                                <h4 class="Card-WayTitle">Транспорт:</h4>
+        
+                                <ul class="Card-TransportList">
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_fly  Card-TransportIco_active">
+                                        </div>
+                                    </li>
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_car"></div>
+                                    </li>
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_bike"></div>
+                                    </li>
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_walk"></div>
+                                    </li>
+                                </ul>
+                            </div>
+        
+                            <div class="Card-Level">
+                                <h4 class="Card-LevelTitle">Левел:</h4>
+        
+                                <div class="Card-LevelIndicator">
+                                    <p class="Card-LevelText">99</p>
+                                    <p class="Card-LevelSpan">level</p>
+                                    <div class="Card-LevelProgress  Card-LevelProgress_99"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="Card-Call  ButtonForm">
+                            <p class="Card-CallText  ButtonForm-Text">Позвать!</p>
+                        </button>
+                    </li>
+        
+                    <li class="Card-Item">
+                        <header class="Card-Header">
+                            <img src="img/jpg/Demin_m.jpg" width="70" height="70" alt="Петя Демин" class="Card-Avatar  Card-Avatar_m">
+                            <img src="img/png/Demin_t.png" width="190" height="190" alt="Петя Демин" class="Card-Avatar  Card-Avatar_t">
+                            <img src="img/png/Demin_d.png" width="285" height="285" alt="Петя Демин" class="Card-Avatar  Card-Avatar_d">
+
+                            <button class="Card-Favorite  Card-Favorite_active">
+                                <p class="Card-FavoriteIco"></p>
+                            </button>
+                            
+                            <div class="Card-UserInfo">
+                                <h4 class="Card-Name"><a class="Card-NameLink" href="#!">Петя <br class="Card-RowName">Демин</a></h4>
+                                <span class="Card-Points">1500</span>
+                            </div>
+        
+                            <div class="Card-Status  Card-Status_off"></div>
+                        </header>
+                        <p class="Card-Tags">
+                            #бургер #бар #футбол #концерт #крафт
+                        </p>
+        
+                        <div class="Card-WantVisit">
+                            <h4 class="Card-WantVisitText">Хочет посетить:</h4>
+        
+                            <ul class="Card-CountriesList">
+                                <li class="Card-CountriesItem">
+                                    <p class="Card-CountriesIco  Card-CountriesIco_bel"></p>
+                                    <p class="Card-CountriesText">Бельгия</p>
+                                </li>
+                                <li class="Card-CountriesItem">
+                                    <p class="Card-CountriesIco  Card-CountriesIco_cze"></p>
+                                    <p class="Card-CountriesText">Чехия</p>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div class="Card-WayLevelBox">
+                            <div class="Card-Way">
+                                <h4 class="Card-WayTitle">Транспорт:</h4>
+        
+                                <ul class="Card-TransportList">
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_fly  Card-TransportIco_active"></div>
+                                    </li>
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_car"></div>
+                                    </li>
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_bike"></div>
+                                    </li>
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_walk"></div>
+                                    </li>
+                                </ul>
+                            </div>
+        
+                            <div class="Card-Level">
+                                <h4 class="Card-LevelTitle">Левел:</h4>
+        
+                                <div class="Card-LevelIndicator">
+                                    <p class="Card-LevelText">80</p>
+                                    <p class="Card-LevelSpan">level</p>
+                                    <div class="Card-LevelProgress  Card-LevelProgress_80"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="Card-Call  ButtonForm">
+                            <p class="Card-CallText  ButtonForm-Text">Позвать!</p>
+                        </button>
+                    </li>
+        
+                    <li class="Card-Item">
+                        <header class="Card-Header">
+                            <img src="img/jpg/Smolov_m.jpg" width="70" height="70" alt="Марк Смолов" class="Card-Avatar  Card-Avatar_m">
+                            <img src="img/png/Smolov_t.png" width="190" height="190" alt="Марк Смолов" class="Card-Avatar  Card-Avatar_t">
+                            <img src="img/png/Smolov_d.png" width="285" height="285" alt="Марк Смолов" class="Card-Avatar  Card-Avatar_d">
+
+                            <button class="Card-Favorite">
+                                <p class="Card-FavoriteIco"></p>
+                            </button>
+        
+                            <div class="Card-UserInfo">
+                                <h4 class="Card-Name"><a class="Card-NameLink" href="#!">Марк <br class="Card-RowName">Смолов</a></h4>
+                                <span class="Card-Points">170</span>
+                            </div>
+        
+                            <div class="Card-Status  Card-Status_off"></div>
+                        </header>
+                        
+                        <p class="Card-Tags">
+                            #рэп #тату #хайпбист #кроссовки #суприм
+                        </p>
+        
+                        <div class="Card-WantVisit">
+                            <h4 class="Card-WantVisitText">Хочет посетить:</h4>
+        
+                            <ul class="Card-CountriesList">
+                                <li class="Card-CountriesItem">
+                                    <p class="Card-CountriesIco  Card-CountriesIco_usa"></p>
+                                    <p class="Card-CountriesText">США</p>
+                                </li>
+                                <li class="Card-CountriesItem">
+                                    <p class="Card-CountriesIco  Card-CountriesIco_aus"></p>
+                                    <p class="Card-CountriesText">Австралия</p>
+                                </li>
+                                <li class="Card-CountriesItem">
+                                    <p class="Card-CountriesIco  Card-CountriesIco_dom"></p>
+                                    <p class="Card-CountriesText">Доминика</p>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div class="Card-WayLevelBox">
+                            <div class="Card-Way">
+                                <h4 class="Card-WayTitle">Транспорт:</h4>
+        
+                                <ul class="Card-TransportList">
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_fly  Card-TransportIco_active"></div>
+                                    </li>
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_car"></div>
+                                    </li>
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_bike"></div>
+                                    </li>
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_walk"></div>
+                                    </li>
+                                </ul>
+                            </div>
+        
+                            <div class="Card-Level">
+                                <h4 class="Card-LevelTitle">Левел:</h4>
+        
+                                <div class="Card-LevelIndicator">
+                                    <p class="Card-LevelText">50</p>
+                                    <p class="Card-LevelSpan">level</p>
+                                    <div class="Card-LevelProgress  Card-LevelProgress_50"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="Card-Call  ButtonForm">
+                            <p class="Card-CallText  ButtonForm-Text">Позвать!</p>
+                        </button>                        
+                    </li>
+                    
+                    <li class="Card-Item">
+                        <header class="Card-Header">
+                            <img src="img/jpg/Rogovaya.jpg" width="70" height="70" alt="Лариса Роговая" class="Card-Avatar  Card-Avatar_m">
+                            <img src="img/png/Rogovaya_t.png" width="190" height="190" alt="Лариса Роговая" class="Card-Avatar  Card-Avatar_t">
+                            <img src="img/png/Rogovaya_d.png" width="285" height="285" alt="Лариса Роговая" class="Card-Avatar  Card-Avatar_d">
+
+                            <button class="Card-Favorite">
+                                <p class="Card-FavoriteIco"></p>
+                            </button>
+        
+                            <div class="Card-UserInfo">
+                                <h4 class="Card-Name"><a class="Card-NameLink" href="#!">Лариса <br class="Card-RowName">Роговая</a></h4>
+                                <span class="Card-Points">23</span>
+                            </div>
+        
+                            <div class="Card-Status  Card-Status_on"></div>
+                        </header>
+
+                        <p class="Card-Tags">
+                            #образование #карьера #учеба #линкедин
+        
+                        </p>
+        
+                        <div class="Card-WantVisit">
+                            <h4 class="Card-WantVisitText">Хочет посетить:</h4>
+        
+                            <ul class="Card-CountriesList">
+                                <li class="Card-CountriesItem">
+                                    <p class="Card-CountriesIco  Card-CountriesIco_eng"></p>
+                                    <p class="Card-CountriesText">Великобритания</p>
+                                </li>
+                                <li class="Card-CountriesItem">
+                                    <p class="Card-CountriesIco  Card-CountriesIco_ger"></p>
+                                    <p class="Card-CountriesText">Германия</p>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div class="Card-WayLevelBox">
+                            <div class="Card-Way">
+                                <h4 class="Card-WayTitle">Транспорт:</h4>
+        
+                                <ul class="Card-TransportList">
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_fly  Card-TransportIco_active"></div>
+                                    </li>
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_car"></div>
+                                    </li>
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_bike"></div>
+                                    </li>
+                                    <li class="Card-TransportItem">
+                                        <div class="Card-TransportIco  Card-TransportIco_walk"></div>
+                                    </li>
+                                </ul>
+                            </div>
+        
+                            <div class="Card-Level">
+                                <h4 class="Card-LevelTitle">Левел:</h4>
+        
+                                <div class="Card-LevelIndicator">
+                                    <p class="Card-LevelText">25</p>
+                                    <p class="Card-LevelSpan">level</p>
+                                    <div class="Card-LevelProgress  Card-LevelProgress_25"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="Card-Call  ButtonForm">
+                            <p class="Card-CallText  ButtonForm-Text">Позвать!</p>
+                        </button>
+                    </li>
+                </ul>
+        
+                <button class="CompanionsContent-ShowButton">
+                    <p class="CompanionsContent-ShowButtonText">Показать еще</p>
+                </button>
+        
+                <div class="CompanionsContent-PaginationBox  Pagination">
+                    <ul class="Pagination-List">
+                        <li class="Pagination-Item">
+                            <a href="#!" class="Pagination-Link  Pagination-Link_active">
+                                <p class="Pagination-Text">1</p>
+                            </a>
+                        </li>
+                        <li class="Pagination-Item">
+                            <a href="#!" class="Pagination-Link">
+                                <p class="Pagination-Text">2</p>
+                            </a>
+                        </li>
+                        <li class="Pagination-Item">
+                            <a href="#!" class="Pagination-Link">
+                                <p class="Pagination-Text">3</p>
+                            </a>
+                        </li>
+                        <li class="Pagination-Item">
+                            <a href="#!" class="Pagination-Link">
+                                <p class="Pagination-Text">4</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="Pagination-ButtonBox">
+                        <button class="Pagination-Button  Pagination-Button_prev">
+                            <div class="Pagination-ButtonIco"></div>
+                        </button>
+                        <button class="Pagination-Button  Pagination-Button_next">
+                            <div class="Pagination-ButtonIco"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+
+    </main>
+
+    <footer class="Footer">
+        <div class="Footer-Wrapper">
+            <a class="Footer-Logo  Logo" href="#!">
+                <svg class="Logo-Pic" width="96" height="15" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="15">
+                    <rect width="96" height="15" fill="url(#pattern0)"/>
+                    </mask>
+                    <g mask="url(#mask0)">
+                    <rect width="96" height="15" fill="#192144"/>
+                    </g>
+                    <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0" transform="scale(0.00787402 0.05)"/>
+                    </pattern>
+                    <image id="image0" width="127" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAAUCAYAAACkjuKKAAAFjUlEQVRoge2Ze4hXRRTHP6u59rAsy8xeaqFGZWmrpj3UwspCioge9iCyJ0GlkRWkPUgqsrAS/GMpwkijrDTL0h6Wm7U9rAxMqk17KoTS1oZbi7kbh74XhuHM3d9v9yqL7Rcu/H7nzpw5M2fmnO+cW9F3wPgW2o9hwJoC9HSi/TgKuBE4ExgAVAK/AR8CTwFLgGYbpUvnYu9SmA6sBW4CBsvxhl7ARGAR8BbQm07n71Iwx98PdG1lUqcDbwDdO52/a2AgcG9iJtsdWZVFh90SHc7PWZLZQP//4wp3YExyTvwG5f1fgJnAbdH7ySnnL86ZZ2qHpbAHcLTyTKOM2dBB17EC6AfsD2wGfuoANpWCI5w284D1+n234/xBOzLsjxazrAdWK8+slEE/A/eJiMR4UjeH1PMxcHvQ5zygRvpHJGyxsPgyUAtc47w3YjQN+BH4Xvba76+Bq7QpzgXeBZYBJ0b9h7dis/dMC/pPDHSflJjDOK2nzf9BoEfw7hOn/argdz/nfUvqqleRMABN4vhIFl71LPw8AkzJ0ZFhE3BxZOh7wNgS+o4HfgW+DIhrvVJSQ9Cui5w4MJCdrYU29AReA07JGcvanhGE1niccXJeOXhcazRYDD2Lwg3SXR/oOgt4PSLoNRrX/NcNmANcpmuchflZalelKHBMZNuqHXHy55boeMPBwJsysFz0AcZEC7KfszEPiRyPGG+Gea043jAhyqneOG3FqMDxhn0i3bZG852b2RhFV8M24AZgb23mWdowXymKxY43zCza+acB1zly2511KjbEME5QXea1c7V4SaXzLiY+3tUn6zdBacPDJnGUFFq7UpWKvChrYzwnDuLhyITcNvwr4loxLDJMBZYX7fxbHdk6VZ0GifTd7LQ5ATg5oXOjKlXZcxgwMscxQxUOs2dUjr1e/rcUMUQLaJxkRk7/PEyVYytkd1swQyc8hdQGtPXs7shXKFo8RhRuisB4R8dFwLf63azcNExEKoRdS953+v8D/FCGbbPLaOuF+wu0YQ1Nyp9DNI+diXHt2Hify/ZwAxhhfTVsVOTJt1OyeyTboLwTY6kj61ugLaWgq3hDiLrA8SEW7WTbLEIucAheqdioG0SNUuTVseMp+ORvdWS9NIHmSN7TabutQFtKwXaN2S1ou6/CdHwD6lGe6nahSSkjPAzLxIvyUkCMt3VzqkylyCJPfpNTFLHFnBzJuifyfl1BdnwgspM9S6NrU4g4nfRWtSyERbNbcsazNTxQxasQf7fR/sqAxaNTfIWzIfPQVYy/QYfSNsHhcfuic/5ix7FzdW9dqkW6w7kmtchRRWC6Jpuhvwo3HpY518CnJVsOHATcCRyb6L+nTtho5513sykFIfu3iHkpsKVMHVOiit5YFbmGh42KZvsPA39FMgurd+l78uLEQoWlyJ2JJ0QoQ1SqhF2rXB9X80JMSswH5dpSkHei7ykz12e40JFVxWVgc/6fUaMG8vGH8zbrs1HFhnKwVjkuQ6y/KUfX744sno/HRbI08J1OdluwVUUVD8uj7xeeDVlk+DSh4x3ggVZ0ePPH4ViuvIvqxCFmJjpmeCj6TPhCNNFngHP0YaQ1PA+cGk2iOjKyOkfHEm24DB8BX0RtNsvGDLZRnw3+P6pvBSnCuUXFoHAcq69/Bix0QrJVLC93bFgY2TBfv9c5PvgmKNVmWKmDkqFOY3lY4MhqY45jtX1U7hypDwQrEgpDHKf6+HqFRu+b8V7AldoIQ1USbdRHnRqF+thRGUbIpjU6RXnoo+8DjaqGeSekm0KhlUpfSnAAK0Jdr/x4gJxqi2t1A3OeyS4RkQvHOVS6bQ0staXCfWjDiw7ZtA86VnewyqLlZ4+h2y0p+3xrNqR4hfEGSxmW+y06Gbe5Vrr/A/Avocc+F49G4KEAAAAASUVORK5CYII="/>
+                    </defs>
+                </svg>   
+                <img class="Logo-Pic_tablet" width="166" height="42" src="img/png/LogoDesktop.png" alt="Логотип Погнали">
+                <img class="Logo-Pic_desktop" width="200" height="52" src="img/png/LogoDesktop.png" alt="Логотип Погнали">             
+            </a>
+
+            <ul class="Footer-SocialList  SocialList">
+                <li class="SocialList-Item">
+                    <a class="SocialList-Link" href="#!">
+                        <p class="SocialList-Icon  SocialList-Icon_fb"></p>
+                    </a>
+                </li>
+                <li class="SocialList-Item">
+                    <a class="SocialList-Link" href="#!">
+                        <p class="SocialList-Icon  SocialList-Icon_vk"></p>
+                    </a>
+                </li>
+                <li class="SocialList-Item">
+                    <a class="SocialList-Link" href="#!">
+                        <p class="SocialList-Icon  SocialList-Icon_in"></p>
+                    </a>
+                </li>
+            </ul>
+
+            <a class="Footer-Copyright" href="#!">
+                <small class="Footer-CopyrightText">Разработано</small>
+                <p class="Footer-CopyrightLink"></p>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>  
+
+    <!-- <script src="js/main.min.js"></script> -->
+</body>
+</html>

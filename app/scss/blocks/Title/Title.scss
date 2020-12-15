@@ -1,0 +1,122 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.Title {
+    position: relative;
+    z-index: 1;
+
+    font-family: $bold, 'Arial';
+    font-style: normal;
+    font-weight: 700;
+
+    margin: 0;
+    padding: 0;
+
+    color: $specialOrange;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        font-size: 24px;
+        line-height: 24px;
+
+        margin-bottom: 19px;
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        font-size: 45px;
+        line-height: 45px;  
+    }
+    
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 45px;
+        line-height: 45px;
+    }
+}
+
+.Title_rect {
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+            &::after {
+                position: absolute;
+                z-index: -2;
+                top: -30px;
+                left: -38px;
+
+                content: '';
+    
+                width: 113px;
+                height: 132px;
+    
+                background: #141B3B;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {  
+            &::after {
+                position: absolute;
+    
+                content: '';
+    
+                width: 212px;
+                height: 212px;
+    
+                background: #141B3B;
+                
+                border-radius: 20px;
+            }
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            &::after {
+                position: absolute;
+    
+                content: '';
+    
+                width: 212px;
+                height: 212px;
+                
+    
+                background: #141B3B;
+                
+                border-radius: 20px;
+            }
+        }
+}
+
+.Title_form {
+    color: $basicBlueDark;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        font-size: 24px;
+        line-height: 24px;
+
+        margin-bottom: 29px;    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        font-size: 36px;
+        line-height: 36px;   
+
+        margin-bottom: 48px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 36px;
+        line-height: 36px;   
+
+        margin-bottom: 49px;
+    }    
+}

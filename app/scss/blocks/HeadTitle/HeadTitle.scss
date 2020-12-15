@@ -1,0 +1,54 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+.HeadTitle {
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: 700;
+
+    margin: 0;
+    padding: 0;
+
+    color: $basicWhite;    
+
+    border-radius: 4px;
+    border-bottom-color: $specialOrange;
+    border-bottom-style: solid;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        font-size: 36px;
+        line-height: 36px;   
+
+        padding-bottom: 9px;
+
+        border-bottom-width: 5px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        font-size: 60px;
+        line-height: 60px;     
+        
+        padding-bottom: 63px;
+
+        border-bottom-width: 8px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 60px;
+        line-height: 60px; 
+        
+        padding-bottom: 64px;
+        
+        border-bottom-width: 8px;
+    }
+}

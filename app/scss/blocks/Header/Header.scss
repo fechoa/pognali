@@ -1,0 +1,1000 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+// Header
+
+.Header {
+    z-index: 10;
+    transition: 0.2s;
+    
+    // Mobile
+        min-height: 73px;
+
+        padding-top: 27px;
+        padding-left: 26px;
+        padding-right: 26px;
+
+        background-color: $basicBlue;
+
+    // Tablet
+    @media (min-width: $tablet-width) {
+        min-height: 132px;
+
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        background-color: #182044;
+
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        min-height: 99px;
+
+        padding-top: 60px;
+        padding-left: 60px;
+        padding-right: 46px;
+
+        margin-bottom: 0;
+
+        background-color: $basicBlue;
+    }
+}
+
+.Header-Wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    position: relative;
+
+    margin: 0 auto;
+
+    // Mobile
+        min-width: 280px;
+    
+    // Tablet
+    @media (min-width: $tablet-width) {
+        min-width: 688px;
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        justify-content: start;
+        min-width: 1320px;
+    }
+}
+
+.Header-Logo {
+    // Mobile
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+        margin-top: 2px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-right: 140px;
+
+        &::after {
+            content: '';
+    
+            width: 60px;
+            height: 2px;
+
+            position: absolute;
+
+            top: 50%;
+            left: 240px;
+    
+            background-color: $basicWhite;
+        }
+    }
+}
+
+.Header-BurgerButton {
+    display: block;
+
+    width: 25px;
+    height: 11px;
+
+    margin: 0;
+    margin-top: 2px;
+    margin-right: 3px;
+    padding: 0;
+    border: 0;
+
+    background-color: transparent;
+
+    // Mobile
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+        margin-top: 16px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: none;
+    } 
+}
+
+.Header-BurgerIco_open {
+    display: block;
+}
+.Header-BurgerIco_close {
+    display: none;
+}
+
+.Header-MenuList {
+    display: none;
+    list-style: none;
+
+    // Mobile
+
+    // Tablet
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: flex;
+        flex-wrap: wrap;
+
+        font-family: 'BloggerSansMedium', 'Arial';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+
+        max-width: 500px;
+
+        text-transform: uppercase;
+
+        margin: 0;
+        padding: 0;
+
+        color: $basicWhite;
+    } 
+}
+
+.Header-MenuItem {
+    // Mobile
+    // Tablet
+    // Desktop
+    @media (min-width: $desktop-width) {
+        padding: 0;
+        margin: 0;
+
+        margin-right: 34px;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.Header-MenuLink {
+    color: inherit;
+    overflow: hidden;
+	padding: 0 4px;
+    height: 1em;
+    
+    margin: 0;
+    padding: 0;
+
+    // Mobile
+    // Tablet
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: block;
+        
+        margin-top: 21px;
+    }
+
+    // Events
+    &:hover, &:focus {
+        color: $basicYellow;
+    }
+    &:active {
+        color: $basicYellow;
+        opacity: 0.2;
+    }
+
+    &:hover .Header-MenuSpan,
+    &:focus .Header-MenuSpan {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%);
+    }
+}
+
+.Header-MenuSpan {
+	position: relative;
+	display: inline-block;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    
+    &::before {
+        position: absolute;
+        top: 100%;
+        content: attr(data-hover);
+        font-weight: 700;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+    // Mobile
+    // Tablet
+    // Desktop
+}
+
+.Header-MenuSpan_popup {
+    display: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+.Header-UserBox {
+    // Mobile
+    @media (max-width: $mobile-width-only){
+        display: none;
+    }
+    // Tablet
+    @media (min-width: $tablet-width){
+        display: flex;
+        flex-wrap: wrap;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-left: auto;
+    }
+}
+
+.Header-Phone {
+    margin: 0;
+    padding: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+    }
+
+    
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        display: flex;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        width: 50px;
+        height: 50px;
+
+        border-radius: 50%;
+
+        background-color: $specialOrange;
+    }
+
+    // Events
+    &:hover, &:focus {
+        background-color: $specialYellowDark;
+    }
+    &:active .Header-PhoneIco {
+        opacity: 0.3;
+    }
+}
+
+.Header-PhoneIco {
+    margin: 0;
+    padding: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+    }
+    // Tablet
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+
+        background-image: url('../../../img/svg/Phone-Ico.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+}
+
+.Header-Mail {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+    }
+    
+    
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        display: flex; 
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        width: 50px;
+        height: 50px;
+
+        border-radius: 50%;
+
+        background-color: $specialYellowDark;
+    }
+
+    // Events
+    &:hover, &:focus {
+        background-color: $specialOrange;
+    }
+    &:active .Header-MailIco {
+        opacity: 0.3;
+    }
+}
+
+.Header-MailIco {
+    margin: 0;
+    padding: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+    }
+    // Tablet
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: inline-block;
+        width: 16px;
+        height: 14px;
+
+        background-image: url('../../../img/svg/Mail-Ico.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }   
+}
+
+.Header-Auth {
+    margin: 0;
+
+    border-radius: 25px;
+
+    background-color: $basicYellow;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        padding-top: 12.8px;
+        padding-left: 29px;
+        padding-right: 28px;
+        padding-bottom: 7.2px;
+    }
+    
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        padding-top: 16px;
+        padding-left: 29px;
+        padding-right: 28px;
+        padding-bottom: 14px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        padding-top: 16px;
+        padding-left: 29px;
+        padding-right: 28px;
+        padding-bottom: 14px;
+        
+    }
+
+    // Events
+    &:hover, &:focus {
+        background-color: $specialYellowDark;
+        
+    }
+    &:active .Header-AuthText {
+        opacity: 0.3;
+    }    
+}
+
+.Header-AuthText {
+    padding: 0;
+    margin: 0;
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $basicBlue;
+
+    // Mobile
+    // Tablet
+    // Desktop
+}
+
+.Header-Contacts {
+    display: none;
+
+    // Mobile
+    // Tablet
+    // Desktop
+}
+
+.Header-ContactsLink {
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+
+    text-transform: uppercase;
+
+    color: #192144;
+
+    &:first-child {
+        margin-bottom: 27px;
+    }
+
+    // Mobile
+    // Tablet
+    // Desktop
+
+    // Events 
+    &:hover, &:focus {
+        color: $basicYellow;
+    }
+
+    &:hover .Header-ContactsIcoColor,
+    &:focus .Header-ContactsIcoColor {
+        fill: $basicYellow;
+    }
+
+
+    &:active .Header-ContactsIcoColor {
+        opacity: 0.3;
+    }
+    &:active .Header-ContactsText {
+        opacity: 0.3;
+    }
+}
+
+.Header-ContactsIco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    left: 0;
+    top: -75%;
+
+    border-radius: 50%;
+
+    background-color: #121936;
+    // Mobile
+    width: 45px;
+    height: 45px;
+    // Tablet
+    // Desktop
+}
+
+
+.Header-ContactsText {
+    margin: 0;
+    padding: 0;
+
+    padding-left: 61px;
+}
+
+.Header-SocialList {
+    display: none;
+}
+
+//----------------------------------------------------------
+
+// Header Popup Open
+.Header_open {
+    position: fixed;
+    width: 100%;
+
+    background-color: $basicWhite;
+
+    .Logo-Fill {
+        fill: #192144;
+    }
+
+    .Header-BurgerButton {
+        width: 18px;
+        height: 19px;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .Header-BurgerIco_open {
+        display: none;
+    }
+
+    .Header-BurgerIco_close {
+        display: block;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        min-height: 568px;  
+
+        .Header-Wrapper {
+            position: relative;
+            flex-direction: column;
+
+            justify-content: start;
+            align-items: start;
+        }
+
+        .Header-Logo {
+            margin-bottom: 76px;
+        }
+
+        .Header-MenuList {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+
+            align-self: center;
+
+            padding: 0;
+            margin: 0;
+            margin-bottom: 51px;
+        }
+
+        .Header-MenuItem {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 12px;
+
+            font-family: 'BloggerSansMedium', 'Arial';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 25px;
+
+            text-transform: uppercase;
+
+            color: #192144;
+        }
+
+        .Header-MenuSpan {
+            display: none;
+        }
+
+        .Header-MenuSpan_popup {
+            display: block;
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .Header-UserBox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+
+            margin-bottom: 51px;
+            width: 100%;
+        }
+
+        .Header-Phone {
+            display: none;
+        }
+
+        .Header-Mail {
+            display: none;
+        }
+
+        
+        .Header-Auth {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0;
+            padding: 0;
+
+            height: 50px;
+            width: 100%;
+
+            border-radius: 25px;
+        
+            background-color: $basicYellow;
+        
+            // Events
+            &:hover, &:focus {
+                background-color: $specialYellowDark;
+                
+            }
+            &:active .Header-AuthText {
+                opacity: 0.3;
+            }    
+        }
+        
+        .Header-AuthText {
+            padding: 0;
+            margin: 0;
+            font-family: 'BloggerSansBold', 'Arial';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 17px;
+            line-height: 30px;
+        
+            text-align: center;
+            text-transform: uppercase;
+        
+            color: $basicBlue;
+        }
+
+        .Header-Contacts {
+            display: flex;
+            flex-direction: column;
+
+            margin-bottom: 41px;
+
+        }
+
+        .Header-SocialList {
+            display: flex;
+            margin: 0 auto;
+
+            .SocialList-Link {
+                background-color: transparent;
+
+                &:hover, &:focus {
+                    opacity: 0.5;
+                }
+                &:active {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        .Header-Wrapper {
+            position: relative;
+            flex-direction: column;
+
+            justify-content: start;
+            align-items: start;
+        }
+
+        .Header-Logo {
+            margin-bottom: 76px;
+        }
+
+        .Header-LogoPicTablet_w {
+            display: none;
+        }
+        .Header-LogoPicTablet_b {
+            display: inline-block;
+        }
+
+        .Header-BurgerButton {
+            width: 22px;
+            height: 22px;
+    
+            position: absolute;
+            top: 0;
+            left: 44vw;
+            
+        }
+    
+        .Header-BurgerIco_close {
+            display: block;
+
+            width: 22px;
+            height: 22px;
+    
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .Header-MenuList {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+
+            align-self: start;
+
+            padding: 0;
+            margin: 0;
+            margin-left: 57px;
+            margin-bottom: 169px;
+        }
+
+        .Header-MenuItem {
+            align-self: start;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 12px;
+
+            font-family: 'BloggerSansMedium', 'Arial';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 60px;
+            line-height: 71px;
+
+            text-transform: uppercase;
+
+            color: #192144;
+        }
+
+        .Header-MenuSpan {
+            display: none;
+        }
+
+        .Header-MenuSpan_popup {
+            display: block;
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .Header-UserBox {
+            display: flex;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+
+            margin: 0;
+            min-width: 188px;
+        }
+
+        .Header-Phone {
+            display: none;
+        }
+
+        .Header-Mail {
+            display: none;
+        }
+
+        
+        .Header-Auth {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0;
+            padding: 0;
+
+            height: 50px;
+            min-width: 188px;
+
+            border-radius: 25px;
+        
+            background-color: $basicYellow;
+        
+            // Events
+            &:hover, &:focus {
+                background-color: $specialYellowDark;
+                
+            }
+            &:active .Header-AuthText {
+                opacity: 0.3;
+            }    
+        }
+        
+        .Header-AuthText {
+            padding: 0;
+            padding-top: 5px;
+            margin: 0;
+            font-family: 'BloggerSans', 'Arial';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 20px;
+        
+            text-align: center;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        
+            color: $basicBlue;
+        }
+
+        .Header-Contacts {
+            display: flex;
+            flex-direction: column;
+
+            margin: 0;
+            margin-bottom: 129px;
+        }
+
+        .Header-ContactsLink:first-child {
+            margin-bottom: 38px;
+        }
+
+        .Header-ContactsIco {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            position: absolute;
+        
+            left: 15%;
+            top: -75%;
+        
+            border-radius: 50%;
+        
+            background-color: #121936;
+            // Mobile
+            width: 68px;
+            height: 68px;
+            // Tablet
+            // Desktop
+        }
+
+        .Header-ContactsText {
+            font-family: 'BloggerSansBold', 'Arial';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 28px;
+
+            padding-left: 148px;
+        }
+
+        .Header-ContactsIcoPic_phone {
+            width: 30px;
+            height: 29px;
+        }
+
+        .Header-ContactsIcoPic_mail {
+            width: 36px;
+            height: 38px;
+        }
+
+
+        .Header-SocialList {
+            display: flex;
+            margin-left: 68px;
+            margin-bottom: 80px;
+
+            .SocialList-Link {
+                background-color: transparent;
+
+                &:hover, &:focus {
+                    opacity: 0.5;
+                }
+                &:active {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {   
+    }  
+}
+
+// Header Scroll
+.Header_scroll {
+    width: 100%;
+    position: fixed;
+    background-color: $basicWhite;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        .Logo-Fill {
+            fill: $basicBlue;
+        }
+
+        .Header-BurgerLine {
+            fill: #cccccc;
+        }
+        
+        .Header-BurgerButton {
+            margin-right: 3px;
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        .Header-BurgerLine {
+            fill: #cccccc;
+        }
+        
+        .Header-BurgerButton {
+            margin-right: 0;
+            margin-top: 20px;
+        } 
+
+        .Header-LogoPicTablet_w {
+            display: none;
+        }
+        .Header-LogoPicTablet_b {
+            display: block;
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        align-items: center;
+
+        padding-top: 0;
+
+        .Header-Wrapper {
+            min-height: 90px;
+
+            align-items: center;
+
+            padding-top: 10px;
+        }
+        .Header-LogoPicDesktop_w {
+            display: none;
+        }
+        .Header-LogoPicDesktop_b {
+            display: block;
+        }
+
+        .Header-Logo::after {
+            width: 44px;
+
+            left: 256px;
+    
+            background-color: #192144;
+        }
+
+        .Header-MenuList {
+            color: #192144;
+        }
+
+        .Header-MenuLink {
+            margin-top: 5px;
+        }
+    }
+}

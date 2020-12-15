@@ -1,0 +1,36 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.TravelerName {
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: 700;
+
+    text-align: center;
+
+    color: $basicBlueDark;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        font-size: 21px;
+        line-height: 21px; 
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        font-size: 24px;
+        line-height: 22px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 24px;
+        line-height: 22px;  
+    }
+}

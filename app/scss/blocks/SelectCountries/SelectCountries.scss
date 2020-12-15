@@ -1,0 +1,1097 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.SelectCountries {
+    list-style: none;
+
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}    
+
+.SelectCountries-Item {
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        padding-right: 15px;
+
+        margin-bottom: 22px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        
+        width: 100%;
+        height: 42px;
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        margin-bottom: 22px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        // Vertical Decoration Line
+        &::before {
+            position: absolute;
+            z-index: 0;
+
+            content: '';
+
+            width: 1px;
+            height: 145px;
+            top: -42px;
+            left: 395.5px;
+
+            background-image: url('../../../img/png/SelectCountries-DecorationLine.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        // Vertical Decoration Line
+        &::before {
+            position: absolute;
+            z-index: 0;
+
+            content: '';
+
+            width: 1px;
+            height: 265px;
+            top: -62px;
+            left: 775px;
+
+            background-color: #E1E3E9;
+        }
+    }    
+}
+
+.SelectCountries-Button {
+    position: relative;
+    z-index: 50;
+    text-align: left;
+    font-family: $medium, 'Arial';
+    font-style: normal;
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    
+    
+    color: $basicBlueDark;    
+
+    border-radius: 4px;
+    border: 1px solid #CBCED9;
+    background-color: transparent;
+
+    outline: none;
+    transition: 0.2s;
+
+    .SelectCountries-ButtonText {
+        display: inline-block;
+    }
+
+    /// Circle Ico
+    &::before {
+        z-index: 90;
+        position: absolute;
+        cursor: default;
+        content: '';
+
+        background-color: $basicWhite;
+        border: 1px solid #CBCED9;
+        border-radius: 50%;
+    }
+
+    /// Arrow Ico
+    &::after {
+        position: absolute;
+
+        content: '';
+
+        background-image: url('../../../img/svg/SelectCountries_arrow_m.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        opacity: 0.3;
+    }    
+
+    &:hover, &:focus {
+        border-color: #959BB2;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        font-size: 14px;
+        line-height: 18px;
+
+        padding-top: 3px;
+        padding-left: 11px;
+
+        width: 220px;
+
+
+        // Circle Ico
+        &::before {
+            width: 8px;
+            height: 8px;
+
+            top: 15px;
+            left: 162px;
+        }
+
+        // Arrow Ico
+        &::after {
+            width: 11.2px;
+            height: 7.2px;
+
+            top: 16px;
+            left: 193px;
+        }
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        font-size: 20px;
+        line-height: 20px;
+
+        padding-top: 5px;
+        padding-left: 25.5px; 
+
+        width: 369px;
+        height: 70px;
+
+        // Circle Ico
+        &::before {
+            width: 14px;
+            height: 14px;
+
+            top: 26px;
+            left: 388px;
+        }
+
+        // Arrow Ico
+        &::after {
+            width: 16px;
+            height: 9px;
+
+            top: 29px;
+            left: 325px;
+        }
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 20px;
+
+        padding-top: 5px;
+        padding-left: 25.5px;  
+        
+        width: 730px;
+        height: 70px;
+
+        // Circle Ico
+        &::before {
+            width: 14px;
+            height: 14px;
+
+            top: 26px;
+            left: 768px;
+        }
+
+        // Arrow Ico
+        &::after {
+            width: 21px;
+            height: 11px;
+
+            top: 29px;
+            left: 684px;
+
+            background-image: url('../../../img/svg/SelectCountries_arrow_t.svg');
+        }
+    }      
+}
+
+.SelectCountries-ButtonDel {
+    cursor: pointer;
+    outline: none;
+
+    border: 0;
+
+    transition: 0.2s;
+
+    &:hover, &:focus {
+        .SelectCountries-ButtonDelIco {
+            opacity: 0.6;
+        }
+    }
+    &:active {
+        opacity: 0.9;
+        .SelectCountries-ButtonDelIco {
+            opacity: 0.9;
+        }
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        position: absolute;
+
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        top: -11px;
+        left: 209px;
+
+        width: 21px;
+        height: 21px;
+
+        border-radius: 50%;
+        background-color: $basicBlueLight;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        position: absolute;
+
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        top: 23px;
+        right: 0px;
+
+        width: 24px;
+        height: 22px;
+
+        background-color: transparent;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: absolute;
+
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        top: 23px;
+        right: 0px;
+
+        width: 24px;
+        height: 22px;
+
+        background-color: transparent;
+    }    
+}
+
+.SelectCountries-ButtonDelIco {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;    
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        background-image: url('../../../img/svg/SelectCountries_close.svg');
+        width: 9px;
+        height: 9px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        background-image: url('../../../img/svg/SelectCountries_close_t.svg'); 
+        width: 24px;
+        height: 22px;
+        opacity: 0.2;
+
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        background-image: url('../../../img/svg/SelectCountries_close_t.svg'); 
+        width: 24px;
+        height: 22px;
+        opacity: 0.2;
+    }    
+}
+
+.SelectCountries-ClosePopup {
+    display: none;
+}
+
+.SelectCountries .SelectCountries-Popup {
+    display: none;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+// Add Country Button Styles
+.SelectCountries-Item_add {
+
+    .SelectCountries-Button {    
+        position: relative;
+
+        border: none;
+        background-color: $basicBlueLight;
+    
+        transition: 0.2s;
+        
+        // Circle Ico
+        &::before {
+            z-index: 99;
+            background-color: #EDEFF6;
+        }
+    
+        /// Plus Ico
+        &::after {
+            position: absolute;
+    
+            content: '';
+    
+            background-image: url('../../../img/svg/SelectCountries-PlusIco.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }    
+    
+        &:hover, &:focus {
+            background-color: #DBDFEA;
+        }
+    
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+            font-size: 14px;
+            line-height: 18px;
+    
+            padding-left: 11px;
+    
+            // Plus Ico
+            &::after {
+                width: 14px;
+                height: 14px;
+    
+                top: 12px;
+                left: 193px;
+            }
+        }
+    
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {   
+            font-size: 20px;
+            line-height: 20px;
+    
+            padding-top: 5px;
+            padding-left: 25.5px; 
+    
+            width: 369px;
+            height: 70px;
+    
+    
+            // Plus Ico
+            &::after {
+                background-image: url('../../../img/svg/SelectCountries-PlusIco_t.svg');
+                width: 21px;
+                height: 21px;
+    
+                top: 23px;
+                left: 325px;
+            }
+
+            // Circle Ico
+            &::before {
+                background-color: #DFE3F0;
+            }
+        }
+    
+        // Desktop
+        @media (min-width: $desktop-width) {
+            font-size: 20px;
+            line-height: 20px;
+    
+            padding-top: 5px;
+            padding-left: 25.5px;  
+            
+            width: 730px;
+            height: 70px;
+    
+            // Plus Ico
+            &::after {
+                background-image: url('../../../img/svg/SelectCountries-PlusIco_t.svg');
+                width: 21px;
+                height: 21px;
+    
+                top: 23px;
+                left: 684px;
+            }
+        }      
+    }
+    
+    .SelectCountries-ButtonDel {
+        display: none;
+    }
+}
+
+// Choice Country Button Styles
+.SelectCountries-Item_choice {
+
+    .SelectCountries-Button {
+        position: relative;
+        
+    
+        .SelectCountries-ButtonText {
+            display: inline-block;
+        }
+    
+        /// Circle Ico
+        &::before {
+            z-index: 99;
+            border: 1px solid $basicBlueDark;
+            background-color: $basicBlueDark;
+        }
+     
+        &:hover, &:focus {
+            border-color: #959BB2;
+        }
+    
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+            width: 168px;
+    
+    
+            // Circle Ico
+            &::before {
+                top: 15px;
+                right: 162px;
+            }
+    
+            // Arrow Ico
+            &::after {
+                top: 16px;
+                left: 141px;
+            }
+
+            .SelectCountries-ButtonText {
+                position: relative;
+
+                display: inline-block;
+                width: 118px;
+
+                padding-top: 5px;
+                
+                overflow: hidden;
+                white-space: nowrap;
+
+                &::after {
+                    position: absolute;
+                    z-index: 1;
+
+                    top: 0;
+                    right: -15px;
+
+                    content: '';
+                    
+                    width: 18px;
+                    height: 20px;
+
+                    background-image: url('../../../img/png/Fade.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+
+                }
+            }
+        }
+    
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {   
+            width: 369px;
+    
+            // Circle Ico
+            &::before {
+                width: 14px;
+                height: 14px;
+    
+                top: 26px;
+                left: 388px;
+            }
+    
+            // Arrow Ico
+            &::after {
+                width: 16px;
+                height: 9px;
+    
+                top: 29px;
+                left: 325px;
+            }
+        }
+    
+        // Desktop
+        @media (min-width: $desktop-width) {
+            font-size: 20px;
+            line-height: 20px;
+    
+            padding-top: 5px;
+            padding-left: 25.5px;  
+            
+            width: 730px;
+            height: 70px;
+    
+            // Circle Ico
+            &::before {
+                width: 14px;
+                height: 14px;
+    
+                top: 26px;
+                left: 768px;
+            }
+    
+            // Arrow Ico
+            &::after {
+                width: 21px;
+                height: 11px;
+    
+                top: 29px;
+                left: 684px;
+    
+                background-image: url('../../../img/svg/SelectCountries_arrow_t.svg');
+            }
+        }      
+    }
+    
+    .SelectCountries-ButtonDel {
+        cursor: pointer;
+        outline: none;
+    
+        border: 0;
+    
+        transition: 0.2s;
+    
+        &:hover, &:focus {
+            .SelectCountries-ButtonDelIco {
+                opacity: 0.6;
+            }
+        }
+        &:active {
+            opacity: 0.9;
+            .SelectCountries-ButtonDelIco {
+                opacity: 0.9;
+            }
+        }
+    
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+            position: absolute;
+    
+            padding: 0;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            top: -11px;
+            left: 209px;
+    
+            width: 21px;
+            height: 21px;
+    
+            border-radius: 50%;
+            background-color: $basicBlueLight;
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+            position: absolute;
+    
+            padding: 0;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            top: 23px;
+            right: 0px;
+    
+            width: 24px;
+            height: 22px;
+    
+            background-color: transparent;
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            position: absolute;
+    
+            padding: 0;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            top: 23px;
+            right: 0px;
+    
+            width: 24px;
+            height: 22px;
+    
+            background-color: transparent;
+        }    
+    }
+    
+    .SelectCountries-ButtonDelIco {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;    
+    
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+            background-image: url('../../../img/svg/SelectCountries_close.svg');
+            width: 9px;
+            height: 9px;
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {   
+            background-image: url('../../../img/svg/SelectCountries_close_t.svg'); 
+            width: 24px;
+            height: 22px;
+            opacity: 0.2;
+    
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            background-image: url('../../../img/svg/SelectCountries_close_t.svg'); 
+            width: 24px;
+            height: 22px;
+            opacity: 0.2;
+        }    
+    }
+
+    .SelectCountries-CountryBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+            width: 53px;
+            height: 42px;   
+            
+            border: 1px solid #CBCED9;
+            border-radius: 4px;            
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+            align-self: center;
+
+            width: 70px;
+            height: 47px;  
+
+            margin-left: 52px;
+
+            border-radius: 4px;   
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            align-self: center;
+
+            width: 70px;
+            height: 47px;  
+
+            margin-left: 85px;
+
+            border-radius: 4px;   
+        }
+    }
+
+    .SelectCountries-Country {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        // Flags Ico
+        &_seychell {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {
+                background-image: url('../../../img/png/Seychell_m.png');    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                background-image: url('../../../img/png/Seychell.png');  
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                background-image: url('../../../img/png/Seychell.png'); 
+            }            
+        }
+
+        &_dominica {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {
+                background-image: url('../../../img/png/Dominica_m.png');    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                background-image: url('../../../img/png/Dominica.png'); 
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                background-image: url('../../../img/png/Dominica.png'); 
+            }            
+        }   
+
+        &_thailand {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {
+                background-image: url('../../../img/png/Thailand_m.png');    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                background-image: url('../../../img/png/Thailand.png'); 
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                background-image: url('../../../img/png/Thailand.png'); 
+            }            
+        }    
+
+        &_usa {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {
+                background-image: url('../../../img/png/Usa_m.png');    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                background-image: url('../../../img/png/Usa.png'); 
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                background-image: url('../../../img/png/Usa.png'); 
+            }            
+        }     
+
+        &_australia {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {
+                background-image: url('../../../img/png/Australia_m.png');    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                background-image: url('../../../img/png/Australia.png'); 
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                background-image: url('../../../img/png/Australia.png'); 
+            }            
+        } 
+
+        &_czech {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {
+                background-image: url('../../../img/png/Czech_m.png');    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                background-image: url('../../../img/png/Czech.png'); 
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                background-image: url('../../../img/png/Czech.png'); 
+            }            
+        }   
+        
+        &_germany {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {
+                background-image: url('../../../img/png/Germany_m.png');    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                background-image: url('../../../img/png/Germany.png'); 
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                background-image: url('../../../img/png/Germany.png'); 
+            }            
+        }          
+
+        &_france {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {
+                background-image: url('../../../img/png/France_m.png');    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                background-image: url('../../../img/png/France.png'); 
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                background-image: url('../../../img/png/France.png'); 
+            }            
+        }              
+
+        &_uk {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {
+                background-image: url('../../../img/png/Uk_m.png');    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                background-image: url('../../../img/png/Uk.png'); 
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                background-image: url('../../../img/png/Uk.png'); 
+            }            
+        }    
+        
+        &_belgium {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {
+                background-image: url('../../../img/png/Belgium_m.png');    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                background-image: url('../../../img/png/Belgium.png'); 
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                background-image: url('../../../img/png/Belgium.png'); 
+            }            
+        }         
+        
+        &_srilanka {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {
+                background-image: url('../../../img/png/Srilanka_m.png');    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                background-image: url('../../../img/png/Srilanka.png'); 
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                background-image: url('../../../img/png/Srilanka.png'); 
+            }            
+        }     
+        
+        &_bosnia {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {
+                background-image: url('../../../img/png/Bosnia_m.png');    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                background-image: url('../../../img/png/Bosnia.png'); 
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                background-image: url('../../../img/png/Bosnia.png'); 
+            }            
+        }    
+        //---------------------//
+
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+            width: 35px;
+            height: 24px;   
+            border-radius: 2px;          
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+            width: 70px;
+            height: 47px;
+            border-radius: 4px;            
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            width: 70px;
+            height: 47px;
+            border-radius: 4px;               
+        }        
+    }
+}
+
+// Popup
+.SelectCountries-Item_popup {
+
+    .SelectCountries-Button {
+        position: relative;
+
+        color: $basicWhite;
+
+        border: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        background-color: $basicBlueDark;
+        
+    
+        &::after {
+            display: none;
+        }
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+            &::before  {
+                display: none;
+            }
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+        }  
+    } 
+
+    .SelectCountries-ButtonDel {
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+            display: none;  
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+        }        
+    }
+
+    .SelectCountries-ClosePopup {
+        position: absolute;
+        z-index: 99;
+        display: block;
+
+        border: 0;
+        outline: none;
+
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+            width: 8.25px;
+            height: 9px;
+
+            top: 17px;
+            right: 35px;
+
+            background-image: url('../../../img/svg/SelectCountries-CloseWhiteIco_m.svg');
+
+            &:hover, &:focus {
+                opacity: 0.3;
+            }
+            &:active {
+                opacity: 0.7;
+            }
+        }
+
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+            width: 22px;
+            height: 21px;
+
+            top: 22px;
+            left: 323px;
+
+            opacity: 0.3;
+
+            background-image: url('../../../img/svg/SelectCountries-CloseWhiteIco_t.svg'); 
+            
+            &:hover, &:focus {
+                opacity: 0.9;
+            }
+            &:active {
+                opacity: 0.7;
+            }
+        }
+
+        // Desktop
+        @media (min-width: $desktop-width) {
+            width: 22px;
+            height: 24px;
+
+            top: 22px;
+            left: 681px;
+
+            opacity: 0.3;
+            
+            background-image: url('../../../img/svg/SelectCountries-CloseWhiteIco_d.svg');                
+            
+            &:hover, &:focus {
+                opacity: 0.9;
+            }
+            &:active {
+                opacity: 0.7;
+            }
+        }          
+    }
+
+    .SelectCountries-Popup {
+        display: flex;
+
+        position: absolute;
+        z-index: 99;
+
+    
+        
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+            top: 42px;             
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+            top: 70px;
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            top: 70px;
+        }        
+    }
+}
+

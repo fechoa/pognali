@@ -1,0 +1,274 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.ArriveDate {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}    
+
+.ArriveDate-Title {
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-bottom: 16px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        order: 1;
+        margin-bottom: 35px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 33px;
+    }    
+}
+
+.ArriveDate-Subtitle {
+    position: relative;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-bottom: 20px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        order: 2;
+
+        margin-bottom: 64px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 115px;
+
+        &::after {
+            position: absolute;
+            top: 105px;
+            left: 0;
+
+            content: '';
+
+            width: 998px;
+            height: 1px;
+
+            background-color: #e1e3e9;
+        }
+    }    
+}
+
+.ArriveDate-SearchCompanion {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-bottom: 21px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        order: 3; 
+        margin-bottom: 34px; 
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 66px;
+    }           
+}
+
+.ArriveDate-Long {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-bottom: 28px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        order: 5;  
+        margin-bottom: 60px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 58px;
+    }           
+}
+
+.ArriveDate-Children {
+    font-family: $normal, 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    
+    color: $basicBlueDark;    
+
+    display: flex;
+
+    position: relative;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        font-size: 15px;
+        line-height: 15px;  
+        
+        margin-bottom: 27px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        order: 4;
+
+        margin-bottom: 59px;
+        font-size: 20px;
+        line-height: 20px;
+
+        letter-spacing: 0.1em;
+        text-transform: uppercase;         
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: absolute;
+
+        top: 335px;
+        right: 158px;
+
+        width: 250px;
+
+        font-size: 20px;
+        line-height: 20px;
+
+        letter-spacing: 0.1em;
+        text-transform: uppercase;        
+    }    
+}
+
+.ArriveDate-ChildrenInput {
+    display: none;
+
+    &:checked + .ArriveDate-ChildrenLabel::before {
+        background-image: url('../../../img/svg/InputMark.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        &:checked + .ArriveDate-ChildrenLabel::before {
+            background-size: 13px 12px; 
+            
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        &:checked + .ArriveDate-ChildrenLabel::before {
+            background-size: 18px 17px; 
+        }  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        &:checked + .ArriveDate-ChildrenLabel::before {
+            background-size: 18px 17px; 
+        }            
+    }    
+}
+
+
+.ArriveDate-ChildrenLabel {
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+
+
+    transition: 0.2s ease-in;
+
+    &::before {     
+        position: absolute;
+
+        content: '';
+        border: 1px solid #CBCED9;
+        border-radius: 4px;
+        left: 0;
+        top: 60%;
+        transform: translateY(-60%);
+    }
+
+    //// Actions
+    &:hover, &:focus {
+        opacity: 0.6;
+    }
+    &:active {
+        opacity: 0.3;
+    }
+
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        padding-left: 41px;   
+
+        &::before {
+            width: 26px;
+            height: 26px; 
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        padding-left: 59px;   
+
+        &::before {
+            width: 36px;
+            height: 36px; 
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        padding-left: 59px; 
+        
+        &::before {
+            width: 36px;
+            height: 36px; 
+        }
+    }    
+}
+
+.ArriveDate-Calendar {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        margin-bottom: 22px; 
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        order: 6; 
+        margin-bottom: 47px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 57px;
+    }    
+}
+
+.ArriveDate-ButtonNext { 
+    outline: none;
+    
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        order: 7;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}
+

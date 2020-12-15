@@ -1,0 +1,79 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+//// Tooltip
+.Tooltip {
+    cursor: default;
+
+    position: absolute;
+    background-color: #101D41;
+    border-radius: 4px;
+
+    transition: 0.2s;
+
+
+    //// Tail 
+    &::before {
+        position: absolute;
+
+        content: '';
+
+        border: 20px solid transparent;
+        border-bottom: 20px solid #101D41;
+
+        top: -50%;
+        left: 37%;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        display: none;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        display: none; 
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: none;
+
+        height: 56px;
+ 
+        padding-left: 25px;
+        padding-right: 25px;
+
+        top: 130%;
+    }    
+}
+
+//// Tooltip
+.Tooltip-Text {
+    font-family: $normal, 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    
+    text-align: center;
+    
+    color: $basicWhite;    
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 20px;
+    }    
+}

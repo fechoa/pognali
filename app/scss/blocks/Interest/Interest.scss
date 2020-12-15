@@ -1,0 +1,594 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.Interest {
+    width: 100%;
+
+    position: relative;
+    z-index: 2;
+
+    background-color: #192144;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;  
+    }
+}
+
+.Interest-Wrapper {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        max-width: 270px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+
+        padding-top: 72px;
+        padding-bottom: 29px;  
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        max-width: 616px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+
+        padding-top: 76px;
+        padding-bottom: 60px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        max-width: 1174px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+
+        padding-top: 109px;
+        padding-bottom: 102px;
+    }
+}
+
+.Interest-Title {
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        margin-bottom: 19px;  
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        margin-bottom: 59px; 
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 57px;
+    }    
+}
+
+.Interest-Subtitle {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'BloggerSansLight', 'Arial';
+    font-style: normal;
+    font-weight: 300;
+
+    text-align: center;
+
+    color: $basicWhite;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        font-size: 16px;
+        line-height: 22px;  
+
+        margin-bottom: 29px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+        font-size: 28px;
+        line-height: 32px;    
+
+        margin-bottom: 65px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 28px;
+        line-height: 32px;  
+
+        margin-bottom: 60px;
+    }
+}
+
+.Interest-Row {
+    display: none;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        &_m {
+            display: block;
+        }   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        &_t {
+            display: block;
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        &_d {
+            display: block;
+        }
+    }
+}
+
+.Interest-AuthLink {
+    color: $basicYellow;
+
+    &:hover, &:focus {
+        color: $specialOrange;
+    }
+
+    &:active {
+        color: $specialOrange;
+        opacity: 0.3;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.Interest-SearchBox {
+    width: 100%;
+
+    display: flex;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        margin-bottom: 29px;  
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        margin-bottom: 60px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 70px;
+    }
+}
+
+.Interest-SearchInput {
+    box-sizing: border-box;
+
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: 700;
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+    
+    color: $basicBlue;
+    outline: none;
+
+    transition: 0.3s;
+    
+    &::placeholder {
+        opacity: 0.3;
+        color: $specialGray;
+    }
+
+    &:hover{
+        background-color: $basicBlueLight;
+
+        &::placeholder {
+            opacity: 0.5;
+            color: $specialGray;
+        }
+    }
+
+    &:focus {
+        background-color: transparent;
+        border: 4px solid $basicWhite;
+        color: $basicWhite;
+
+        &::placeholder {
+            color: transparent;
+        }
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        font-size: 18px;
+        line-height: 18px;
+
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;  
+        
+        width: 220px;
+        max-height: 62px;
+
+        padding-top: 22px;
+        padding-bottom: 22px;
+        padding-left: 25px;
+        padding-right: 15px;
+
+        border: 4px solid transparent;
+
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        font-size: 24px;
+        line-height: 24px;
+
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;   
+
+        width: 536px;
+        max-height: 80px;
+
+        padding-top: 28px;
+        padding-bottom: 28px;
+        padding-left: 36px;
+        padding-right: 15px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 24px;
+        line-height: 24px;
+
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px; 
+
+        width: 850px;
+        max-height: 81px;
+
+        padding-top: 28px;
+        padding-bottom: 28px;
+        padding-left: 36px;
+        padding-right: 15px;
+    }
+}
+
+.Interest-SearchButton {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        padding-top: 24px;
+        padding-left: 22px;
+        padding-bottom: 24px;
+        padding-right: 22px;
+
+        margin-left: -10px;
+
+        width: 60px;
+        height: 62px;
+
+        &::after {
+            padding-left: 20px;
+            width: 14px;
+            height: 16px;
+
+            background-position: center;
+        }
+
+            
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        padding-top: 24px;
+        padding-left: 22px;
+        padding-bottom: 24px;
+        padding-right: 22px;
+
+        margin-left: -3px;
+
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+
+        width: 80px;
+        height: 80px;
+
+        &::after {
+            padding-left: 30px;
+
+            
+            width: 14px;
+            height: 16px;
+
+            background-position: center;
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        padding-top: 24px;
+        padding-left: 41px;
+        padding-bottom: 24px;
+        padding-right: 33px;
+
+        margin-left: -3px;
+
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+
+        width: 324px;
+        height: 81px;
+
+        &::after {
+            padding-left: 20px;
+
+            
+            width: 14px;
+            height: 16px;
+
+            background-position: center;
+        }
+    }
+}
+
+.Interest-ButtonText {
+    display: none;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+ 
+    color: $basicBlueDark;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: block;
+    }
+}
+
+.Interest-Text {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'BloggerSansLight', 'Arial';
+    font-style: normal;
+    font-weight: 300;
+ 
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: $basicWhite;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        font-size: 16px;
+        line-height: 22px;  
+
+        margin-bottom: 30px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        font-size: 28px;
+        line-height: 30px;
+
+        margin-bottom: 64px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 28px;
+        line-height: 30px;
+
+        margin-bottom: 77px;
+    }
+}
+
+.Interest-LinkBox {
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: $basicYellow;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        font-size: 16px;
+        line-height: 22px;    
+
+        display: flex;
+        flex-direction: column;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        font-size: 28px;
+        line-height: 28px;
+
+        display: flex;
+        flex-direction: column;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 28px;
+        line-height: 28px;
+
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.Interest-Link {
+    transition: 0.3s;
+    
+    &:hover, &:focus {
+        color: $specialYellowDark;
+
+        .Interest-LinkIco {
+            fill: $specialYellowDark;
+        }
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+.Interest-PhoneLink {
+    position: relative;
+
+    font: inherit;
+    color: inherit;
+    text-decoration: inherit;
+
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        padding-left: 61px; 
+        margin-bottom: 23px; 
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        padding-left: 90px;
+        margin-bottom: 39px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        padding-left: 121px;
+    }
+}
+
+.Interest-MailLink {
+    position: relative;
+
+    font: inherit;
+    color: inherit;
+    text-decoration: inherit;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        padding-left: 61px;    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        padding-left: 90px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        padding-left: 121px;
+    }
+}
+
+.Interest-IcoBox {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #121936;
+    
+
+    border-radius: 50%;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        width: 45px;
+        height: 45px;
+
+        left: 0;
+        top: -12.5px;
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        width: 68px;
+        height: 68px;
+
+        left: 0;
+        top: -21px;
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 90px;
+        height: 90px;
+
+        left: 0;
+        top: -32px;
+    }
+}
+
+.Interest-PhoneIco {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        width: 18px;
+        height: 17px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        width: 27.2px;
+        height: 25.7px;   
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 36px;
+        height: 34px;
+    }
+}
+
+.Interest-MailIco {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        width: 23.5px;
+        height: 25px; 
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        width: 35.5px;
+        height: 37.8px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 47px;
+        height: 50px;
+    }
+}

@@ -1,0 +1,88 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.MyPlans {
+    background-color: $specialBLueLight;
+
+    width: 100%;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        border-top-left-radius: 30px; 
+        border-top-right-radius: 30px;
+
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 30px;
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        border-top-left-radius: 30px;  
+        border-top-right-radius: 30px;
+
+        padding-left: 75px;
+        padding-right: 75px;
+        padding-bottom: 42px;
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        border-top-left-radius: 56px;
+        border-top-right-radius: 56px;
+
+        padding-left: 124px;
+        padding-right: 58px;
+        padding-bottom: 64px;
+    }
+}
+
+.MyPlans-Wrapper {
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        width: 270px;
+
+        padding-bottom: 30px;
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        width: 618px;
+
+        padding-bottom: 76px;
+    }
+    
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 1258px;
+
+        padding-bottom: 64px;
+    }    
+}
+
+.MyPlans-List {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}
+

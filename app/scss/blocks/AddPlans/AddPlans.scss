@@ -1,0 +1,89 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.AddPlans {
+    width: 100%;
+    background-color: #D4D9EB;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;    
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        border-top-left-radius: 56px;
+        border-top-right-radius: 56px;    
+    }
+}
+
+.AddPlans-Wrapper {
+    margin: 0 auto;
+
+    /// Popup Margin Bottom
+    &_popup {
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+            margin-bottom: 400px;
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {   
+            margin-bottom: 140px; 
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            margin-bottom: 140px;
+        }        
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        width: 270px;
+        padding-bottom: 43px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        width: 618px;
+        padding-bottom: 63px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: relative;
+        
+        width: 1320px;
+        padding-bottom: 70px;
+    }
+}
+
+.AddPlans-TitleBox {
+    display: flex;
+    justify-content: space-between;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        padding-right: 18px;   
+
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        padding-left: 69px;
+    }
+}

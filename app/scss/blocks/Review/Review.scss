@@ -1,0 +1,397 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.Review {
+    display: flex;
+    
+    padding: 0; 
+    
+    width: 100%;
+
+    background-color: $basicBlue;
+
+    // Mobile
+    @media (min-width: 270px) and (max-width: $mobile-width-only) {   
+        padding-top: 21px; 
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        padding-top: 30px;   
+        background-color: #182144;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.Review-Wrapper {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+  
+    // Mobile
+    min-width: 280px;
+    padding-bottom: 29px;
+    
+    // Tablet
+    @media (min-width: $tablet-width) {
+        min-width: 688px;
+        padding-bottom: 350px;
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        flex-direction: row;
+        min-width: 1440px;
+
+        padding-top: 110px;
+        padding-left: 127px;
+
+    }
+}
+
+.Review-Title {
+    padding: 0;
+    margin: 0;
+
+    position: relative;
+    z-index: 1;
+
+    color: $basicWhite;
+
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: 700;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        max-width: 238px;
+
+        margin: 0 auto;  
+        margin-bottom: 313px;
+
+        font-size: 36px;
+        line-height: 40px;
+
+        text-align: center;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        max-width: 399px;
+
+        margin: 0 auto;  
+        margin-bottom: 86px;
+
+        font-size: 60px;
+        line-height: 70px;
+
+        text-align: center;   
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        max-width: 418px;
+
+        margin: 0 auto;  
+        margin-bottom: 86px;
+
+        font-size: 60px;
+        line-height: 70px;
+
+        text-align: left;  
+    }
+}
+
+
+.Review-Quote {
+    display: block;
+
+    position: relative;
+    z-index: 1;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: 'BloggerSansLight', 'Arial';
+    font-style: normal;
+    font-weight: 300;
+
+    color: $basicWhite;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        max-width: 150px;
+
+        margin-bottom: 18px;
+        margin-left: 25px;
+        
+        font-size: 16px;
+        line-height: 22px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+        max-width: 260px;
+
+        margin-left: 32px;
+        margin-bottom: 45px;
+
+        font-size: 28px;
+        line-height: 33px;    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: absolute;
+
+        right: 83px;
+
+        max-width: 260px;
+
+        font-size: 28px;
+        line-height: 32px;
+    }
+}
+
+.Review-Author {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    padding: 0;
+    margin: 0;
+    
+
+    color: $basicWhite;
+
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: 700;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        max-width: 155px;
+        margin-left: 25px;
+        margin-bottom: 109px;
+
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        max-width: 264px;
+
+        margin-left: 32px;
+
+        font-size: 21px;
+        line-height: 25px;   
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: absolute;
+        top: 218px;
+        right: 78px;
+
+        max-width: 264px;
+
+        font-size: 21px;
+        line-height: 24px;
+    }
+}
+
+.Review-Bg {
+    position: absolute;
+
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+    // background-position: ;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        background-image: url(../../../img/svg/ManBg.svg);
+
+        width: 192px;
+        height: 255px;
+
+        top: 130px;
+        right: 40px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        z-index: 0;
+
+        background-image: url(../../../img/svg/ManBg-t.svg);
+        background-size: contain;
+        
+        min-width: 768px;
+        height: 612px;
+
+        top: 220px;
+        right: -40px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        z-index: 0;
+
+        background-image: url(../../../img/svg/ManBg-d.svg);
+        background-size: contain;
+        
+        min-width: 1440px;
+        height: 640px;
+
+        top: 10px;
+        right: 0;
+    }
+}
+
+.Review-UserBox {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    
+    // Mobile
+    @media (max-width: $mobile-width-only){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        z-index: 2;
+
+        top: 360px;
+    }
+}
+
+.Review-Phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50%;
+
+        background-color: $specialOrange;
+    }
+
+    &:hover, &:focus {
+        background-color: $specialOrange;
+    }
+    &:active .Review-MailIco {
+        opacity: 0.3;
+    }
+}
+
+.Review-PhoneIco {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+
+        background-image: url('../../../img/svg/Phone-Ico.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.Review-Mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50%;
+
+        background-color: $specialYellowDark;
+    }
+    
+    &:hover, &:focus {
+        background-color: $specialOrange;
+    }
+    &:active .Review-MailIco {
+        opacity: 0.3;
+    }
+}
+
+.Review-MailIco {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        display: inline-block;
+        width: 16px;
+        height: 14px;
+
+        background-image: url('../../../img/svg/Mail-Ico.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.Review-Auth {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        padding-top: 13.8px;
+        padding-left: 37px;
+        padding-right: 34px;
+        padding-bottom: 8.2px;
+
+        border-radius: 25px;
+
+        background-color: $basicYellow;
+    }
+    
+    // Events
+    &:hover, &:focus {
+        background-color: $specialYellowDark;
+        
+    }
+    &:active .Header-AuthText {
+        opacity: 0.3;
+    }   
+}
+
+.Review-AuthText {
+    padding: 0;
+    margin: 0;
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $basicBlue;
+
+    // Mobile
+    // Tablet
+    // Desktop
+}

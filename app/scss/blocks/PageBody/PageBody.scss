@@ -1,0 +1,15 @@
+.PageBody {
+    // Position
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+
+    position: relative;
+
+    // Font
+    font-family: 'BloggerSans', 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $basicBlue;
+}

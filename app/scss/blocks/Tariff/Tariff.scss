@@ -1,0 +1,165 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+.Tariff {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+
+    display: flex;
+
+    background-color: #E6E8F1; 
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+
+        background-color: #EDEFF6;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+
+        background-color: #EDEFF6;
+    }    
+}
+
+.Tariff-Wrapper {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        margin: 0 auto;  
+
+        padding-top: 65px;
+        padding-left: 40px;
+        padding-right: 25px;
+        padding-bottom: 38px;
+
+        width: 320px;
+
+        display: flex;
+        flex-direction: column;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        margin: 0 auto;  
+
+        padding-top: 135px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        width: 768px;
+
+        display: flex;
+        flex-direction: column;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin: 0 auto;  
+
+        padding-top: 175px;
+        padding-left: 130px;
+        padding-right: 133px;
+        padding-bottom: 165px;
+
+        width: 1440px;
+
+        display: flex;
+        flex-direction: column;
+    }    
+}
+
+.Tariff-Br {
+    display: none;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        display: block;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}
+
+.Tariff-Title {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        position: relative;
+
+        margin-bottom: 46px;
+
+        &::after {
+            content: '';
+
+            position: absolute;
+
+            width: 100px;
+            height: 100px;
+
+            top: -16px;
+            right: 0;
+
+            background-image: url('../../../img/svg/Tariff-Title_ico.svg');
+        }   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        text-align: center;  
+
+        margin-bottom: 71px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        text-align: center;  
+
+        margin-bottom: 131px;
+    }    
+}
+
+.Tariff-List {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        margin-bottom: 46px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        margin-bottom: 57px; 
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 56px; 
+    }
+}
+
+.Tariff-Button {
+    cursor: pointer;
+    outline: none;
+    
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}

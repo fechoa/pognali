@@ -1,0 +1,171 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.ButtonForm {
+    position: relative;
+
+    border: 0;
+    outline: none;
+    
+    background-color: $basicYellow;
+
+    &:hover, &:focus {
+        background-color: $specialYellowDark;
+    }
+
+    &:active {
+        background-color: $specialYellowDark;
+
+        .ButtonForm-Text {
+            opacity: 0.3;
+        }
+    }
+
+
+    /// Button Back
+    &_back {
+        background-color: transparent;
+
+
+        .ButtonForm-Text {
+            padding-left: 35px;
+
+            &::after {
+                transform: rotate(180deg);
+                left: 0;
+            }
+        }
+
+        &:hover, &:focus, &:active {
+            background-color: transparent;
+        }
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        width: 229px;
+        height: 40px;   
+        
+        border-radius: 20px;
+
+        /// Button Back
+        &_back {
+            .ButtonForm-Text {
+                padding-left: 0;
+            }
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        width: 284px;
+        height: 80px;    
+
+        border-radius: 20px;    
+        
+        padding-left: 34px;
+        padding-right: 37px;
+
+        text-align: left;
+
+
+        /// Button Back
+        &_back {
+            position: absolute;
+
+            width: 253px;
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 284px;
+        height: 80px;    
+
+        border-radius: 20px;    
+        
+        padding-left: 34px;
+        padding-right: 37px;
+
+        text-align: left;
+
+        /// Button Back
+        &_back {
+            position: absolute;
+        }        
+    }    
+}
+
+.ButtonForm-Text {
+    position: relative;
+
+    cursor: pointer;
+    
+    outline: none;
+    margin: 0;
+    padding: 0;
+
+    font-family: $bold, 'Arial';
+    font-style: normal;
+    font-weight: 700;
+
+
+    color: $basicBlueDark;    
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        text-transform: uppercase;
+        padding-top: 3px;
+
+        font-size: 17px;
+        line-height: 30px;     
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        font-size: 24px;
+        line-height: 24px;    
+        
+        &::after {
+            position: absolute;
+            top: 3px;
+            right: 0;
+
+            content: '';
+
+            width: 14px;
+            height: 14px;
+
+            background-image: url('../../../img/svg/About-ArrowIco.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 24px;
+        line-height: 24px;     
+        
+        &::after {
+            position: absolute;
+            top: 3px;
+            right: 0;
+
+            content: '';
+
+            width: 14px;
+            height: 14px;
+
+            background-image: url('../../../img/svg/About-ArrowIco.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }    
+}

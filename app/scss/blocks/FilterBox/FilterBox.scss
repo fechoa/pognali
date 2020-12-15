@@ -1,0 +1,500 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+//// Header Filter
+.FilterBox {
+    display: flex;
+
+    font-family: $bold, 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    color: #192144;
+    background-color: #E2E5F2;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        width: 100%;
+        
+        justify-content: space-between;
+
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 17px;
+
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        font-size: 16px;
+        line-height: 18px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        width: 100%;
+
+        justify-content: space-between;
+
+        padding-left: 72px;
+        padding-right: 72px;
+        padding-bottom: 57px;
+
+        border-bottom-left-radius: 56px;
+        border-bottom-right-radius: 56px; 
+
+        font-size: 20px;
+        line-height: 20px;        
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 100%;
+
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-bottom: 57px;
+
+        border-bottom-left-radius: 56px;
+        border-bottom-right-radius: 56px; 
+
+        font-size: 20px;
+        line-height: 20px;        
+    }    
+}    
+.FilterBox-TitleBox {
+    position: relative;
+
+    font: inherit;
+    color: inherit;
+    text-transform: inherit;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    background-color: transparent;
+
+    &::before {
+        position: absolute;
+
+        content: '';
+
+        background-image: url('../../../img/svg/FilterBox-FilterIco.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+    }
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        width: 225px;
+
+        text-align: right;
+
+        &::before {
+            width: 15px;
+            height: 10px;
+
+            top: 2.3px;
+            left: 0;
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        display: none;   
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 285px;
+
+        margin-right: 35px;
+
+        text-align: right;
+
+        &::before {
+            width: 23px;
+            height: 15px;
+
+            top: 1px;
+            left: 0;
+        }
+    }    
+}    
+.FilterBox-Title {
+    font: inherit;
+    color: inherit;
+    text-transform: inherit;
+
+    margin: 0;
+    padding: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}
+
+//// Continents
+.FilterBox-Continents {
+    display: flex;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        display: none; 
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        justify-content: space-between;
+
+        width: 368px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        justify-content: space-between;
+
+        width: 368px;  
+    }    
+}
+    //// Continents Item
+    .FilterBox-ContinentsItem {
+        display: block;
+
+        padding: 0;
+        margin: 0;
+        border: 0;
+
+        text-decoration: none;
+
+        font-family: $bold, 'Arial';
+        font-style: normal;
+        font-weight: 700;
+
+        text-transform: uppercase;
+        text-align: left;
+        
+        color: #192144;
+        background-color: transparent;
+
+        opacity: 0.3;
+        transition: 0.2s;
+        outline: none;
+
+        &:hover, &:focus {
+            opacity: 0.5;
+        }
+        &:active {
+            opacity: 1;
+        }
+
+        &_current {
+            opacity: 1;
+        }
+
+
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+            font-size: 20px;
+            line-height: 20px; 
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) { 
+            font-size: 20px;
+            line-height: 20px;
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            font-size: 20px;
+            line-height: 20px;        
+        }      
+    }
+
+//// Button Show All
+.FilterBox-ShowButton {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    background-color: transparent;
+
+    transition: 0.2s;
+    outline: none;
+
+    &:hover, &:focus {
+        opacity: 0.5;
+    }
+    &:active {
+        opacity: 0.2;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        width: 25px;
+        height: 16px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        width: 185px;
+        height: 17px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-left: auto;
+
+        width: 185px;
+        height: 17px; 
+    }
+}
+    //// Button Show All Text
+    .FilterBox-ShowText {
+        margin: 0;
+        padding: 0;
+
+        font-family: $bold, 'Arial';
+        font-style: normal;
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        color: #192144; 
+
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+            display: none;
+
+            font-size: 16px;
+            line-height: 18px;     
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+            font-size: 20px;
+            line-height: 20px;           
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            font-size: 20px;
+            line-height: 20px;           
+        }
+    }
+    //// Button Show All Text Open
+    .FilterBox-ShowTextReturn {
+        display: none;
+
+        margin: 0;
+        padding: 0;
+
+        font-family: $bold, 'Arial';
+        font-style: normal;
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        color: #192144; 
+
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+            font-size: 16px;
+            line-height: 18px;     
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+            font-size: 20px;
+            line-height: 20px;           
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            font-size: 20px;
+            line-height: 20px;           
+        }
+    }
+    //// Button Show Ico
+    .FilterBox-ShowIco {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+            position: absolute;
+            top: 6px;
+            right: 4px;
+
+            width: 17px;
+            height: 3px;  
+
+            background-image: url('../../../img/svg/FilterBox-Dots.svg');
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {  
+            position: absolute;
+            right: 0;
+            top: 3px;
+
+            width: 30px;
+            height: 6px;
+            background-image: url('../../../img/svg/FilterBox-Dots.svg');
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            position: absolute;
+            right: 0;
+            top: 3px;
+
+            width: 30px;
+            height: 6px;
+            background-image: url('../../../img/svg/FilterBox-Dots.svg');
+        }
+    }
+
+//// Header Filter OPEN
+.FilterBox_open {
+
+    //// Continents
+    .FilterBox-Continents {
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+            position: absolute;
+            top: 100px;
+            left: 55px;
+
+            display: flex;
+            flex-direction: column;
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+        }    
+    } 
+        //// Continents Item
+        .FilterBox-ContinentsItem {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+                &:not(:last-child) {
+                    margin-bottom: 13px;
+                }
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) { 
+
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                
+            }      
+        }
+
+    //// Button Show All
+    .FilterBox-ShowButton {
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+            position: absolute;
+
+            top: 47px;
+            right: 27px;
+
+            width: 16px;
+            height: 16px;  
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {   
+            position: absolute;
+
+            top: 115px;
+            right: 50px;
+
+            width: 174px;
+            height: 22px; 
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            position: absolute;
+
+            top: 130px;
+            right: 55px;
+
+            width: 174px;
+            height: 22px; 
+        }
+    }
+        //// Button Text Close
+        .FilterBox-ShowText {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) { 
+                display: none;   
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                display: none;
+            }   
+        }
+        //// Button Text Open
+        .FilterBox-ShowTextReturn {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) { 
+                display: block;   
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                display: block;
+            }   
+        }        
+        //// Button Show Ico
+        .FilterBox-ShowIco {
+            
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+                width: 16px;
+                height: 16px;  
+
+                top: 0;
+                left: 0;
+    
+                background-image: url('../../../img/svg/FilterBox-CloseIco.svg');   
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) { 
+                width: 22px;
+                height: 24px;  
+
+                top: -3px;
+                right: 7px;
+    
+                background-image: url('../../../img/svg/FilterBox-CloseIco.svg');      
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                width: 22px;
+                height: 24px;  
+
+                top: -3px;
+                right: 7px;
+    
+                background-image: url('../../../img/svg/FilterBox-CloseIco.svg');   
+            }
+        }   
+}

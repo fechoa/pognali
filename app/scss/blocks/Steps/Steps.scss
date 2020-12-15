@@ -1,0 +1,142 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+.Steps {
+    background-color: $basicWhite;
+    border: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        border-radius: 10px;
+
+        padding-top: 24px;  
+        padding-bottom: 23px;  
+        padding-left: 25px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        border-radius: 30px;
+
+        padding-top: 48px;
+        padding-left: 44px;
+        padding-right: 38px;
+        padding-bottom: 56px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        border-radius: 60px;
+
+        padding-top: 101px;
+        padding-bottom: 106px;
+        padding-left: 160px;
+        padding-right: 152px;
+    }    
+}
+
+.Steps-Title {
+    padding: 0;
+    margin: 0;
+
+    font-family: $bold, 'Arial';
+
+    font-style: normal;
+    font-weight: 700;
+
+
+    color: $basicBlueDark;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        font-size: 20px;
+        line-height: 20px;    
+        margin-bottom: 16px;     
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        font-size: 36px;
+        line-height: 36px;    
+        margin-bottom: 35px;       
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 36px;
+        line-height: 36px;    
+        margin-bottom: 33px;
+    }    
+}
+
+.Steps-TitleRow {
+    display: none;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        &_one {
+            display: block;
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        display: block;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+}
+
+.Steps-Subtitle {
+    padding: 0;
+    margin: 0;
+
+    font-family: $normal, 'Arial';
+    font-style: normal;
+    font-weight: 400;
+
+    color: $specialGray;   
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        font-size: 16px;
+        line-height: 22px;         
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        font-size: 20px;
+        line-height: 24px;       
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 24px;        
+    }    
+}
+
+.Steps-SubtitleRow {
+    display: none;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        &_one {
+            display: block;
+        } 
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        &_two {
+            display: block;
+        }  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        &_two {
+            display: block;
+        }  
+    }
+}

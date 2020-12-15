@@ -1,0 +1,138 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.Road {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        padding-bottom: 6px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}    
+
+.Road-Title {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}
+
+.Road-Subtitle {
+    position: relative;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin-bottom: 21px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        margin-bottom: 75px;
+
+        &::after {
+            position: absolute;
+            left: 0;
+            top: 81px;
+
+            content: '';
+
+            width: 532px;
+            height: 1px;
+            background-color: #E1E3E9;
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 117px;
+
+        &::after {
+            position: absolute;
+            left: 0;
+            top: 103px;
+
+            content: '';
+
+            width: 998px;
+            height: 1px;
+            background-color: #E1E3E9;
+        }
+    }    
+}
+
+.Road-SelectList {
+    margin-top: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin-bottom: 25px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        margin-bottom: 50px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 56px;
+    }    
+}
+
+.Road-ButtonNext {
+    outline: none;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin-bottom: 6px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}
+
+.Road-ButtonPrev {
+    margin: 0;
+
+    outline: none;
+    
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin-bottom: 6px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        position: absolute;
+        bottom: 55px;
+        right: 0;
+
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: absolute;  
+        bottom: 110px;
+        right: 100px;
+    }    
+}

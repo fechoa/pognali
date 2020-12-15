@@ -1,0 +1,218 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+//// All Content Box
+.CompanionsContent {
+    display: flex;
+
+    background-color: #EDEFF6;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        flex-direction: column;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        flex-direction: column;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        flex-direction: row;
+        margin: 0 auto;
+        width: 1320px;
+    }    
+}
+    //// Main Filter Form
+    .CompanionsContent-Filter {
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+            margin: 0 auto;
+            margin-top: 21px;
+            margin-bottom: 28px;  
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {  
+            margin: 0 auto;
+            margin-top: 43px;
+            margin-bottom: 40px;                
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            order: 2;
+        }    
+    }
+
+    //// Cards and Pagination Content
+    .CompanionsContent-CardsBox {
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+            display: flex;
+            flex-direction: column;
+
+
+            width: 270px;
+            margin: 0 auto;
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {  
+            display: flex;
+            flex-direction: column;  
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            display: flex;
+            flex-direction: column;
+            margin-right: 84px;
+        }    
+    }    
+        //// Cards
+        .CompanionsContent-Cards {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {    
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+            }    
+        }    
+
+        //// Button Show More
+        .CompanionsContent-ShowButton {
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+            outline: none;
+
+            background-color: transparent;
+
+            transition: all 0.1s ease-out;
+
+            //// Actions
+            &:hover, &:focus {
+                opacity: 0.6;
+            }
+            &:active {
+                opacity: 0.3;
+            }
+
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+                margin-bottom: 26px;  
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                height: 30px; 
+                margin-bottom: 52px;
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                height: 30px;
+                margin-bottom: 73px;
+            }    
+        }   
+            //// Button Show More Text
+            .CompanionsContent-ShowButtonText {
+                position: relative;
+
+                margin: 0;
+                padding: 0;
+
+                font-family: $bold, 'Arial';
+                font-style: normal;
+                font-weight: 700;
+
+                font-size: 17px;
+                line-height: 30px;
+
+                text-transform: uppercase;
+                
+                color: $basicBlueDark;    
+                
+                //// Plus Ico
+                &::before {
+                    position: absolute;
+
+                    content: '';
+
+                    background-image: url('../../../img/svg/CompanionsContent-ShowButton.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+
+                // Mobile
+                @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                    font-size: 17px;
+                    line-height: 30px;
+
+                    padding-left: 33px;
+
+                    //// Plus Ico
+                    &::before {
+                        width: 18px;
+                        height: 18px;
+
+                        left: 0;
+                        top: 3px;
+                    }                    
+                }
+                // Tablet
+                @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                    font-size: 20px;
+                    line-height: 20px;     
+                    
+                    padding-left: 51px;
+
+                    //// Plus Ico
+                    &::before {
+                        width: 26px;
+                        height: 26px;
+
+                        left: 0;
+                        top: -4px;
+                    }                       
+                }
+                // Desktop
+                @media (min-width: $desktop-width) {
+                    font-size: 20px;
+                    line-height: 20px;     
+                    
+                    padding-left: 50px;
+
+                    //// Plus Ico
+                    &::before {
+                        width: 26px;
+                        height: 26px;
+
+                        left: 0;
+                        top: -4px;
+                    }                     
+                }    
+            }           
+
+        //// Pagination
+        .CompanionsContent-PaginationBox {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                margin-bottom: 46px;
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {    
+
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+
+            }    
+        }             

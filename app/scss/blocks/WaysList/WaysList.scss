@@ -1,0 +1,149 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.WaysList {
+    display: flex;
+    align-items: center;
+    align-self: center;
+
+    list-style: none;
+
+    padding: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.WaysList-Item {
+    opacity: 15%;
+
+    padding: 0;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    margin-bottom: 20px;
+
+    &_on {
+        opacity: 100%;
+    }
+
+    &_fly {
+        background-image: url('../../../img/svg/FlyIco.svg');
+    }
+    &_car {
+        background-image: url('../../../img/svg/CarIco.svg');
+    }
+    &_bike {
+        background-image: url('../../../img/svg/BikeIco.svg');
+    }
+    &_walk {
+        background-image: url('../../../img/svg/WalkIco.svg');
+    }
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        &:first-child {
+            margin-right: 15px;
+        }
+        &:nth-child(2) {
+            margin-right: 13px;
+        }
+        &:nth-child(3) {
+            margin-right: 9px;
+        }
+
+
+        &_fly {
+            width: 21px;
+            height: 21px;
+        }
+        &_car {
+            width: 17px;
+            height: 19px;
+        }
+        &_bike {
+            width: 24px;
+            height: 24px;
+        }
+        &_walk {
+            width: 21px;
+            height: 23px;
+        }   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        &:first-child {
+            margin-right: 14px;
+        }
+        &:nth-child(2) {
+            margin-right: 13px;
+        }
+        &:nth-child(3) {
+            margin-right: 8px;
+        }
+
+
+        &_fly {
+            width: 23px;
+            height: 23px;
+        }
+        &_car {
+            width: 18px;
+            height: 20px;
+        }
+        &_bike {
+            width: 25px;
+            height: 25px;
+        }
+        &_walk {
+            width: 22px;
+            height: 24px;
+        }   
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        &:first-child {
+            margin-right: 14px;
+        }
+        &:nth-child(2) {
+            margin-right: 13px;
+        }
+        &:nth-child(3) {
+            margin-right: 8px;
+        }
+
+
+        &_fly {
+            width: 23px;
+            height: 23px;
+        }
+        &_car {
+            width: 18px;
+            height: 20px;
+        }
+        &_bike {
+            width: 25px;
+            height: 25px;
+        }
+        &_walk {
+            width: 22px;
+            height: 24px;
+        }   
+    }
+}

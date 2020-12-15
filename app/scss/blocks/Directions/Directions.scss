@@ -1,0 +1,234 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.Directions {
+    position: relative;
+    z-index: 10;
+
+    width: 100%;
+    background-color: #EDEFF6;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;      
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;  
+    }
+}
+
+.Directions-Wrapper {
+    margin: 0 auto;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        padding-top: 81px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 34px;
+
+        max-width: 320px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        display: flex;
+        flex-direction: column;  
+        padding-top: 151px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 80px;
+
+        max-width: 768px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: grid;
+        grid-template-columns: 559px 380px;
+        grid-template-rows: repeat(3, min-content min-content min-content);
+        column-gap: 170px;
+
+
+        padding-top: 220px;
+        padding-left: 131px;
+        padding-right: 60px;
+        padding-bottom: 110px;
+
+        max-width: 1440px;
+    }
+}
+
+.Directions-Title {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        padding-left: 25px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        padding-left: 33px;
+        margin-bottom: 57px;
+
+        position: relative;
+        z-index: 1;
+        
+        &::after {
+            position: absolute;
+            z-index: -1;
+
+            content: '';
+
+            width: 288px;
+            height: 574px;
+
+            top: 10px;
+            right: 0;
+
+            background-image: url('../../../img/png/Directions-CountriesBg_t.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+
+        margin-top: 5px;
+        margin-bottom: 58px;
+
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            position: absolute;
+            z-index: -1;
+
+            content: '';
+
+            width: 288px;
+            height: 574px;
+
+            top: -70px;
+            right: -140px;
+
+            background-image: url('../../../img/png/Directions-CountriesBg_t.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+    }
+}
+
+.Directions-Subtitle {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'BloggerSansLight', 'Arial';
+    font-style: normal;
+    font-weight: 300;
+    
+    color: #444444;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        padding-left: 25px;
+        margin-bottom: 60px;
+
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        padding-left: 33px;
+        margin-bottom: 104px;
+
+        font-size: 28px;
+        line-height: 33px;           
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        grid-column: 2 / span 1;
+        grid-row: 2;
+
+        margin-bottom: 98px;
+
+        z-index: 9;
+        font-size: 28px;
+        line-height: 33px;        
+    }
+}
+
+.Directions-List {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        grid-column: 1 / span 1;
+        // grid-column-end: 1;
+        // grid-row-start: 0 / span 3;
+ 
+    }
+}
+
+.Directions-Button {
+    position: relative;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        width: 100%;
+        padding-top: 22px;
+        padding-bottom: 21px;
+        padding-left: 23px;
+        padding-right: 23px;
+
+         
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        
+        justify-self: center;;
+        margin-right: 35px;
+        margin-left: 35px;
+        
+        padding-top: 31px;
+        padding-bottom: 27px;
+        padding-left: 33px;
+        padding-right: 32px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        z-index: 10;
+
+        grid-column: 2 / span 1;
+        grid-row: 3;
+
+        padding-top: 29px;
+        padding-bottom: 27px;
+        padding-left: 33px;
+        padding-right: 36px;
+
+        max-width: 275px;
+    }
+    
+}

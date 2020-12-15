@@ -1,0 +1,314 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.ArriveInputBox {
+    position: relative;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        display: flex;  
+        flex-direction: column;
+
+        padding-right: 15px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        &::before {
+            position: absolute;
+            left: 0;
+            top: -26px;
+            
+            content: '';
+
+            width: 532px;
+            height: 1px;
+
+            background-color: #E1E3E9;
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}
+
+.ArriveInputBox-Text {
+    position: relative;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 8px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        display: flex;
+        justify-content: space-between;  
+
+        margin-bottom: 24px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: flex;
+        justify-content: space-between;  
+        width: 475px;
+    }    
+}
+
+.ArriveInputBox-Label {
+    padding: 0;
+    margin: 0;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}
+
+.ArriveInputBox-Descr {
+    padding: 0;
+    margin: 0;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        &_day {
+            padding-right: 8px;
+        }
+    }    
+}
+
+.ArriveInputBox-NumberBox {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #CBCED9;
+    border-radius: 4px;
+
+    display: flex;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    //// Actions
+    &:hover, &:focus {
+        border-color: #959BB2;
+    }
+    &:active {
+        border-color: #161C35;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        justify-content: space-between;
+        align-items: center;
+
+        width: 220px;
+        height: 43px;  
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        justify-content: space-between;
+        align-items: center; 
+
+        width: 531px;
+        height: 70px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: absolute;
+        top: -27px;
+        left: 221px;
+
+        justify-content: space-between;
+        align-items: center; 
+
+        width: 180px;
+        height: 70px;
+    }    
+}
+
+.ArriveInputBox-Value {
+    padding: 0;
+    margin: 0;
+
+    font-family: $medium, 'Arial';
+    font-style: normal;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    
+    color: $basicBlueDark;    
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        font-size: 14.86px;
+        line-height: 14px;           
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        font-size: 20px;
+        line-height: 18px;          
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 18px;        
+    }    
+}
+
+.ArriveInputBox-Input {
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    outline: none;
+
+    transition: 0.2s ease;
+    &:hover .ArriveInputBox-IcoMinus,
+    &:focus .ArriveInputBox-IcoMinus {
+        background-color: #999999;
+    }
+
+    &:active .ArriveInputBox-IcoMinus {
+        background-color: #E5E5E5;
+    }
+
+    &:hover .ArriveInputBox-IcoPlus,
+    &:focus .ArriveInputBox-IcoPlus {
+        background-color: #999999;
+    }
+
+    &:active .ArriveInputBox-IcoPlus {
+        background-color: #E5E5E5;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        height: 43px;  
+        width: 43px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        width: 69px;
+        height: 69px;   
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 70px;
+        height: 70px;
+    }    
+}
+
+.ArriveInputBox-InputMinus {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;   
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {     
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.ArriveInputBox-InputPlus {
+    position: relative;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;  
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.ArriveInputBox-IcoMinus {
+    background-color: #CCCCCC;  
+    
+    
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        width: 14px;
+        height: 2px;
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        width: 20px;
+        height: 2px;  
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 20px;
+        height: 2px;
+    }    
+}
+
+.ArriveInputBox-IcoPlus {
+    background-color: #CCCCCC;  
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        position: absolute;
+        width: 14px;
+        height: 2px;
+        
+        &_one {
+            transform: rotate(-90deg);
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        position: absolute;
+
+        width: 20px;
+        height: 2px;
+        
+        &_one {
+            transform: rotate(-90deg);
+        }   
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: absolute;
+        
+        width: 20px;
+        height: 2px;
+        
+        &_one {
+            transform: rotate(-90deg);
+        }  
+    }    
+}
+

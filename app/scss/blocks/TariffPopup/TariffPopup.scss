@@ -1,0 +1,375 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+
+
+.TariffPopup {
+    position: absolute;
+    z-index: 50;
+
+    transition: 0.2s;
+
+    display: flex;
+    
+    animation-name: pop;
+    animation-duration: 0.4s;
+
+    background-color: $basicWhite;
+
+    box-shadow: 0px 2px 8px rgba(29, 46, 91, 0.14);
+
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        min-width: 270px;
+        min-height: 443px;
+
+        bottom: 1055px;
+        left: 50%;
+        transform: translate(-50%);
+
+        border-radius: 20px;
+
+        padding-top: 34px;
+        
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        min-width: 688px;
+        min-height: 526px;
+
+        bottom: 1620px;
+        left: 50%;
+        transform: translate(-50%);
+
+        border-radius: 30px;
+
+        padding-top: 54px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        min-width: 750px;
+        min-height: 526px;
+
+        bottom: 1530px;
+        left: 50%;
+        transform: translate(-50%);
+
+        border-radius: 30px;
+
+        padding-top: 54px;
+    }
+}
+
+.TariffPopup-Wrapper {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {     
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.TariffPopup-Title {
+    text-align: center;
+
+    padding: 0;
+    margin: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin-bottom: 39px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        margin-bottom: 61px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 54px;
+    }
+}
+
+.TariffPopup-List {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    font-family: 'BloggerSansLight', 'Arial';
+    font-style: normal;
+    font-weight: 300;
+
+    color: $specialGray; 
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        font-size: 16px;
+        line-height: 22px;
+
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        font-size: 22px;
+        line-height: 28px;   
+        
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 22px;
+        line-height: 28px;   
+        
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+}
+
+.TariffPopup-Item {
+    font: inherit;
+
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 22px;
+
+        &::before {
+            position: absolute;
+            top: -11px;
+
+            content: '';
+
+            width: 100%;
+            height: 1px;
+
+            background-color: #000000;
+            opacity: 0.05;
+        }
+
+        &:last-child {
+            &::after {
+                position: absolute;
+                bottom: -14px;
+
+                content: '';
+
+                width: 100%;
+                height: 1px;
+
+                background-color: #000000;
+                opacity: 0.05;
+            }
+
+            margin-bottom: 45px;
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-bottom: 27px;
+
+        &::before {
+            position: absolute;
+            top: -14px;
+
+            content: '';
+
+            width: 100%;
+            height: 1px;
+
+            background-color: #000000;
+            opacity: 0.05;
+        }
+
+        &:last-child {
+            &::after {
+                position: absolute;
+                bottom: -14px;
+
+                content: '';
+
+                width: 100%;
+                height: 1px;
+
+                background-color: #000000;
+                opacity: 0.05;
+            }
+
+            margin-bottom: 67px;
+        }  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-bottom: 27px;
+
+        &::before {
+            position: absolute;
+            top: -12px;
+
+            content: '';
+
+            width: 100%;
+            height: 1px;
+
+            background-color: #000000;
+            opacity: 0.05;
+        }
+
+        &:last-child {
+            &::after {
+                position: absolute;
+                bottom: -12px;
+
+                content: '';
+
+                width: 100%;
+                height: 1px;
+
+                background-color: #000000;
+                opacity: 0.05;
+            }
+
+            margin-bottom: 64px;
+        }
+    }
+}
+
+.TariffPopup-Service {
+    font: inherit;
+
+    padding: 0;
+    margin: 0;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.TariffPopup-Descr {
+    font: inherit;
+
+    padding: 0;
+    margin: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.TariffPopup-Button {
+    width: 100%;
+    border: 0;
+    outline: none;
+
+
+    background-color: #F3F4F8;
+
+    cursor: pointer;
+
+    //// Actions
+    &:hover, &:focus {
+        background-color: #EDEFF6;
+    }
+    &:active {
+        .TariffPopup-ButtonText {
+            opacity: 0.3;
+            background-color: #EDEFF6;            
+        }
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        height: 59px;
+
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        height: 108px;
+        
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        height: 122px;
+        
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+}
+
+.TariffPopup-ButtonText {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: 700;
+
+    color: $basicBlueDark;   
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        font-size: 16px;
+        line-height: 24px;
+
+        text-transform: uppercase;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        font-size: 24px;
+        line-height: 24px;           
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 24px;
+        line-height: 26px;        
+    }
+}

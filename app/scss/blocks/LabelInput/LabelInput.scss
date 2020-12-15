@@ -1,0 +1,38 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.LabelInput {
+    font-family: $medium, 'Arial';
+    font-style: normal;
+    font-weight: 500;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    
+    color: $basicBlueDark;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        font-size: 16px;
+        line-height: 16px;   
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+        font-size: 20px;
+        line-height: 18px;            
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 18px;        
+    }    
+    
+}

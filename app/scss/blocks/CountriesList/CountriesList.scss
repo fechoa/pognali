@@ -1,0 +1,55 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+.CountriesList {
+    display: flex;
+    
+    padding: 0;
+
+    list-style: none;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.CountriesList-Item {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }  
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }  
+    }
+}

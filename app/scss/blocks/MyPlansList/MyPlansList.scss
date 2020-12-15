@@ -1,0 +1,309 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.MyPlansList {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}    
+
+.MyPlansList-Item {
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: $basicWhite;
+
+    border-radius: 10px;
+    
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        flex-direction: column;
+
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        padding-top: 24px;
+        padding-left: 23px;
+        padding-right: 23px;
+        padding-bottom: 23px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-bottom: 11px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        padding-top: 40px;
+        padding-left: 36px;
+        padding-right: 31px;
+        padding-bottom: 15px;   
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        flex-direction: row;
+        align-items: center;
+        
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        padding-top: 39px;
+        padding-left: 42px;
+        padding-right: 42px;
+        padding-bottom: 38px;
+    }    
+}    
+
+.MyPlansList-Number {
+    padding: 0;
+    margin: 0;
+    
+    font-family: $medium, 'Arial';
+    font-style: normal;
+    font-weight: 500;
+
+    color: $basicBlueDark;    
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        font-size: 16px;
+        line-height: 16px;
+
+        position: absolute;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        font-size: 20px;
+        line-height: 20px;
+
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-right: 36px;
+
+        font-size: 20px;
+        line-height: 20px;        
+    }    
+}
+
+.MyPlansList-Title {
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: $bold, 'Arial';
+    font-style: normal;
+    font-weight: 700;
+
+    color: $basicBlueDark;    
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        padding-left: 18px; 
+        margin-bottom: 20px;
+
+        font-size: 16px;
+        line-height: 16px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        order: -1;
+
+        width: 520px;
+
+        margin-bottom: 53px;
+
+        font-size: 24px;
+        line-height: 24px;  
+
+        &::after {
+            position: absolute;
+
+            content: '';
+
+            width: 618px;
+            height: 1px;
+
+            opacity: 0.3;
+            background-color: #CBCED9;
+
+            left: 38%;
+            transform: translate(-38%);
+            top: 58px;
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 305px;
+        margin-right: 227px;
+
+        font-size: 24px;
+        line-height: 24px;
+    }    
+}
+
+.MyPlansList-Companions {
+    padding: 0;
+    margin: 0;
+
+    font-family: $medium, 'Arial';
+    font-style: normal;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    
+    color: $basicBlueDark;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-bottom: 5px;
+
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.06em;           
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0.1em;       
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 170px;
+        margin-right: 7px;
+
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0.09em;   
+    }    
+}
+
+.MyPlansList-Date {
+    padding: 0;
+    margin: 0;
+
+    font-family: $medium, 'Arial';
+    font-style: normal;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    
+    color: $basicBlueDark;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        margin-bottom: 24px;
+
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.06em;     
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0.06em;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0.06em;   
+    }    
+}
+
+.MyPlansList-Button {
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    background-color: transparent;
+
+    font-family: $medium, 'Arial';
+    font-style: normal;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    
+    color: #000000;
+    
+    opacity: 0.3;   
+    
+    &:hover, &:focus {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.1;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        width: 68px;
+        height: 14px;   
+
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.03em;    
+        
+        text-align: left;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        width: 107px;
+        height: 20px;   
+        
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0.1em;        
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-left: auto;
+
+        width: 107px;
+        height: 20px; 
+        
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0.08em;  
+    }    
+}

@@ -1,0 +1,98 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.Button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: 700;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+
+    outline: none;
+
+    color: $basicBlueDark;
+    background-color: $basicYellow;
+
+
+    //// Actions
+    &:hover, &:focus {
+        background-color: $specialYellowDark;
+    }
+    &:active {
+        p {
+            opacity: 0.3;
+        }
+        &::after {
+            opacity: 0.3;
+        }
+    }
+
+
+    //// Arrow Ico
+    &::after {
+        content: '';
+
+        width: 14px;
+        height: 13px;     
+
+        background-image: url('../../../img/svg/About-ArrowIco.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        border-radius: 10px;
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        border-radius: 20px; 
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        border-radius: 20px; 
+    }
+}
+
+.Button-Text {
+    padding: 0;
+    margin: 0;
+
+    font: inherit;
+
+    
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        font-size: 18px;
+        line-height: 18px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        font-size: 24px;
+        line-height: 24px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 24px;
+        line-height: 24px;
+    }
+}

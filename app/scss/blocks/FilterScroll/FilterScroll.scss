@@ -1,0 +1,381 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+//// Filter Fall List
+.FilterScroll {
+    display: flex;
+
+    position: absolute;
+    
+    &_off {
+        display: none;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        flex-direction: column;
+
+        background-color: #E2E5F2;
+
+        width: 100%;
+
+        padding-top: 170px;
+        padding-bottom: 28px;
+
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        flex-wrap: wrap;
+        
+        background-color: #E2E5F2;
+
+        width: 100%; 
+
+        padding-bottom: 75px;
+
+        border-bottom-left-radius: 56px;
+        border-bottom-right-radius: 56px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: relative;
+        
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        background-color: #EDEFF6;
+
+        width: 100%;
+    }    
+}    
+    //// Calendar
+    .FilterScroll-Calendar {
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+            margin: 0 auto;
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+            margin: 0;
+            margin-left: -15px;
+            margin-right: 80px;
+            margin-bottom: 40px;
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            display: none;
+            margin-top: 0;
+        }    
+    }
+
+    //// List Countries
+    .FilterScroll-Table {
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                margin: 0 auto;
+
+                width: 220px;
+                
+                margin-bottom: 15px;
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {  
+            padding-left: 0;  
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            display: none;
+        }    
+    }
+
+    //// Country List Desktop
+    .FilterScroll-CountryList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        margin: 0 auto;
+        padding: 0;
+
+        list-style: none;
+
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+            display: none;  
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+            display: none;
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            width: 1320px;
+
+            padding-top: 10px;
+        }        
+    }
+        //// Country Item Desktop
+        .FilterScroll-CountryItem {
+            margin: 0;
+            padding: 0;
+    
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {    
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                width: 264px;
+
+                margin-bottom: 60px;
+
+            }        
+        }
+            //// Country Letter Text
+            .FilterScroll-CountryLetter {
+                margin: 0;
+                padding: 0;
+
+                font-family: $bold, 'Arial';
+                font-style: normal;
+                font-weight: 700;
+
+                
+                text-transform: uppercase;
+                
+                color: #192144;                
+        
+                // Mobile
+                @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                }
+                // Tablet
+                @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                }
+                // Desktop
+                @media (min-width: $desktop-width) {
+                    font-size: 60px;
+                    line-height: 60px;
+
+                    margin-bottom: 25px;
+                }        
+            }
+
+            //// Countries Scroll List
+            .FilterScroll-Countries {
+                margin: 0;
+                padding: 0;
+
+                list-style: none;
+        
+                // Mobile
+                @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                }
+                // Tablet
+                @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                }
+                // Desktop
+                @media (min-width: $desktop-width) {
+                }        
+            }
+                //// Countries Scroll Item
+                .FilterScroll-CountriesItem {
+                    margin: 0;
+                    padding: 0;
+            
+                    // Mobile
+                    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                    }
+                    // Tablet
+                    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                    }
+                    // Desktop
+                    @media (min-width: $desktop-width) {
+                        margin-bottom: 5px;
+                    }        
+                }      
+                    //// Country Letter Link
+                    .FilterScroll-CountriesLink {
+                        margin: 0;
+                        padding: 0;
+
+                        text-decoration: none;
+
+                        font-family: $normal, 'Arial';
+                        font-style: normal;
+                        font-weight: 400;
+
+                        color: $specialGray;    
+
+                        transition: 0.2s;
+                        
+                        &:hover, &:focus {
+                            opacity: 0.3;
+                        }
+                        &:active{
+                            opacity: 0.5;
+                        }
+
+                        // Mobile
+                        @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                        }
+                        // Tablet
+                        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                        }
+                        // Desktop
+                        @media (min-width: $desktop-width) {
+                            font-size: 20px;
+                            line-height: 30px;
+                        }                                    
+                    }
+
+    //// Button 
+    .FilterScroll-Button {
+        display: flex;
+
+        transition: 0.2s;
+        outline: none;
+        cursor: pointer;
+
+        border: 0;
+        background-color: #D6DAED;
+
+        &:hover, &:focus {
+            background-color: #DFE2F1;
+
+            .FilterScroll-ButtonText {
+                opacity: 0.8;
+            }
+        }
+        &:active {
+            background-color: #D4D5D8;
+
+            .FilterScroll-ButtonText {
+                opacity: 0.3;
+            }
+        }
+        
+
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) {
+            align-items: center;
+            justify-content: center;
+
+            width: 270px;
+            height: 39px;
+            
+            margin: 0 auto;
+
+            border-radius: 20px;
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) {  
+            align-self: flex-end;  
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            height: 100px;
+            border-radius: 20px;
+
+            margin: 0 auto;
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            align-items: center;
+            justify-content: center;
+            align-self: flex-end;
+
+            width: 1320px;
+            height: 100px;
+
+            margin: 0 auto;
+
+            border-radius: 20px;
+        }        
+    }
+        //// Button Text
+        .FilterScroll-ButtonText {
+            position: relative;
+
+            margin: 0;
+            padding: 0;
+
+            font-family: $bold, 'Arial';
+            font-style: normal;
+            font-weight: 700;
+            
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            
+            color: #192144;   
+            
+            //// Close Icon
+            &::before {
+                position: absolute;
+
+                content: '';
+
+                background-image: url('../../../img/svg/FilterBox-CloseIco.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {
+                padding-left: 25px;
+
+                font-size: 16px;
+                line-height: 20px;   
+
+                &::before {
+                    width: 14px;
+                    height: 14px;
+
+                    top: 1px;
+                    left: 0;
+                }
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) { 
+                padding-left: 45px;
+
+                font-size: 20px;
+                line-height: 20px;         
+                
+                &::before {
+                    width: 22px;
+                    height: 24px;
+
+                    top: -4px;
+                    left: 0;
+                }
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                padding-left: 45px;
+
+                font-size: 20px;
+                line-height: 20px;      
+                
+                &::before {
+                    width: 22px;
+                    height: 24px;
+
+                    top: -4px;
+                    left: 0;
+                }
+            }                
+        }

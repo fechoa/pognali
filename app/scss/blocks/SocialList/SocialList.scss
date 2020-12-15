@@ -1,0 +1,127 @@
+.SocialList {
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.SocialList-Item {
+    margin: 0;
+    padding: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.SocialList-Link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    border-radius: 50%;
+
+    background-color: $basicYellow;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        width: 45px;
+        height: 45px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        width: 62px;
+        height: 62px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 62px;
+        height: 62px;
+    }
+
+    // Events
+    &:hover, &:focus {
+        background-color: $specialYellowDark;
+    }
+
+    &:active .SocialList-Icon {
+        opacity: 0.3;
+    }
+}
+
+.SocialList-Icon {
+    margin: 0;
+    padding: 0;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &_fb {
+        background-image: url(../../../img/svg/Footer-SocialIcon_fb.svg);
+    }
+    &_vk {
+        background-image: url(../../../img/svg/Footer-SocialIcon_vk.svg);
+    }
+    &_in {
+        background-image: url(../../../img/svg/Footer-SocialIcon_in.svg);
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        &_fb {
+            width: 11px;
+            height: 21px;   
+        }
+
+        &_vk {
+            width: 23px;
+            height: 12px;
+        }
+        
+        &_in {
+            width: 18px;
+            height: 18px;
+        }
+    }
+        
+    // Tablet & Desktop
+    @media (min-width: $tablet-width) {   
+        &_fb {
+            width: 14px;
+            height: 26px;   
+        }
+
+        &_vk {
+            width: 28px;
+            height: 18px;
+        }
+        
+        &_in {
+            width: 22px;
+            height: 22px;
+        }
+    } 
+}

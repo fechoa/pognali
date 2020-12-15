@@ -1,0 +1,172 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+//// Calendar Countries Form
+.CalendarCountries {
+    font-family: $medium, 'Arial';
+    font-style: normal;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    
+    color: $basicBlueDark;    
+
+    background-color: #fff;
+
+    text-align: center;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        border-collapse: collapse;
+
+        width: 220px;
+        height: 205px;
+
+        font-size: 14px;
+        line-height: 18px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        border-collapse: collapse;
+
+        width: 262px;
+        height: 346px;        
+
+        margin-top: 35px;
+        margin-right: 79px;
+
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        border-collapse: separate;
+        border-spacing: 16px;
+
+        margin-top: 19px;
+        margin-right: 86px;
+
+        
+
+        width: 361px;
+        height: 408px;        
+
+        font-size: 20px;
+        line-height: 20px;
+    }    
+}
+
+.CalendarCountries-Row {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}
+
+.CalendarCountries-Cell {
+    cursor: pointer;
+
+    border: 1px solid #CBCED9;
+
+    transition: 0.2s;
+
+    /// Selected Cell
+    &_selected {
+        background-color: #EDEFF6;
+    }
+
+    &:hover, &:focus {
+        background-color: #959BB2;
+    }
+    &:active {
+        background-color: $basicBlueDark;
+        color: $basicWhite;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        width: 43px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        width: 55px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        border-radius: 4px;
+
+        width: 60px;
+    }    
+}
+
+/// Calendar Countries Filter Companions
+.CalendarCountries_filter {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        width: 346px;
+        height: 378px;
+
+        font-family: $bold, 'Arial';
+        font-style: normal;
+        font-weight: 700;
+
+        font-size: 60px;
+        line-height: 60px;
+        
+        text-transform: uppercase;
+        
+        color: #192144;
+        background-color: transparent;
+
+        border-collapse: separate;
+        border-spacing: 33px 30px;
+
+
+        .CalendarCountries-Cell {
+            border: 0;
+            
+            width: auto;
+            // height: 75px;
+     
+
+            opacity: 0.3;  
+
+            /// Selected Cell
+            &_selected {
+                background-color: transparent;
+                opacity: 1;
+            }            
+
+            &:hover, &:focus {
+                background-color: transparent;
+                opacity: 0.7;
+            }
+            &:active {
+                background-color: transparent;
+                color: #192144;
+                opacity: 1;
+            }
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}

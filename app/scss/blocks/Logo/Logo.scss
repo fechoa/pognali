@@ -1,0 +1,41 @@
+
+.Logo {
+    padding: 0;
+
+    position: relative;
+}
+
+.Logo-Pic {
+    display: none;
+
+    // Mobile
+    @media (min-width: 1px) and (max-width: $mobile-width-only) {
+        display: inline-block;
+    }
+
+    // Tablet
+
+    // Desktop
+
+    // Modificator
+    &_tablet {
+        display: none;
+        @media (min-width: $tablet-width) and (max-width: 1439px) {
+            display: inline-block;
+        }
+
+        &_open {
+            display: none;
+        }
+    }
+    &_desktop {
+        display: none;
+        @media (min-width: $desktop-width) {
+            display: inline-block;
+        }
+
+        &_open {
+            display: none;
+        }
+    }
+}

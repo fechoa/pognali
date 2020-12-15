@@ -1,0 +1,327 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.PlanList {
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin-bottom: 17px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        margin-bottom: 42px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 53px;
+    }    
+}    
+
+.PlanList-Item {
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+
+    &:first-child {
+        &::before {
+            position: absolute;
+    
+            content: '';
+
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin-bottom: 21px;
+        
+        &:first-child {
+            &::before {
+                width: 17px;
+                height: 287px;
+
+                left: -14px;
+                top: 6px;
+
+                background-image: url('../../../img/png/Entertainment-Line.png ');
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        margin-bottom: 53px;
+
+        &:first-child {
+            &::before {
+                width: 14px;
+                height: 285px;
+
+                right: 0;
+                top: 4px;
+
+                background-image: url('../../../img/png/Entertainment-Line_t.png ');
+            }
+        }
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 53px;
+
+        &:first-child {
+            &::before {
+                width: 14px;
+                height: 285px;
+
+                left: 767px;
+                top: 4px;
+
+                background-image: url('../../../img/png/Entertainment-Line_t.png ');
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }    
+}    
+
+.PlanList-Title {
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    z-index: 1;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    font-family: $medium, 'Arial';
+    font-style: normal;
+    font-weight: 500;
+    
+    color: $basicBlueDark;    
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        font-size: 18px;
+        line-height: 18px; 
+
+        padding-left: 11px;
+
+        margin-bottom: 18px;
+
+        width: 164px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        font-size: 30px;
+        line-height: 30px;   
+        
+        margin-bottom: 37px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 30px;
+        line-height: 30px;    
+        
+        margin-bottom: 37px;        
+    }    
+}      
+
+.PlanList-CountryFlag {
+    position: absolute;
+    z-index: 50;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        width: 35px;
+        height: 24px;
+
+        top: -4px;
+        right: 12px;
+        
+        /// Countries Flags
+        &_bosnia {
+            background-image: url('../../../img/png/Bosnia_m.png');
+        }  
+        &_czech {
+            background-image: url('../../../img/png/Czech_m.png');
+        } 
+
+        /// Fade
+        &::before {
+            position: absolute;
+            z-index: -1;
+            right: 35px;
+
+            content: '';
+
+            width: 43px;
+            height: 24px;
+
+
+            background-image: url('../../../img/png/Entertainment-Fade.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        width: 70px;
+        height: 47px;
+        
+        top: -12px;
+        right: 32px;
+
+        /// Countries Flags
+        &_bosnia {
+            background-image: url('../../../img/png/Bosnia.png');
+        }  
+        &_czech {
+            background-image: url('../../../img/png/Czech.png');
+        } 
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 70px;
+        height: 47px;
+        
+        top: -12px;
+        right: 120px;
+
+        /// Countries Flags
+        &_bosnia {
+            background-image: url('../../../img/png/Bosnia.png');
+        }  
+        &_czech {
+            background-image: url('../../../img/png/Czech.png');
+        }     
+    }        
+}
+
+.PlanList-Comment {
+    border: 1px solid #CBCED9;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+
+    font-family: $normal, 'Arial';
+    font-style: normal;
+    font-weight: 400;
+
+    color: $specialGray;
+
+    transition: 0.2s;
+    &::placeholder {
+        font-family: $normal, 'Arial';
+        font-style: normal;
+        font-weight: 400;
+
+        color: $specialGray;
+        opacity: 0.3;        
+    }
+
+    &:hover {
+        border: 1px solid #959BB2;
+    }
+
+    &:focus {
+        border: 1px solid #161C35;
+        &::placeholder {
+            opacity: 1;
+        }
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        width: 220px;
+        min-height: 220px;
+
+        padding-top: 10px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 10px;
+
+        font-size: 16px;
+        line-height: 22px;  
+
+        &::placeholder {
+            font-size: 16px;
+            line-height: 22px;  
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        width: 500px;
+        min-height: 140px;
+
+        padding-top: 19px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 19px;
+
+        font-size: 20px;
+        line-height: 20px;
+
+        &::placeholder {
+            font-size: 20px;
+            line-height: 20px;
+        } 
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 730px;
+        min-height: 142px;
+
+        padding-top: 26px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 26px;
+
+        font-size: 20px;
+        line-height: 20px;
+
+        &::placeholder {
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }    
+}    

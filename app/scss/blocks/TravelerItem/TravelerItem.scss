@@ -1,0 +1,248 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+
+.TravelerItem {
+    position: relative;
+
+    padding: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        width: 270px;
+        min-height: 428px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: 10px;
+        background-color: $basicWhite;
+
+        &_userid1 {
+            background-image: url('../../../img/png/userid1.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0 0;
+        }
+
+        &_userid2 {
+            background-image: url('../../../img/png/userid2.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0 0;
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        width: 285px;
+        min-height: 483px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: 20px;
+        background-color: $basicWhite;
+
+        &_userid1 {
+            background-image: url('../../../img/png/userid1_t.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0 0;
+        }
+
+        &_userid2 {
+            background-image: url('../../../img/png/userid2_t.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0 0;
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 285px;
+        min-height: 483px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: 20px;
+        background-color: $basicWhite;
+
+        &_userid1 {
+            background-image: url('../../../img/png/userid1_t.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0 0;
+        }
+
+        &_userid2 {
+            background-image: url('../../../img/png/userid2_t.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0 0;
+        }
+    }
+}
+
+.TravelerItem-Level {
+    position: absolute;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        top: 17px;
+        left: 17px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+        top: 20px;
+        left: 22px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        top: 20px;
+        left: 22px;
+    }
+}
+
+.TravelerItem-CountriesList {
+    padding: 0;
+    margin: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin-top: 259px;
+        margin-bottom: 13px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        margin-top: 273px;
+        margin-bottom: 19px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-top: 273px;
+        margin-bottom: 19px;
+    }
+}
+
+.TravelerItem-Content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.TravelerItem-Status {
+    padding: 0;
+    margin: 0;
+
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background-color: #81E31E;
+
+    &_off {
+        background-color: #F97676;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        top: 7px;
+        left: 15px;
+
+        width: 6px;
+        height: 6px;  
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        top: 7px;
+        left: 15px;
+
+        width: 8px;
+        height: 8px;    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        top: 7px;
+        left: 15px;
+
+        width: 8px;
+        height: 8px;
+    }
+}
+
+.TravelerItem-Title {
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin-bottom: 15px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        margin-bottom: 23px;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        margin-bottom: 23px;
+    }
+}
+
+.TravelerItem-Tags {
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        max-width: 188px;
+
+        margin-bottom: 14px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        max-width: 223px;
+
+        margin-bottom: 24px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        max-width: 223px;
+
+        margin-bottom: 24px;
+    }
+}
+

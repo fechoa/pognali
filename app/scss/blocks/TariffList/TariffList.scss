@@ -1,0 +1,431 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.TariffList {
+    position: relative;
+    z-index: 2;
+    list-style: none;
+
+    margin-top: 0;
+    padding: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+        
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        &::after {
+            position: absolute;
+            z-index: -1;
+            top: -39px;
+            right: 0;
+
+            content: '';
+
+            width: 198px;
+            height: 285px;
+
+            border-radius: 20px;
+
+            background-color: #E2E5F2;
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        &::after {
+            position: absolute;
+            z-index: -1;
+            top: -39px;
+            left: 621px;
+
+            content: '';
+
+            width: 446px;
+            height: 300px;
+
+            border-radius: 20px;
+
+            background-color: #E2E5F2;
+        }
+    }
+}    
+
+.TariffList-Item {
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: 'BloggerSansLight', 'Arial';
+    font-style: normal;
+    font-weight: 300;
+
+    color: $specialGray;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-size: 16px;
+        line-height: 24px;  
+
+        margin-bottom: 17px;
+
+        &::before {
+            position: absolute;
+
+            content: '';
+
+            width: 200px;
+            height: 1px;
+
+            background-color: #E1E3E9;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+
+            &::after {
+                position: absolute;
+                bottom: -10px;
+                
+                content: '';
+
+                width: 200px;
+                height: 1px;
+
+                background-color: #E1E3E9;
+            }
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        display: flex;
+        align-items: baseline;
+
+        font-size: 28px;
+        line-height: 28px;
+
+        &::before {
+            position: absolute;
+            left: 90px;
+
+            content: '';
+
+            width: 561px;
+            height: 1px;
+
+            background-color: #E1E3E9;
+        }
+
+        &:last-child {
+            &::after {
+                position: absolute;
+                left: 90px;
+                bottom: -10px;
+                
+                content: '';
+
+                width: 561px;
+                height: 1px;
+
+                background-color: #E1E3E9;
+            }
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: flex;
+        align-items: baseline;
+
+        font-size: 28px;
+        line-height: 28px;
+
+        &::before {
+            position: absolute;
+            left: 90px;
+
+            content: '';
+
+            width: 812px;
+            height: 1px;
+
+            background-color: #E1E3E9;
+        }
+
+        &:last-child {
+            &::after {
+                position: absolute;
+                left: 90px;
+                bottom: 0px;
+                
+                content: '';
+
+                width: 812px;
+                height: 1px;
+
+                background-color: #E1E3E9;
+            }
+        }
+    }
+}    
+
+.TariffList-Text {
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+
+    font: inherit;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        padding-top: 10px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        order: 2; 
+        width: 564px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        order: 2; 
+        width: 814px;
+    }
+}    
+
+.TariffList-Cost {
+    padding: 0;
+    margin: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        display: block;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: block;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+}
+
+.TariffList-NumberBox {
+    &_one {
+        background-color: $specialOrange;
+    }
+    &_two {
+        background-color: $specialYellowDark;
+    }
+    &_three {
+        background-color: $basicYellow;
+    }
+
+
+    border-radius: 50%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        width: 34px;
+        height: 34px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        width: 68px;
+        height: 68px;
+
+        margin-right: 23px;
+
+        &_one {
+            &::after {
+                position: absolute;
+                z-index: 2;
+                
+                top: 220px;
+                left: 543px;
+    
+                content: '';
+    
+                width: 100px;
+                height: 100px;
+    
+                background-image: url('../../../img/svg/Tariff-Title_ico.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 68px;
+        height: 68px;
+
+        margin-right: 23px;
+
+        &_one {
+            &::after {
+                position: absolute;
+                z-index: 2;
+                
+                top: 10px;
+                left: 980px;
+
+                content: '';
+
+                width: 198px;
+                height: 198px;
+
+                background-image: url('../../../img/svg/Tariff-Title_ico.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+    }
+}    
+
+.TariffList-Number {
+    font-family: 'BloggerSans', 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    color: $basicWhite;
+
+    padding: 0;
+    margin: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        font-size: 16px;
+        line-height: 16px;  
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        font-size: 28px;
+        line-height: 28px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 28px;
+        line-height: 28px; 
+    }
+}    
+
+.Tariff-Button {
+    display: flex;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: 700;
+
+    color: #132576;
+
+    border: none;
+    background-color: transparent;
+    outline: none;
+
+    &:hover, &:focus {
+            opacity: 0.7;
+    }
+    &:active {
+        opacity: 0.3;
+}
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        font-size: 16px;
+        line-height: 16px;          
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        max-width: 363px; 
+        font-size: 20px;
+        line-height: 20px;
+
+        margin-bottom: 85px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        max-width: 365px; 
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+.Tariff-ButtonText {
+    position: relative;
+
+    cursor: pointer;
+
+    padding: 0;
+    margin: 0;
+
+    font: inherit;
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        padding-left: 89px;
+
+        &::before {
+            position: absolute;
+            top: -26px;
+            left: 0;
+
+            content: '';
+
+            width: 68px;
+            height: 68px;
+
+            background-image: url('../../../img/svg/TariffList_manico.svg');
+        }  
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        padding-left: 91px;
+
+        &::before {
+            position: absolute;
+            top: -26px;
+            left: 0;
+
+            content: '';
+
+            width: 68px;
+            height: 68px;
+
+            background-image: url('../../../img/svg/TariffList_manico.svg');
+        }  
+    }
+}

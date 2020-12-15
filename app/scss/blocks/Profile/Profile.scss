@@ -1,0 +1,565 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.Profile {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $basicBlueLight;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        padding-left: 42px;
+        padding-right: 42px;
+        padding-top: 22px;  
+        padding-bottom: 64px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        padding-top: 62px;   
+        padding-left: 75px;
+        padding-right: 75px;
+        padding-bottom: 117px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        padding-top: 74px;
+        padding-left: 124px;
+        padding-right: 60px;
+        padding-bottom: 108px;
+    }    
+} 
+
+.Profile-Wrapper {
+    position: relative;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        width: 270px;  
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        width: 618px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 1256px;
+    }    
+}
+
+.Profile-UserBox {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        margin-bottom: 18px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        margin-bottom: 50px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: absolute;
+
+        right: 5%;
+        transform: translate(-5%);
+        top: -264px;
+    } 
+}
+
+.Profile-ChangeButton {
+    cursor: pointer;
+    outline: none;
+
+    border: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $specialBLueLight;
+
+    &:hover, &:focus {
+        background-color: #D1D7E9;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        border-radius: 20px;
+
+        width: 100%;
+        min-height: 40px;
+
+        margin-bottom: 33px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        border-radius: 10px;
+
+        width: 100%;
+        min-height: 60px;
+
+        margin-bottom: 52px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        width: 190px;
+        height: 47px;
+
+        position: absolute;
+        top: -74px;
+        right: 5.45%;
+        transform: translate(-5.45%);
+    } 
+}
+
+.Profile-ChangeText {
+    padding: 0;
+    margin: 0;
+
+    font-family: $medium, 'Arial';
+    font-style: normal;
+    font-weight: 500;
+    
+    text-align: center;
+    text-transform: uppercase;
+    
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        font-size: 20px;
+        line-height: 18px;   
+
+        color: $basicBlue;  
+    }
+    
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        font-size: 20px;
+        line-height: 18px;  
+        
+        letter-spacing: 0.09em;
+        
+        color: $basicBlueDark;                
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 18px; 
+        
+        color: $basicBlue;
+    }    
+}
+
+.Profile-ChangeSpan {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: none;
+    }    
+}
+
+.Profile-Titles {
+    font-family: $bold, 'Arial';
+    font-style: normal;
+    font-weight: 700;
+
+    text-align: center;
+    text-transform: uppercase;
+    
+    background-color: $basicBlueLight;
+     
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        font-size: 16px;
+        line-height: 18px;           
+
+        color: $basicBlueDark;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        font-size: 20px;
+        line-height: 20px;
+        
+        letter-spacing: 0.08em;
+        
+        color: #1D2E5B;
+
+        color: $basicBlueDark;  
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 20px;
+  
+        letter-spacing: 0.07em;        
+
+        color: $basicBlue;
+    }    
+}
+
+.Profile-TagsList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    position: relative;
+
+    border: 1px solid #CBCED9;
+    border-radius: 10px;
+
+    transition: 0.2s ease-out;
+    //// Actions
+    &:hover {
+        border-color: #AEB4CB ;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        width: 100%;
+        min-height: 89px;
+        
+        padding-top: 26px;
+        padding-bottom: 26px;
+        padding-left: 25px;
+        padding-right: 28px;
+
+        margin-bottom: 18px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        width: 100%;
+        min-height: 95px;
+
+        padding-top: 36px;
+        padding-bottom: 36px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 732px;
+        min-height: 95px;
+
+        padding-top: 36px;
+        padding-bottom: 37px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }    
+}
+
+.Profile-TagTitle {
+    padding: 0;
+    margin: 0;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        position: absolute;   
+        left: 50%;
+        transform: translate(-50%);
+        top: -8px;
+
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+        position: absolute;   
+        left: 50%;
+        transform: translate(-50%);
+        bottom: -11px;
+
+        padding-left: 14px;
+        padding-right: 14px;   
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: absolute;   
+        left: 4%;
+        bottom: -11px;
+
+        padding-left: 14px;
+        padding-right: 14px;   
+    }    
+}
+
+.Profile-TagText {
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+    height: 100%;
+    width: 100%;
+    outline: none;
+
+    background-color: transparent;
+
+    font-family: $normal, 'Arial';
+    font-style: normal;
+    font-weight: 400;
+
+    resize: none;
+
+    color: $specialGray;
+    opacity: 0.6;    
+
+    //// Actions
+    &:hover, &:focus {
+        opacity: 0.7;
+    }
+    &:focus {
+        opacity: 1;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        font-size: 16px;
+        line-height: 18px;       
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        font-size: 20px;
+        line-height: 22px;   
+        
+        height: 22px;
+    }
+    
+    // Desktop
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 22px;      
+        
+        height: 22px;
+    }    
+}
+
+.Profile-Ways {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    border: 1px solid #CBCED9;
+    border-radius: 10px;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {
+        width: 100%; 
+        height: 63px;
+
+        padding-top: 16px;
+        padding-bottom: 14px;
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        position: absolute;
+
+        width: 308px;
+        height: 93px;
+
+        padding-top: 24px;
+        padding-bottom: 26px;
+
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: absolute;
+        right: 0;
+
+        width: 384px;
+        height: 93.6px;
+
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }    
+}
+
+.Profile-WaysTitle {
+    padding: 0;
+    margin: 0;
+    
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        position: absolute;
+        
+        padding-left: 14px;
+        padding-right: 14px;
+
+        left: 31%;
+        top: -8px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        position: absolute;
+
+        left: 50%;
+        transform: translate(-50%);
+        bottom: -11px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        position: absolute;
+
+        left: 50%;
+        transform: translate(-50%);
+        bottom: -11px;
+    }    
+}
+
+.Profile-WaysList {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}
+
+.Profile-WaysItem {
+    padding: 0;
+    margin: 0;
+
+    position: relative;
+
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background-color: $basicWhite;
+
+    cursor: pointer;
+    transition: 0.2s;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+        width: 31.5px;
+        height: 31.5px;
+    }
+
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        width: 43px;
+        height: 43px;  
+    }
+
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 43px;
+        height: 43px; 
+
+        //// Actions
+        &:hover, &:focus {
+            .Profile-Ico {
+                opacity: 0.7;
+            }
+
+            .Tooltip {
+                display: block;
+            }
+        }
+        &:active {
+            background-color: #E2E5F1;
+            .Profile-Ico {
+                opacity: 0.3;
+            }
+        }
+    }    
+}
+
+.Profile-Ico {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &_off {
+        opacity: 0.15;
+    }
+
+    &_on {
+        opacity: 1;
+    }
+    
+    &_fly {
+        background-image: url('../../../img/svg/FlyIco.svg');
+    }
+
+    &_car {
+        background-image: url('../../../img/svg/CarIco.svg');
+    }
+
+    &_bike {
+        background-image: url('../../../img/svg/BikeIco.svg');
+    }
+
+    &_walk {
+        background-image: url('../../../img/svg/WalkIco.svg');
+    }
+    
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        width: 17px;
+        height: 16px;      
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        width: 23px;
+        height: 22px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        width: 23px;
+        height: 23px;
+    }    
+}

@@ -1,0 +1,33 @@
+@keyframes rotead {
+    0% {
+        transform: perspective(800px) rotateY(0deg);
+    }
+
+    25% {
+    }
+
+    50% {
+        background-color: #fff;
+     }
+       
+    100% {
+       transform: perspective(800px) rotateY(-360deg);
+    }
+}
+
+@keyframes popup {
+    0% {
+        transform: perspective(800px) rotateY(0deg);
+    }
+
+    25% {
+    }
+
+    50% {
+        background-color: #fff;
+     }
+       
+    100% {
+       transform: perspective(800px) rotateY(-360deg);
+    }
+}

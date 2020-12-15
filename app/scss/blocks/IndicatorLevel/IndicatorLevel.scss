@@ -1,0 +1,124 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+.IndicatorLevel {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+
+    padding-top: 15px;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    border-radius: 50%;
+
+    &::after {
+        content: '';
+        position: absolute;
+
+        top: 0;
+
+        width: 60px;
+        height: 60px;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &_eighty::after {
+        background-image: url('../../../img/svg/IndicatorCircle_80.svg');
+    }
+
+    &_ninetynine::after {
+        background-image: url('../../../img/svg/IndicatorCircle_99.svg');
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.IndicatorLevel-Number {
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: 'BloggerSansBold', 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+
+    color: $basicWhite;
+
+    padding-left: 17px;
+
+    &::after {
+        position: absolute;
+
+        content: '';
+
+        height: 1px;
+        width: 26px;
+
+        left: 17px;
+        top: 21px;
+
+        opacity: 0.3;
+
+        background-color: $basicWhite;
+    }
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}
+
+.IndicatorLevel-Text {
+    
+    padding: 0;
+    padding-left: 17px;
+
+    margin: 0;
+
+    font-family: 'BloggerSans', 'Arial';
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    color: $basicWhite;
+
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }    
+}

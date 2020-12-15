@@ -1,0 +1,1356 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+//// All Cards List
+.Card {
+    display: flex;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+    
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+        flex-direction: column; 
+        
+        width: 270px;
+
+        margin: 0 auto;
+        margin-bottom: 18px;
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+        flex-direction: column;  
+
+        width: 688px;
+
+        margin: 0 auto;
+        margin-bottom: 46px;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        flex-direction: column;
+        width: 951px;
+
+        margin-bottom: 62px;
+    }    
+}    
+    //// Card
+    .Card-Item {
+        position: relative;
+        
+        display: flex;
+
+        margin: 0;
+        padding: 0;
+
+        background-color: $basicWhite;
+
+        // Mobile
+        @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+            flex-direction: column;
+
+            width: 270px;
+
+            padding-top: 14px;
+            padding-left: 25px;
+            padding-right: 18px;
+            padding-bottom: 23px;
+
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            border-radius: 20px;
+        }
+        // Tablet
+        @media (min-width: $tablet-width) and (max-width: 1439px) { 
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            width: 688px;
+            min-height: 333px;
+            
+            padding-top: 35px;
+            padding-left: 35px;
+            padding-right: 25px;
+            padding-bottom: 2px;
+
+            margin-bottom: 39px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            border-radius: 20px;
+        }
+        // Desktop
+        @media (min-width: $desktop-width) {
+            width: 951px;
+            min-height: 286px;
+
+            padding-left: 324px;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            border-radius: 20px;
+            
+        }    
+    }    
+        //// Card Header Piece
+        .Card-Header {
+            position: relative;
+
+            display: flex;
+
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                align-items: flex-start;
+                margin-bottom: 13px;
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                z-index: 1;
+                align-items: flex-start;
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+
+                margin-left: -324px;
+            }    
+        }        
+            //// Avatar IMG
+            .Card-Avatar {
+                display: none;
+
+                    -moz-transition: all 1s ease-out;
+                    -o-transition: all 1s ease-out;
+                    -webkit-transition: all 1s ease-out;
+                    
+                   &:hover{
+                    -webkit-transform: scale(1.1);
+                    -moz-transform: scale(1.1);
+                    -o-transform: scale(1.1);
+                    }
+
+                // Mobile
+                @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+                    &_m {
+                        display: block;
+                    }  
+                }
+                // Tablet
+                @media (min-width: $tablet-width) and (max-width: 1439px) {  
+                    margin-right: 33px;  
+                    &_t {
+                        display: block;
+                    }  
+                }
+                // Desktop
+                @media (min-width: $desktop-width) {
+                    margin-right: 62px;
+                    &_d {
+                        display: block;
+                    }  
+                }    
+            }   
+
+            //// Heart Favorite Button
+            .Card-Favorite {
+                display: flex;
+
+                 
+                margin: 0;
+                padding: 0;
+
+                border: 0;
+                border-radius: 50%;
+
+                outline: none;
+
+                background-color: transparent;
+
+                //// Actions
+                &:hover, &:focus {
+                    background-color: #E2E5F2;
+                }
+                &:active {
+                    .Card-FavoriteIco {
+                        opacity: 0.1;
+                    }
+                }
+
+                //// Different Status
+                &_active {
+                    background-color: #F9EAEA;
+
+                    .Card-FavoriteIco {
+                        background-image: url('../../../img/svg/Favorite_active.svg');
+                        opacity: 1;
+                    }
+
+                    //// Actions
+                    &:hover, &:focus {
+                        background-color: #F9D8D8;
+                    }
+                    &:active {
+                        .Card-FavoriteIco {
+                            opacity: 0.1;
+                        }
+                    }
+                } 
+
+
+                // Mobile
+                @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+                    align-self: flex-end;
+
+                    margin-left: -20px;
+                    margin-right: 6px;
+
+                    width: 31px;
+                    height: 31px;   
+                }
+                // Tablet
+                @media (min-width: $tablet-width) and (max-width: 1439px) {  
+                    position: absolute;
+                    left: 371px;
+                    top: 140px;
+
+                    width: 50px;
+                    height: 50px;  
+                }
+                // Desktop
+                @media (min-width: $desktop-width) {
+                    position: absolute;
+                    left: 490px;
+                    top: 187px;
+
+                    width: 50px;
+                    height: 50px;
+                }    
+            }   
+                //// Heart Icon 
+                .Card-FavoriteIco {
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    background-image: url('../../../img/svg/FavoriteIco.svg');
+
+                    opacity: 0.5;
+
+                    // Mobile
+                    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+                        width: 12px;
+                        height: 11px;
+
+                        background-size: 12px 11px;
+
+                        margin-top: 11px;
+                        margin-left: 9.5px;
+                    }
+                    // Tablet
+                    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+                        width: 20px;
+                        height: 17px;
+
+                        background-size: 20px 17px;
+
+                        margin-top: 17px;
+                        margin-left: 15px;   
+                    }
+                    // Desktop
+                    @media (min-width: $desktop-width) {
+                        width: 20px;
+                        height: 17px;
+
+                        background-size: 20px 17px;
+
+                        margin-top: 17px;
+                        margin-left: 15px;                           
+                    }    
+                }   
+
+            //// User Name and Points Box
+            .Card-UserInfo {
+                display: flex;
+                // Mobile
+                @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+                    flex-direction: column;   
+                }
+                // Tablet
+                @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                    position: relative;
+
+                    flex-direction: row; 
+                }
+                // Desktop
+                @media (min-width: $desktop-width) {
+                }    
+            } 
+                //// User Name
+                .Card-Name {
+                    margin: 0;
+                    padding: 0;
+
+                    font-family: $bold, 'Arial';
+                    font-style: normal;
+                    font-weight: 700;
+
+                    color: $basicBlueDark;   
+
+                    // Mobile
+                    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                        font-size: 20px;
+                        line-height: 20px;
+
+                        margin-bottom: 8px;
+                    }
+                    // Tablet
+                    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                        font-size: 30px;
+                        line-height: 30px;
+
+                        margin-right: 22px;
+                    }
+                    // Desktop
+                    @media (min-width: $desktop-width) {
+                        margin-top: 46px;
+                        font-size: 30px;
+                        line-height: 30px;                        
+                    }    
+                }   
+                    //// User Link
+                    .Card-NameLink {
+                        text-decoration: none;
+
+                        font: inherit;
+                        color: inherit;
+
+                        //// Actions
+                        &:hover, &:focus {
+                            opacity: 0.6;
+                        }
+                        &:active {
+                            opacity: 0.3;
+                        }
+                        // Mobile
+                        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+                        }
+                        // Tablet
+                        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                        }
+                        // Desktop
+                        @media (min-width: $desktop-width) {
+                        }    
+                    }                  
+                    //// Row Name
+                    .Card-RowName {
+                        display: none;
+                        // Mobile
+                        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+                            display: block;  
+                        }
+                        // Tablet
+                        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                        }
+                        // Desktop
+                        @media (min-width: $desktop-width) {
+                        }    
+                    }   
+
+                //// User Points
+                .Card-Points {
+                    margin: 0;
+                    padding: 0;
+
+                    font-family: $bold;
+                    font-style: normal;
+                    font-weight: 700;
+
+                    text-transform: uppercase;
+                    
+                    color: #161C35;
+
+                    // Mobile
+                    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                    // Tablet
+                    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+                        position: absolute;
+                        top: 157px;
+                        left: 207px;
+
+                        min-width: 49px;
+
+                        font-size: 20px;
+                        line-height: 20px;                    
+                    }
+                    // Desktop
+                    @media (min-width: $desktop-width) {
+                        position: absolute;
+                        top: 203px;
+                        left: 547px;
+
+                        min-width: 49px;
+                        
+                        font-size: 20px;
+                        line-height: 20px;                        
+                    }    
+                }  
+
+            //// User Status Off/On 
+            .Card-Status {
+                background-color: #BBF085;
+                border-radius: 50%;
+
+
+                //// Different Status
+                &_off {
+                    background-color: #F97676;
+                }
+
+
+                // Mobile
+                @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+                    width: 6px;
+                    height: 6px;   
+
+                    margin-top: 8px;
+                    margin-left: auto;
+                }
+                // Tablet
+                @media (min-width: $tablet-width) and (max-width: 1439px) { 
+                    width: 8px;
+                    height: 8px;
+
+                    margin-top: 10px;
+                }
+                // Desktop
+                @media (min-width: $desktop-width) {
+                    position: absolute;
+
+                    top: 57px;
+                    left: 322px;
+
+                    width: 8px;
+                    height: 8px;
+                }    
+            }   
+            
+        //// HashTags 
+        .Card-Tags {
+            margin: 0;
+            padding: 0;
+
+            font-family: $normal, 'Arial';
+            font-style: normal;
+            font-weight: 400;
+            
+            color: $specialGray;            
+
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                font-size: 15px;
+                line-height: 18px;
+
+                margin-bottom: 16px;
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                position: absolute;
+                z-index: 50;
+                max-width: 226px;
+
+                font-size: 20px;
+                line-height: 23px;
+
+                top: 82px;
+                left: 260px;
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                position: absolute;
+                top: 96px;
+                left: 346px;
+
+                max-width: 226px;
+
+                font-size: 20px;
+                line-height: 23px;                
+            }    
+        }             
+
+        //// User Wants to Visit 
+        .Card-WantVisit {
+            position: relative;
+
+            display: flex;
+
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                flex-direction: column;
+
+                &::before {
+                    position: absolute;
+                    z-index: 1;
+                    left: -25px;
+                    top: 6px;
+
+
+                    content: '';
+
+                    width: 270px;
+                    height: 1px;
+
+                    background-color: #EDEFF6;
+                }
+
+                margin-bottom: 1px;
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                flex-direction: column;
+
+                top: 250px;
+                left: 22px;
+
+                position: absolute;
+
+                &::before {
+                    position: absolute;
+                    z-index: 1;
+                    left: -25px;
+                    top: 6px;
+
+
+                    content: '';
+
+                    width: 687px;
+                    height: 1px;
+
+                    background-color: #EDEFF6;
+                }
+
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                position: absolute;
+                top: 49px;
+                left: 675px;
+            }    
+        }        
+            //// User Wants to Visit Text
+            .Card-WantVisitText {
+                position: relative;
+                z-index: 1;
+
+                margin: 0;
+                padding: 0;
+                 
+                font-family: $normal, 'Arial';
+
+                font-style: normal;
+                font-weight: 400;
+
+                color: $specialGray;   
+                background-color: $basicWhite;    
+                
+                text-transform: lowercase;
+
+                // Mobile
+                @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                    font-size: 15px;
+                    line-height: 16px;       
+                    
+                    width: 111px;
+
+                    margin-bottom: 19px;
+                }
+                // Tablet
+                @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                    font-size: 15px;
+                    line-height: 16px;
+
+                    width: 118px;
+
+                    margin-left: 57px;
+                    margin-bottom: 19px;
+                }
+                // Desktop
+                @media (min-width: $desktop-width) {
+                    display: none;
+                }    
+            }   
+
+            //// Countries List which User wants to visit
+            .Card-CountriesList {
+                display: flex;
+                list-style: none;
+
+                margin: 0;
+                padding: 0;
+
+                // Mobile
+                @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+                    flex-direction: column; 
+                }
+                // Tablet
+                @media (min-width: $tablet-width) and (max-width: 1439px) { 
+
+                }
+                // Desktop
+                @media (min-width: $desktop-width) {
+                    flex-direction: column;
+
+                }    
+            }                
+                //// Countries Item
+                .Card-CountriesItem {
+                    position: relative;
+
+                    display: flex;
+
+                    margin: 0;
+                    padding: 0;
+
+                    // Mobile
+                    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+                        margin-bottom: 12px; 
+
+                    }
+                    // Tablet
+                    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                        margin-right: 25px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                    // Desktop
+                    @media (min-width: $desktop-width) {
+                        margin-bottom: 17px;
+                        &:last-child {
+                            margin-right: 0;
+                        }                        
+                    }    
+                }  
+
+                //// Countries Flag
+                .Card-CountriesIco {
+                    display: block;
+
+                    margin: 0;
+                    padding: 0;
+
+                    border-radius: 2px;
+
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    
+                    //// Countries List
+                    &_sri {
+                        background-image: url('../../../img/svg/sri.svg');
+                    }
+                    &_tai {
+                        background-image: url('../../../img/svg/tai.svg');
+                    }
+                    &_sei {
+                        background-image: url('../../../img/svg/sei.svg');
+                    }
+                    &_bel {
+                        background-image: url('../../../img/svg/bel.svg');
+                    }
+                    &_cze {
+                        background-image: url('../../../img/svg/cze.svg');
+                    }
+                    &_usa {
+                        background-image: url('../../../img/svg/usa.svg');
+                    }
+                    &_aus {
+                        background-image: url('../../../img/svg/aus.svg');
+                    }
+                    &_dom {
+                        background-image: url('../../../img/svg/dom.svg');
+                    }
+                    &_eng {
+                        background-image: url('../../../img/svg/eng.svg');
+                    }
+                    &_ger {
+                        background-image: url('../../../img/svg/ger.svg');
+                    }
+
+                    // Mobile
+                    @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+                        margin-top: -4px;
+                        margin-right: 14px;
+
+                        width: 26px;
+                        height: 18px;
+
+                        background-size: 26px 17px;
+                    }
+                    // Tablet
+                    @media (min-width: $tablet-width) and (max-width: 1439px) { 
+                        margin-top: -5px;   
+                        margin-right: 11px;
+
+                        width: 35px;
+                        height: 24px;
+
+                        background-size: 35px 23px;
+                    }
+                    // Desktop
+                    @media (min-width: $desktop-width) {
+                        margin-top: -6px;
+                        margin-right: 18px;
+
+                        width: 35px;
+                        height: 24px;        
+
+                        background-size: 35px 23px;                
+                    }    
+                }                        
+                
+                    //// Countries Text
+                    .Card-CountriesText {
+                        position: relative;
+
+                        margin: 0;
+                        padding: 0;
+
+                        font-family: $normal, 'Arial';
+                        font-style: normal;
+                        font-weight: 400;
+                        
+                        text-transform: uppercase;
+                        
+                        color: $basicBlueDark; 
+
+
+                        // Mobile
+                        @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                            font-size: 15px;
+                            line-height: 16px;  
+
+                            height: 18px;
+                        }
+                        // Tablet
+                        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                            font-size: 20px;
+                            line-height: 20px;                            
+                        }
+                        // Desktop
+                        @media (min-width: $desktop-width) {
+                            font-size: 20px;
+                            line-height: 20px;                            
+                        }    
+                    }                    
+
+        //// User Transport Prefer Box
+        .Card-WayLevelBox {
+            display: flex;
+
+            position: relative;
+
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                margin-bottom: 13px;
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) { 
+                position: absolute;   
+                top: 0;
+                left: 0;
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }    
+        }          
+            //// User Transport
+            .Card-Way {
+                display: flex;
+
+                position: relative;
+
+                // Mobile
+                @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+                    flex-direction: column; 
+                    margin-right: 55px;
+
+
+                    //// Decotation Line
+                    &::before {
+                        position: absolute;
+                        z-index: 1;
+                        left: -25px;
+                        top: 7px;
+    
+    
+                        content: '';
+    
+                        width: 270px;
+                        height: 1px;
+    
+                        background-color: #EDEFF6;
+                    }
+                }
+                // Tablet
+                @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                }
+                // Desktop
+                @media (min-width: $desktop-width) {
+                }    
+            }    
+                //// Title Transport
+                .Card-WayTitle {
+                    position: relative;
+                    z-index: 2;
+                    
+                    margin: 0;
+                    padding: 0;
+
+                    font-family: $normal, 'Arial';
+
+                    font-style: normal;
+                    font-weight: 400;
+    
+                    color: $specialGray;   
+                    background-color: $basicWhite;    
+                    
+                    text-transform: lowercase;
+
+
+                    // Mobile
+                    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+                        font-size: 15px;
+                        line-height: 16px;   
+                        
+                        width: 87px;
+
+                        margin-bottom: 17px;
+                    }
+                    // Tablet
+                    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+                        font-size: 15px;
+                        line-height: 16px;    
+
+                        display: none;
+                    }
+                    // Desktop
+                    @media (min-width: $desktop-width) {
+                        display: none;
+                    }    
+                }   
+
+                //// List Transport 
+                .Card-TransportList {
+                    display: flex;
+
+                    margin: 0;
+                    padding: 0;
+
+                    list-style: none;
+
+                    // Mobile
+                    @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+                    }
+                    // Tablet
+                    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                        flex-direction: column;  
+
+                        position: absolute;
+                        top: 38px;
+                        left: 621px;  
+                    }
+                    // Desktop
+                    @media (min-width: $desktop-width) {
+                        position: absolute;
+
+                        top: 201px;
+                        left: 675px;
+                    }    
+                }               
+                    //// Item Transport 
+                    .Card-TransportItem {
+                        cursor: pointer;
+
+                        position: relative;
+
+
+                        background-color: #EDEFF6;
+                        border-radius: 50%;
+
+                        // Mobile
+                        @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+                            width: 32px;
+                            height: 32px; 
+                        }
+                        // Tablet
+                        @media (min-width: $tablet-width) and (max-width: 1439px) { 
+                            background-color: transparent;
+                        }
+                        // Desktop
+                        @media (min-width: $desktop-width) {
+                            background-color: transparent;
+
+                        }    
+                    }              
+                        //// Icon Transport 
+                        .Card-TransportIco {
+                            position: relative;
+
+                            background-repeat: no-repeat;
+                            background-position: center;
+
+                            opacity: 0.15;
+                            border-radius: 50%;
+
+                            //// Kind Icons
+                            &_fly {background-image: url('../../../img/svg/FlyIco.svg');}
+                            &_car {background-image: url('../../../img/svg/CarIco.svg');}
+                            &_bike {background-image: url('../../../img/svg/BikeIco.svg');}
+                            &_walk {background-image: url('../../../img/svg/WalkIco.svg');}
+
+                            //// Different Status
+                            &_active {opacity: 1;}
+
+                            // Mobile
+                            @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                                width: 32px;
+                                height: 32px;
+
+                                //// Kind Icons
+                                &_fly {
+                                    background-size: 14px 15px;
+                                }
+                                &_car {
+                                    background-size: 13px 16px;
+                                }
+                                &_bike {
+                                    background-size: 16px 16px;
+                                }
+                                &_walk {
+                                    background-size: 14px 18px;
+                                }                            
+                            }
+                            // Tablet
+                            @media (min-width: $tablet-width) and (max-width: 1439px) { 
+                                width: 32px;
+                                height: 32px;
+
+                                //// Kind Icons
+                                &_fly {
+                                    background-size: 22px 23px;
+                                }
+                                &_car {
+                                    background-size: 20px 23px;
+                                }
+                                &_bike {
+                                    background-size: 26px 26px;
+                                }
+                                &_walk {
+                                    background-size: 24px 28px;
+                                }        
+                            }
+                            // Desktop
+                            @media (min-width: $desktop-width) {
+                                width: 32px;
+                                height: 32px;
+                    
+
+                                //// Kind Icons
+                                &_fly {
+                                    background-size: 22px 23px;
+                                }
+                                &_car {
+                                    background-size: 20px 23px;
+                                }
+                                &_bike {
+                                    background-size: 26px 26px;
+                                }
+                                &_walk {
+                                    background-size: 24px 28px;
+                                }  
+                            }    
+                        } 
+
+            //// Level Circle
+            .Card-Level {
+                display: flex;
+
+                // Mobile
+                @media (min-width: 280px) and (max-width: $mobile-width-only) {   
+                    flex-direction: column; 
+                }
+                // Tablet
+                @media (min-width: $tablet-width) and (max-width: 1439px) {    
+
+                }
+                // Desktop
+                @media (min-width: $desktop-width) {
+                    // transition: 1s;
+
+                    // &:hover {
+
+                    // }
+                }
+            }
+                //// Level Circle Title
+                .Card-LevelTitle {
+                    position: relative;
+                    z-index: 2;
+
+                    margin: 0;
+                    padding: 0;
+
+                    font-family: $normal, 'Arial';
+
+                    font-style: normal;
+                    font-weight: 400;
+    
+                    color: $specialGray;   
+                    background-color: $basicWhite;    
+                    
+                    text-transform: lowercase;
+
+
+                    // Mobile
+                    @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+                        width: 50px;
+                        text-align: center;
+                        font-size: 15px;
+                        line-height: 16px;  
+                        
+                        margin-bottom: 10px;
+                    }
+                    // Tablet
+                    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+                        font-size: 15px;
+                        line-height: 16px;    
+
+                        display: none;
+                    }
+                    // Desktop
+                    @media (min-width: $desktop-width) {
+                        display: none;
+                    }    
+                }        
+                
+                //// Level Indicator Scale 
+                .Card-LevelIndicator {
+                    position: relative;
+
+                    display: flex;
+
+                    // Mobile
+                    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                        flex-direction: column;
+
+                        width: 45px;
+                        height: 45px;
+                    }
+                    // Tablet
+                    @media (min-width: $tablet-width) and (max-width: 1439px) {  
+                        position: absolute;
+                        top: 170px;
+                        left: 603px;
+
+                        flex-direction: column;
+
+                        
+                        width: 60px;
+                        height: 60px;
+                        
+                        border-radius: 50%;
+
+                        cursor: pointer;
+                        &:hover {
+                            animation-name: rotead;
+                            animation-duration: 2.2s;
+                            animation-timing-function: ease 0.2s;
+                        }
+                    }
+                    // Desktop
+                    @media (min-width: $desktop-width) {
+                        position: absolute;
+                        top: 183px;
+                        left: 847px;
+
+                        flex-direction: column;
+
+                        
+                        width: 60px;
+                        height: 60px;
+                        
+                        border-radius: 50%;  
+
+                        cursor: pointer;
+                        &:hover {
+                            animation-name: rotead;
+                            animation-duration: 2.5s;
+                            animation-timing-function: ease-out 2.2s;
+                        }
+                    }
+                }   
+                    //// Indicator Text  
+                    .Card-LevelText {
+                        position: relative;
+
+                        margin: 0;
+                        padding: 0;
+
+                        font-family: $bold, 'Arial';
+                        font-style: normal;
+                        
+                        font-weight: 700;
+           
+                        color: $basicBlueDark;
+
+                        font-size: 24px;
+                        line-height: 24px;
+
+                        // Mobile
+                        @media (min-width: 280px) and (max-width: $mobile-width-only) { 
+                            margin-top: 13px;
+                            margin-left: 10px;   
+                        }
+                        // Tablet
+                        @media (min-width: $tablet-width) and (max-width: 1439px) { 
+                            margin-top: 14px;  
+                            margin-left: 17px; 
+
+                            &::after {
+                                content: '';
+
+                                position: absolute;
+                                top: 21px;
+                                left: -2px;
+
+                                width: 31px;
+                                height: 1px;
+
+                                background-color: #000000;
+                                opacity: 0.1;
+                            }
+                        }
+                        // Desktop
+                        @media (min-width: $desktop-width) {
+                            margin-top: 14px;  
+                            margin-left: 17px; 
+
+                            &::after {
+                                content: '';
+
+                                position: absolute;
+                                top: 21px;
+                                left: -2px;
+
+                                width: 31px;
+                                height: 1px;
+
+                                background-color: #000000;
+                                opacity: 0.1;
+                            }                            
+                        }
+                    } 
+
+                    //// Indicator Text "Level" 
+                    .Card-LevelSpan {
+                        margin: 0;
+                        padding: 0;
+
+                        font-family: $normal, 'Arial';
+                        font-style: normal;
+                        font-weight: 400;
+                        
+                        color: #000000;
+                        
+                        opacity: 0.4;
+
+                        // Mobile
+                        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+                            display: none;  
+                        }
+                        // Tablet
+                        @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                            font-size: 14px;
+                            line-height: 14px;   
+                            
+                            margin-left: 17px;
+                        }
+                        // Desktop
+                        @media (min-width: $desktop-width) {
+                            font-size: 14px;
+                            line-height: 14px;
+
+                            margin-left: 17px;
+                        }
+                    }   
+
+                    //// Indicator Progress Bar 
+                    .Card-LevelProgress {
+                        position: absolute;
+
+                        background-repeat: no-repeat;
+                        background-position: center;
+
+
+
+                        // Mobile
+                        @media (min-width: 280px) and (max-width: $mobile-width-only) {  
+                            width: 45px;
+                            height: 45px;
+                            
+                            //// Progress Kind Loading
+                            &_99 {
+                                background-image: url('../../../img/svg/Card-ProgressBar_99.svg');
+                            }
+                            &_80 {
+                                background-image: url('../../../img/svg/Card-ProgressBar_80.svg');
+                            }
+                            &_50 {
+                                background-image: url('../../../img/svg/Card-ProgressBar_50.svg');
+                                right: 0;
+                            }
+                            &_25 {
+                                background-image: url('../../../img/svg/Card-ProgressBar_25.svg');
+                                right: 0;
+                            }
+
+                            background-size: contain;
+                        }
+                        // Tablet
+                        @media (min-width: $tablet-width) and (max-width: 1439px) {   
+                            width: 60px;
+                            height: 60px;                         
+                            
+                            background-size: 60px 60px;
+
+                            //// Progress Kind Loading
+                            &_99 {
+                                background-image: url('../../../img/svg/Card-ProgressBar_99-t.svg');
+                            }
+                            &_80 {
+                                background-image: url('../../../img/svg/Card-ProgressBar_80-t.svg');
+                            }
+                            &_50 {
+                                background-image: url('../../../img/svg/Card-ProgressBar_50-t.svg');
+                                right: -14px;
+                            }
+                            &_25 {
+                                background-image: url('../../../img/svg/Card-ProgressBar_25-t.svg');
+                                right: 0;
+                                top: 0;
+                                background-position: 32px 0px;
+                                background-size: 26px 24px;
+                            }                               
+                        }
+                        // Desktop
+                        @media (min-width: $desktop-width) {
+                            width: 60px;
+                            height: 60px;                         
+                            
+                            background-size: 60px 60px;
+
+                            //// Progress Kind Loading
+                            &_99 {
+                                background-image: url('../../../img/svg/Card-ProgressBar_99-t.svg');
+                            }
+                            &_80 {
+                                background-image: url('../../../img/svg/Card-ProgressBar_80-t.svg');
+                            }
+                            &_50 {
+                                background-image: url('../../../img/svg/Card-ProgressBar_50-t.svg');
+                                right: -14px;
+                            }
+                            &_25 {
+                                background-image: url('../../../img/svg/Card-ProgressBar_25-t.svg');
+                                right: 0;
+                                top: 0;
+                                background-position: 32px 0px;
+                                background-size: 26px 24px;
+                            }                              
+                        }
+                    }     
+
+        //// Button Call!
+        .Card-Call {
+            // Mobile
+            @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+            }
+            // Tablet
+            @media (min-width: $tablet-width) and (max-width: 1439px) { 
+                position: absolute;
+
+                top: 174px;
+                left: 254px;
+                
+                width: 150px;
+                height: 50px;
+                border-radius: 25px;
+            }
+            // Desktop
+            @media (min-width: $desktop-width) {
+                position: absolute;
+
+                top: 187px;
+                left: 340px;
+
+                width: 150px;
+                height: 50px;
+                border-radius: 25px;
+            }    
+        }   
+            //// Button Call!
+            .Card-CallText {
+                margin: 0;
+                padding: 0;
+
+                font-family: $bold, 'Arial';
+                font-style: normal;
+                font-weight: 700;
+
+                text-align: center;
+                text-transform: uppercase;
+                
+                
+                color: $basicBlue;
+
+                &::after {
+                    display: none;
+                }
+
+                // Mobile
+                @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+                    font-size: 17px;
+                    line-height: 17px;    
+                }
+                // Tablet
+                @media (min-width: $tablet-width) and (max-width: 1439px) {    
+                    padding-top: 3px;
+                    font-size: 20px;
+                    line-height: 20px;                
+                }
+                // Desktop
+                @media (min-width: $desktop-width) {
+                    padding-top: 3px;
+                    font-size: 20px;
+                    line-height: 20px;                    
+                }    
+            }                                                 

@@ -1,0 +1,225 @@
+//------------------Worlds Styles Start---------------------//
+
+// Normalize
+@import 'normalize.scss';
+
+
+// Fonts
+@import 'fonts.scss';
+
+
+// World styles
+@import 'world.scss';
+
+
+// Colors
+@import 'colors.scss';
+
+
+// Viewports
+@import 'viewports.scss';
+
+
+// Animations 
+@import 'animation.scss';
+
+//-------------------Worlds Styles End--------------------//
+
+// Title 
+@import 'blocks/Title/Title.scss';
+
+
+// HeadTitle
+@import 'blocks/HeadTitle/HeadTitle.scss';
+
+
+// Button
+@import 'blocks/Button/Button.scss';
+
+
+// CountryName
+@import 'blocks/CountryName/CountryName.scss';
+
+
+// Flag
+@import 'blocks/Flag/Flag.scss';
+
+
+// Tooltip
+@import 'blocks/Tooltip/Tooltip.scss';
+
+
+// PageBody
+@import 'blocks/PageBody/PageBody.scss';
+
+
+// Header
+@import 'blocks/Header/Header.scss';
+
+
+// Link Header
+@import 'blocks/Link-Header/Link-Header.scss';
+
+
+// Logo
+@import 'blocks/Logo/Logo.scss';
+
+
+// SocialList
+@import 'blocks/SocialList/SocialList.scss';
+
+
+// Main
+@import 'blocks/Main/Main.scss';
+
+
+// HowItWorks
+@import 'blocks/HowItWorks/HowItWorks.scss';
+
+
+// Review
+@import 'blocks/Review/Review.scss';
+
+
+// AboutService 
+@import 'blocks/AboutService/AboutService.scss';
+
+
+// Directions
+@import 'blocks/Directions/Directions.scss';
+    // CountryList
+    @import 'blocks/CountryList/CountryList.scss';
+
+    // CountryItem
+    @import 'blocks/CountryItem/CountryItem.scss';
+
+
+// Travelers
+@import 'blocks/Travelers/Travelers.scss';
+    // TravelersList
+    @import 'blocks/TravelersList/TravelersList.scss';
+
+    // TravelerItem
+    @import 'blocks/TravelerItem/TravelerItem.scss';
+
+    // CountriesList
+    @import 'blocks/CountriesList/CountriesList.scss';
+
+    // TravelerName
+    @import 'blocks/TravelerName/TravelerName.scss';
+
+    // IndicatorLevel
+    @import 'blocks/IndicatorLevel/IndicatorLevel.scss';
+
+    // WaysList
+    @import 'blocks/WaysList/WaysList.scss';
+
+
+// Tariff
+@import 'blocks/Tariff/Tariff.scss';
+    // TariffList
+    @import 'blocks/TariffList/TariffList.scss';
+
+    // TariffPopup
+    @import 'blocks/TariffPopup/TariffPopup.scss';
+
+// Interest
+@import 'blocks/Interest/Interest.scss';
+
+
+// Address
+@import 'blocks/Address/Address.scss';
+
+
+// Map
+@import 'blocks/Map/Map.scss';
+
+
+// TitleBox
+@import 'blocks/TitleBox/TitleBox.scss';
+
+
+// Profile
+@import 'blocks/Profile/Profile.scss';
+
+
+// UserBox 
+@import 'blocks/UserBox/UserBox.scss';
+
+
+// MyPlans
+@import 'blocks/MyPlans/MyPlans.scss';
+    // MyPlansList
+    @import 'blocks/MyPlansList/MyPlansList.scss';  
+
+
+// Steps
+@import 'blocks/Steps/Steps.scss';
+
+
+// AddPlans
+@import 'blocks/AddPlans/AddPlans.scss';
+    // ToggleList
+    @import 'blocks/ToggleList/ToggleList.scss';
+    
+    // ArriveDate
+    @import 'blocks/ArriveDate/ArriveDate.scss';
+        // LabelInput
+        @import 'blocks/LabelInput/LabelInput.scss';
+
+        // LabelDescr
+        @import 'blocks/LabelDescr/LabelDescr.scss';
+        
+        // ArriveInputBox
+        @import 'blocks/ArriveInputBox/ArriveInputBox.scss';
+
+        // Calendar
+        @import 'blocks/Calendar/Calendar.scss';
+
+    // Road
+    @import 'blocks/Road/Road.scss';
+        // SelectCountries
+        @import 'blocks/SelectCountries/SelectCountries.scss';
+            // PopupCountries
+            @import 'blocks/PopupCountries/PopupCountries.scss';
+                // CalendarCountries
+                @import 'blocks/CalendarCountries/CalendarCountries.scss';
+
+                // TableCountriesList
+                @import 'blocks/TableCountriesList/TableCountriesList.scss';
+
+
+    // Entertainment
+    @import 'blocks/Entertainment/Entertainment.scss';
+        // PlanList
+        @import 'blocks/PlanList/PlanList.scss';
+
+
+    // OffStep
+    @import 'blocks/OffStep/OffStep.scss';
+    
+    // ButtonForm
+    @import 'blocks/ButtonForm/ButtonForm.scss';
+
+
+// FilterBox
+@import 'blocks/FilterBox/FilterBox.scss';
+
+// FilterScroll
+@import 'blocks/FilterScroll/FilterScroll.scss';
+
+// CompanionsContent
+@import 'blocks/CompanionsContent/CompanionsContent.scss';
+    // Filter
+    @import 'blocks/Filter/Filter.scss';   
+
+    // Card
+    @import 'blocks/Card/Card.scss';
+
+    // Pagination
+    @import 'blocks/Pagination/Pagination.scss';
+
+
+    
+// Footer
+@import 'blocks/Footer/Footer.scss';

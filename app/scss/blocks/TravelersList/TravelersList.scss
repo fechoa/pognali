@@ -1,0 +1,77 @@
+// Helper width
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+    }
+
+
+
+.TravelersList {
+    list-style: none;
+
+    
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+
+       
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {    
+        z-index: 10;
+
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        display: flex;
+    }
+}
+
+.TravelersList-Item {
+    // Mobile
+    @media (min-width: 280px) and (max-width: $mobile-width-only) {    
+        margin-bottom: 9px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    // Tablet
+    @media (min-width: $tablet-width) and (max-width: 1439px) {   
+        cursor: pointer;
+        
+        transition: 200ms ease-in; 
+        &:hover {
+            transform: translateY(-5%);
+        }
+    }
+    // Desktop
+    @media (min-width: $desktop-width) {
+        &:hover {
+            animation-name: rotead;
+            animation-duration: 2.2s;
+            animation-timing-function: ease 0.2s;
+        }
+        
+        &:first-child {
+            margin-right: 60px;
+        }
+    }
+}
